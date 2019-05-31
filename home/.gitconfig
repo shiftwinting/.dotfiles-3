@@ -1,0 +1,28 @@
+[user]
+	name = Dundar Göc
+	email = gocdundar@gmail.com
+[alias]
+  plog = log --graph --pretty=format:'%h -%d %s %n' --abbrev-commit --date=relative --branches
+  nuke = "!sh -c \"git checkout $1 && git fetch --all && git reset --hard origin/$1  && git clean -df && git submodule update --init --recursive\" -"
+	sync = !zsh -ic git-sync
+[merge]
+	tool = meld
+[rerere]
+	enabled = true
+	autoupdate = true
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

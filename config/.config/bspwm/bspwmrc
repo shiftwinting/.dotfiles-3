@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+bspc monitor -d I II III IV V 
+bspc config gapless_monocle true
+bspc config single_monocle true
+
+bspc rule -r '*' 
+bspc rule -a Firefox desktop='^2' 
+bspc rule -a Chromium desktop='^2' 
+bspc rule -a Code desktop='^3' 
+
+~/.config/polybar/launch.sh
+ 
+killall -q sxhkd feh compton unclutter
+
+sxhkd &
+compton -b -i 0.8 &
+feh --bg-fill '/home/dundar/.dotfiles/.Misc/disco.png' 
+unclutter -idle 3.0 -root &
