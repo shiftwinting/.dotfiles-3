@@ -22,6 +22,7 @@ alias search="pacman -Ss"
 alias ysearch="yay -Ss"
 alias list="pacman -Qqet"
 alias remove="sudo pacman -Rs"
+alias purge="sudo pacman -Rns"
 alias up="source ~/.dotfiles/.Misc/upgrade.sh"
 alias mirror="sudo pacman-mirrors --geoip"
 
