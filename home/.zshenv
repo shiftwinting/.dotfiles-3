@@ -13,7 +13,7 @@ alias la="ls -A"
 alias ll="la -l"
 
 # pacman
-alias install="yay -S --needed"
+alias install="yay -S --needed --answerclean All --answerdiff None"
 alias show="yay -Si"
 alias search="yay -Ss"
 alias list="yay -Q"
