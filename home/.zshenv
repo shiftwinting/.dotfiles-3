@@ -13,18 +13,19 @@ alias la="ls -A"
 alias ll="la -l"
 
 # pacman
-alias install="sudo pacman -S"
-alias yinstall="yay -S"
+alias install="sudo pacman -S --needed"
+alias yinstall="yay -S --needed"
 alias upgrade="sudo pacman -Syu"
 alias show="pacman -Si"
 alias yshow="yay -Si"
 alias search="pacman -Ss"
 alias ysearch="yay -Ss"
-alias list="pacman -Qqet"
+alias list="pacman -Q"
 alias remove="sudo pacman -Rs"
 alias purge="sudo pacman -Rns"
 alias up="source ~/.dotfiles/.Misc/upgrade.sh"
 alias mirror="sudo pacman-mirrors --geoip"
+alias orphan="pacman -Qtd"
 
 # VSCode
 alias code="code ."
