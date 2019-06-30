@@ -70,6 +70,9 @@ setopt autocd
 export EDITOR=nvim
 export VISUAL=nvim
 
+# Enable ccache when using yay.
+export PATH="/usr/lib/ccache/bin/:$PATH"
+
 # Use custom colors for files.
 eval $( dircolors -b $HOME/.dircolors)
 
