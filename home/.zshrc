@@ -23,10 +23,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 zstyle ':prezto:load' pmodule \
-  'history' \
-  'completion' \
   'archive' \
-  'autosuggestions' \
   'history-substring-search' 
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -44,6 +41,9 @@ alias load="zpl load"
 
 snip PZT::modules/environment/init.zsh
 snip PZT::modules/command-not-found/init.zsh
+snip PZT::modules/history/init.zsh
+snip PZT::modules/completion/init.zsh
+light zsh-users/zsh-autosuggestions
 
 ice cloneonly atclone"./install"; light junegunn/fzf
 light djui/alias-tips
