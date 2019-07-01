@@ -16,8 +16,6 @@ if [ ! -e "${HOME}/.local/share/nvim/site/autoload/plug.vim" ]; then
 fi
 
 ###########################################################################################################
-# Bind CTRL-SPACE to accept autosuggestion from zsh.
-bindkey '^ ' autosuggest-accept
 
 # Allow .. without getting "Permission denied"
 setopt autocd
@@ -57,8 +55,7 @@ snip PZT::modules/environment/init.zsh
 snip PZT::modules/command-not-found/init.zsh
 snip PZT::modules/history/init.zsh
 snip PZT::modules/completion/init.zsh
-ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'"; light zsh-users/zsh-autosuggestions
-light zdharma/history-search-multi-word
+ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-accept"; light zsh-users/zsh-autosuggestions
 
 ice cloneonly atclone"./install"; light junegunn/fzf
 light djui/alias-tips
