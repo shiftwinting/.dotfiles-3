@@ -4,7 +4,7 @@ reset
 line="__________________________________________________ \n\n"
 
 printf "pacman\n\n"
-upgrade
+yay
 printf $line
 
 printf "Prezto\n\n"
