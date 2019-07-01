@@ -35,9 +35,7 @@ autoload -Uz _zplugin
 
 alias ice="zpl ice"
 alias snip="zpl snippet"
-alias fsnip="zpl ice svn; snip"
 alias light="zpl light"
-alias load="zpl load"
 
 snip PZT::modules/environment/init.zsh
 snip PZT::modules/command-not-found/init.zsh
@@ -56,7 +54,7 @@ light trapd00r/LS_COLORS
 ice atload"POWERLEVEL9K_PROMPT_ON_NEWLINE=true; POWERLEVEL9K_DISABLE_RPROMPT=true; POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)"; light romkatv/powerlevel10k
 ice cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-unalias zplg snip fsnip light ice load
+unalias zplg snip light ice 
 
 # Bind CTRL-SPACE to accept autosuggestion from zsh.
 bindkey '^ ' autosuggest-accept
