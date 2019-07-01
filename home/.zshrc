@@ -27,9 +27,6 @@ export VISUAL=nvim
 # Use custom colors for files.
 eval $( dircolors -b $HOME/.dircolors)
 
-# Enable fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || zpl delete junegunn/fzf
-
 # Include prezto
 zstyle ':prezto:*:*' case-sensitive 'yes'
 zstyle ':prezto:*:*' color 'yes'
@@ -69,3 +66,5 @@ ice cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
 unalias zplg snip light ice 
 
+# Enable fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || zpl delete junegunn/fzf
