@@ -16,6 +16,22 @@ if [ ! -e "${HOME}/.local/share/nvim/site/autoload/plug.vim" ]; then
 fi
 
 ###########################################################################################################
+# Bind CTRL-SPACE to accept autosuggestion from zsh.
+bindkey '^ ' autosuggest-accept
+
+# Allow .. without getting "Permission denied"
+setopt autocd
+
+# Set neovim as default editor and reader.
+export EDITOR=nvim
+export VISUAL=nvim
+
+# Use custom colors for files.
+eval $( dircolors -b $HOME/.dircolors)
+
+# Enable fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || zpl delete junegunn/fzf
+
 # Include prezto
 zstyle ':prezto:*:*' case-sensitive 'yes'
 zstyle ':prezto:*:*' color 'yes'
@@ -56,18 +72,3 @@ ice cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
 unalias zplg snip light ice 
 
-# Bind CTRL-SPACE to accept autosuggestion from zsh.
-bindkey '^ ' autosuggest-accept
-
-# Allow .. without getting "Permission denied"
-setopt autocd
-
-# Set neovim as default editor and reader.
-export EDITOR=nvim
-export VISUAL=nvim
-
-# Use custom colors for files.
-eval $( dircolors -b $HOME/.dircolors)
-
-# Enable fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || zpl delete junegunn/fzf
