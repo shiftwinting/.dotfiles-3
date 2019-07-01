@@ -41,7 +41,7 @@ snip PZT::modules/environment/init.zsh
 snip PZT::modules/command-not-found/init.zsh
 snip PZT::modules/history/init.zsh
 snip PZT::modules/completion/init.zsh
-light zsh-users/zsh-autosuggestions
+ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'"; light zsh-users/zsh-autosuggestions
 light zdharma/history-search-multi-word
 
 ice cloneonly atclone"./install"; light junegunn/fzf
@@ -58,9 +58,6 @@ unalias zplg snip light ice
 
 # Bind CTRL-SPACE to accept autosuggestion from zsh.
 bindkey '^ ' autosuggest-accept
-
-#Change color of autosuggestion
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
 # Allow .. without getting "Permission denied"
 setopt autocd
