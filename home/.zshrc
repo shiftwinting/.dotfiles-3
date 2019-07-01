@@ -44,6 +44,7 @@ snip PZT::modules/command-not-found/init.zsh
 snip PZT::modules/history/init.zsh
 snip PZT::modules/completion/init.zsh
 light zsh-users/zsh-autosuggestions
+light zdharma/history-search-multi-word
 
 ice cloneonly atclone"./install"; light junegunn/fzf
 light djui/alias-tips
@@ -69,9 +70,6 @@ setopt autocd
 # Set neovim as default editor and reader.
 export EDITOR=nvim
 export VISUAL=nvim
-
-# Enable ccache when using yay.
-export PATH="/usr/lib/ccache/bin/:$PATH"
 
 # Use custom colors for files.
 eval $( dircolors -b $HOME/.dircolors)
