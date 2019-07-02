@@ -31,9 +31,9 @@ alias orphan="yay -Qtd"
 alias code="code ."
 
 # goto
-alias dot="cd ~/.dotfiles"
-alias cfg="cd ~/.dotfiles/config/.config"
-alias plug="cd ~/.zplugin"
+alias d="cd ~/.dotfiles"
+alias c="cd ~/.dotfiles/config/.config"
+alias z="cd ~/.zplugin"
 
 #config
 alias ali="vi ~/.zshenv"
