@@ -57,7 +57,6 @@ ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-acce
 ice cloneonly atclone"./install"; light junegunn/fzf
 light djui/alias-tips
 light zdharma/fast-syntax-highlighting
-light zpm-zsh/undollar
 light zdharma/zsh-diff-so-fancy
 light zuxfoucault/colored-man-pages_mod
 light trapd00r/LS_COLORS
