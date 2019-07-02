@@ -34,6 +34,7 @@ alias code="code ."
 alias d="cd ~/.dotfiles"
 alias c="cd ~/.dotfiles/config/.config"
 alias z="cd ~/.zplugin"
+alias zs="cd ~/.zplugin/snippets"
 
 #config
 alias ali="vi ~/.zshenv"
@@ -95,7 +96,7 @@ alias rmd="rmdir *"
 alias -g DOT="~/.dotfiles"
 
 # Restore dotfiles
-alias restore="dot; gco ."
+alias restore="d && gco ."
 #####################
 # Functions
 
