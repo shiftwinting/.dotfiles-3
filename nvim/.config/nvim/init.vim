@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'davidgranstrom/nvim-markdown-preview'
+
 
 call plug#end()
 
