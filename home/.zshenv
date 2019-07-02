@@ -95,6 +95,9 @@ alias -g DOT="~/.dotfiles"
 
 # Restore dotfiles
 alias restore="d && gco ."
+
+# redshift
+alias red="killall -q redshift; while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done; redshift"
 #####################
 # Functions
 
