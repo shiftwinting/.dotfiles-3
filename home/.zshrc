@@ -44,7 +44,7 @@ source '/home/dundar/.zplugin/bin/zplugin.zsh'
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-alias ice="zpl ice"
+alias ice="zpl ice depth"1""
 alias snip="zpl snippet"
 alias light="zpl light"
 
@@ -56,11 +56,11 @@ snip PZT::modules/history/init.zsh
 snip PZT::modules/completion/init.zsh
 ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-accept"; light zsh-users/zsh-autosuggestions
 
-light djui/alias-tips
-light zdharma/fast-syntax-highlighting
-light zdharma/zsh-diff-so-fancy
-light zuxfoucault/colored-man-pages_mod
-light trapd00r/LS_COLORS
+ice; light djui/alias-tips
+ice; light zdharma/fast-syntax-highlighting
+ice; light zdharma/zsh-diff-so-fancy
+ice; light zuxfoucault/colored-man-pages_mod
+ice; light trapd00r/LS_COLORS
 ice atload"POWERLEVEL9K_PROMPT_ON_NEWLINE=true; POWERLEVEL9K_DISABLE_RPROMPT=true; POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)"; light romkatv/powerlevel10k
 ice cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
