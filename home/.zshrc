@@ -48,13 +48,14 @@ alias ice="zpl ice"
 alias snip="zpl snippet"
 alias light="zpl light"
 
+ice cloneonly atclone"./install"; light junegunn/fzf
+
 snip PZT::modules/environment/init.zsh
 snip PZT::modules/command-not-found/init.zsh
 snip PZT::modules/history/init.zsh
 snip PZT::modules/completion/init.zsh
 ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-accept"; light zsh-users/zsh-autosuggestions
 
-ice cloneonly atclone"./install"; light junegunn/fzf
 light djui/alias-tips
 light zdharma/fast-syntax-highlighting
 light zdharma/zsh-diff-so-fancy
