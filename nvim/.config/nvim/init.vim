@@ -1,7 +1,5 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'davidgranstrom/nvim-markdown-preview'
-
 
 call plug#end()
 
