@@ -24,9 +24,6 @@ setopt autocd
 export EDITOR=nvim
 export VISUAL=nvim
 
-# Use custom colors for files.
-eval $( dircolors -b $HOME/.dircolors)
-
 # Include prezto
 zstyle ':prezto:*:*' case-sensitive 'yes'
 zstyle ':prezto:*:*' color 'yes'
@@ -60,7 +57,6 @@ ice; light djui/alias-tips
 ice; light zdharma/fast-syntax-highlighting
 ice; light zdharma/zsh-diff-so-fancy
 ice; light zuxfoucault/colored-man-pages_mod
-ice; light trapd00r/LS_COLORS
 ice atload"POWERLEVEL9K_PROMPT_ON_NEWLINE=true; POWERLEVEL9K_DISABLE_RPROMPT=true; POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)"; light romkatv/powerlevel10k
 ice cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
