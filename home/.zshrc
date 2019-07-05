@@ -49,7 +49,6 @@ alias light="zpl light"
 ice cloneonly atclone"./install"; light junegunn/fzf
 
 snip PZT::modules/environment/init.zsh
-ice1; snip PZT::modules/command-not-found/init.zsh
 ice atload"unalias history-stat"; snip PZT::modules/history/init.zsh
 ice0 blockf; snip PZT::modules/completion/init.zsh
 
@@ -65,3 +64,6 @@ unalias zplg snip light ice ice0 ice1
 
 # Enable fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || zpl delete junegunn/fzf
+
+# Enable command not found
+source /usr/share/doc/find-the-command/ftc.zsh
