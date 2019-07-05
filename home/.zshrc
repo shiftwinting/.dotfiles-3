@@ -50,15 +50,15 @@ ice cloneonly atclone"./install"; light junegunn/fzf
 
 snip PZT::modules/environment/init.zsh
 ice atload"unalias history-stat"; snip PZT::modules/history/init.zsh
-ice0 blockf; snip PZT::modules/completion/init.zsh
-
-ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-accept"; light zsh-users/zsh-autosuggestions
 ice1; light djui/alias-tips
-ice0; light zdharma/fast-syntax-highlighting
 ice1; light zdharma/zsh-diff-so-fancy
 ice1; light zuxfoucault/colored-man-pages_mod
 ice atload"POWERLEVEL9K_PROMPT_ON_NEWLINE=true; POWERLEVEL9K_DISABLE_RPROMPT=true; POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)"; light romkatv/powerlevel10k
 ice1 cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
+
+ice0 blockf; light zsh-users/zsh-completions
+ice0 atload"_zsh_autosuggest_start; ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-accept"; light zsh-users/zsh-autosuggestions
+ice0 atinit"zpcompinit; zpcdreplay"; light zdharma/fast-syntax-highlighting
 
 unalias zplg snip light ice ice0 ice1
 
