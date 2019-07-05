@@ -31,7 +31,6 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 zstyle ':prezto:load' pmodule \
-  'archive' \
   'history-substring-search' 
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
