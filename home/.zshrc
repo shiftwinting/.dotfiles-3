@@ -49,10 +49,10 @@ ice cloneonly atclone"./install"; light junegunn/fzf
 
 snip PZT::modules/environment/init.zsh
 snip PZT::modules/command-not-found/init.zsh
-snip PZT::modules/history/init.zsh
+ice atload"unalias history-stat"; snip PZT::modules/history/init.zsh
 snip PZT::modules/completion/init.zsh
-ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-accept"; light zsh-users/zsh-autosuggestions
 
+ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-accept"; light zsh-users/zsh-autosuggestions
 ice; light djui/alias-tips
 ice; light zdharma/fast-syntax-highlighting
 ice; light zdharma/zsh-diff-so-fancy
