@@ -52,7 +52,7 @@ ice cloneonly atclone"./install"; light junegunn/fzf
 snip PZT::modules/environment/init.zsh
 ice1; snip PZT::modules/command-not-found/init.zsh
 ice atload"unalias history-stat"; snip PZT::modules/history/init.zsh
-ice0; snip PZT::modules/completion/init.zsh
+ice0 blockf; snip PZT::modules/completion/init.zsh
 
 ice atload"ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'; bindkey '^ ' autosuggest-accept"; light zsh-users/zsh-autosuggestions
 ice1; light djui/alias-tips
