@@ -13,7 +13,7 @@ alias ll="la -l"
 # pacman
 alias pacman="sudo pacman"
 alias install="pacman -S --needed"
-alias yinstall="yay -S --needed --answerclean All --answerdiff None"
+alias yinstall="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
 alias show="pacman -Si"
 alias yshow="yay -Si"
 alias search="pacman -Ss"
