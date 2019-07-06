@@ -7,11 +7,10 @@ printf "pacman\n\n"
 yay
 printf $line
 
-printf "Prezto\n\n"
-zprezto-update
+printf "zplugin modules\n\n"
+zpl update
 printf $line
 
 printf "zplugin\n\n"
-zpl update
 zpl self-update
 printf $line
