@@ -63,7 +63,7 @@ ice0 atinit"zpcompinit; zpcdreplay"; light zdharma/fast-syntax-highlighting
 unalias zplg snip light ice ice0 ice1
 
 # Enable fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || zpl delete junegunn/fzf
+source ~/.fzf.zsh 
 
 # Enable command not found
 source /usr/share/doc/find-the-command/ftc.zsh
