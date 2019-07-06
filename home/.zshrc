@@ -16,18 +16,12 @@ if [ ! -e "${HOME}/.local/share/nvim/site/autoload/plug.vim" ]; then
 fi
 
 ###########################################################################################################
-
 # Allow .. without getting "Permission denied"
 setopt autocd
 
 # Set neovim as default editor and reader.
 export EDITOR=nvim
 export VISUAL=nvim
-
-# Include prezto
-zstyle ':prezto:module:editor' key-bindings 'vi'
-zstyle ':prezto:module:editor' dot-expansion 'yes'
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # zplugin
 source '/home/dundar/.zplugin/bin/zplugin.zsh'
@@ -41,8 +35,6 @@ alias snip="zpl snippet"
 alias light="zpl light"
 
 ice cloneonly atclone"./install"; light junegunn/fzf
-
-snip PZT::modules/environment/init.zsh
 ice atload"unalias history-stat"; snip PZT::modules/history/init.zsh
 ice1; light djui/alias-tips
 ice1; light zdharma/zsh-diff-so-fancy
