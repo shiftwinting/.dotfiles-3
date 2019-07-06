@@ -33,6 +33,11 @@ ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice atload"unalias history-stat"; snip PZT::modules/history/init.zsh
 
+ice0 atinit"
+zstyle ':prezto:module:editor' key-bindings 'vi'
+zstyle ':prezto:module:editor' dot-expansion 'yes'"
+snip PZT::modules/editor/init.zsh
+
 ice1; light djui/alias-tips
 
 ice1; light zdharma/zsh-diff-so-fancy
@@ -47,7 +52,10 @@ light romkatv/powerlevel10k
 
 ice1 cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-ice0 blockf; light zsh-users/zsh-completions
+#ice0 blockf; light zsh-users/zsh-completions
+
+
+ice0 blockf; snip PZT::modules/completion/init.zsh
 
 ice0 atload"
 _zsh_autosuggest_start
