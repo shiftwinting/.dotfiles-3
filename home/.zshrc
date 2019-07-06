@@ -25,14 +25,8 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # Include prezto
-zstyle ':prezto:*:*' case-sensitive 'yes'
-zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
-
-zstyle ':prezto:load' pmodule \
-  'history-substring-search' 
-
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # zplugin
@@ -64,6 +58,3 @@ unalias zplg snip light ice ice0 ice1
 
 # Enable fzf
 source ~/.fzf.zsh 
-
-# Enable command not found
-source /usr/share/doc/find-the-command/ftc.zsh
