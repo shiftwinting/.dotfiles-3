@@ -59,10 +59,13 @@ ice0 blockf; snip PZT::modules/completion/init.zsh
 
 ice0 atload"
   _zsh_autosuggest_start
-  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
-ice0 atinit"zpcompinit; zpcdreplay"; light zdharma/fast-syntax-highlighting
+ice0 atinit"
+  zpcompinit
+  zpcdreplay"
+light zdharma/fast-syntax-highlighting
 
 unalias zplg snip light ice ice0 ice1
