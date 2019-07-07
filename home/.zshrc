@@ -31,7 +31,10 @@ alias light="zpl light"
 
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
-ice atload"unalias history-stat"; snip PZT::modules/history/init.zsh
+ice atload"
+unsetopt HIST_BEEP
+unalias history-stat"
+snip PZT::modules/history/init.zsh
 
 ice0 atinit"
 zstyle ':prezto:module:editor' key-bindings 'vi'
