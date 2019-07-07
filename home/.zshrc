@@ -32,13 +32,13 @@ alias light="zpl light"
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice atload"
-unsetopt HIST_BEEP
-unalias history-stat"
+  unsetopt HIST_BEEP
+  unalias history-stat"
 snip PZT::modules/history/init.zsh
 
 ice0 atinit"
-zstyle ':prezto:module:editor' key-bindings 'vi'
-zstyle ':prezto:module:editor' dot-expansion 'yes'"
+  zstyle ':prezto:module:editor' key-bindings 'vi'
+  zstyle ':prezto:module:editor' dot-expansion 'yes'"
 snip PZT::modules/editor/init.zsh
 
 ice1; light djui/alias-tips
@@ -48,9 +48,9 @@ ice1; light zdharma/zsh-diff-so-fancy
 ice1; light zuxfoucault/colored-man-pages_mod
 
 ice atload"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_DISABLE_RPROMPT=true 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)" 
+  POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+  POWERLEVEL9K_DISABLE_RPROMPT=true 
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)" 
 light romkatv/powerlevel10k
 
 ice1 cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
@@ -58,9 +58,9 @@ ice1 cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 ice0 blockf; snip PZT::modules/completion/init.zsh
 
 ice0 atload"
-_zsh_autosuggest_start
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
-bindkey '^ ' autosuggest-accept"
+  _zsh_autosuggest_start
+  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+  bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
 ice0 atinit"zpcompinit; zpcdreplay"; light zdharma/fast-syntax-highlighting
