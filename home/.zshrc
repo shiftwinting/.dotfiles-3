@@ -52,9 +52,6 @@ light romkatv/powerlevel10k
 
 ice1 cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-#ice0 blockf; light zsh-users/zsh-completions
-
-
 ice0 blockf; snip PZT::modules/completion/init.zsh
 
 ice0 atload"
