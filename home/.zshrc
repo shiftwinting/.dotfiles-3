@@ -24,7 +24,7 @@ autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
 alias ice="zpl ice"
-alias ice0="ice wait"0" lucid"
+alias ice0="ice wait lucid"
 alias ice1="ice wait"1" lucid"
 alias snip="zpl snippet"
 alias light="zpl light"
