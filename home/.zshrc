@@ -23,9 +23,7 @@ source '/home/dundar/.zplugin/bin/zplugin.zsh'
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-alias ice="zpl ice"
-alias ice0="ice wait lucid"
-alias ice1="ice wait"1" lucid"
+alias ice="zpl ice lucid"
 alias snip="zpl snippet"
 alias light="zpl light"
 
@@ -41,11 +39,11 @@ snip PZT::modules/editor/init.zsh
 
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
-ice1; light djui/alias-tips
+ice wait"1"; light djui/alias-tips
 
-ice1; light zdharma/zsh-diff-so-fancy
+ice wait"1"; light zdharma/zsh-diff-so-fancy
 
-ice1; light zuxfoucault/colored-man-pages_mod
+ice wait"1"; light zuxfoucault/colored-man-pages_mod
 
 ice atload"
   POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -53,19 +51,19 @@ ice atload"
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)" 
 light romkatv/powerlevel10k
 
-ice1 cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
+ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-ice0 blockf; snip PZT::modules/completion/init.zsh
+ice wait blockf; snip PZT::modules/completion/init.zsh
 
-ice0 atload"
+ice wait atload"
   _zsh_autosuggest_start
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
-ice0 atinit"
+ice wait atinit"
   zpcompinit
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
 
-unalias zplg snip light ice ice0 ice1
+unalias zplg snip light ice 
