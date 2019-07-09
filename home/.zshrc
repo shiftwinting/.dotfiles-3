@@ -32,10 +32,6 @@ ice atload"
   unalias history-stat"
 snip PZT::modules/history/init.zsh
 
-ice atinit"
-  zstyle ':prezto:module:editor' key-bindings 'vi'"
-snip PZT::modules/editor/init.zsh
-
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice wait"1"; light djui/alias-tips
