@@ -92,6 +92,10 @@ alias restore="d && gco ."
 
 # redshift
 alias red="killall -q redshift; while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done; redshift"
+
+# date of 90 days prior
+alias 90='date +%Y:%m:%d -d "90 day ago"'
+
 #####################
 # Functions
 
