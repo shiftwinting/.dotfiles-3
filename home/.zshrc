@@ -33,8 +33,7 @@ ice atload"
 snip PZT::modules/history/init.zsh
 
 ice atinit"
-  zstyle ':prezto:module:editor' key-bindings 'vi'
-  zstyle ':prezto:module:editor' dot-expansion 'yes'"
+  zstyle ':prezto:module:editor' key-bindings 'vi'"
 snip PZT::modules/editor/init.zsh
 
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
@@ -57,6 +56,9 @@ ice wait"1" has"git"; light paulirish/git-open
 
 ice wait"1" has"git" atload"unalias gi gcf gss gclean"
 light wfxr/forgit
+
+ice wait pick'manydots-magic' compile'manydots-magic'
+light knu/zsh-manydots-magic
 
 ice wait blockf; snip PZT::modules/completion/init.zsh
 
