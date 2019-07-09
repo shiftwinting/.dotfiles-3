@@ -11,7 +11,7 @@ alias la="ls -A"
 alias ll="la -l"
 
 # pacman
-alias pacman="sudo pacman"
+#alias pacman="sudo pacman"
 alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
 alias show="yay -Si"
 alias search="yay -Ss"

@@ -23,7 +23,7 @@ source '/home/dundar/.zplugin/bin/zplugin.zsh'
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-alias ice="zpl ice lucid"
+alias ice="zpl ice silent"
 alias snip="zpl snippet"
 alias light="zpl light"
 
@@ -53,10 +53,9 @@ light romkatv/powerlevel10k
 
 ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-ice wait"1"; light paulirish/git-open
+ice wait"1" has"git"; light paulirish/git-open
 
-ice wait"1" atload"
-  unalias gi gcf gss gclean"
+ice wait"1" has"git" atload"unalias gi gcf gss gclean"
 light wfxr/forgit
 
 ice wait blockf; snip PZT::modules/completion/init.zsh
