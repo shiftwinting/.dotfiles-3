@@ -10,13 +10,19 @@ if [ ! -e "${HOME}/.local/share/nvim/site/autoload/plug.vim" ]; then
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-###########################################################################################################
+######################################################
+
 # Allow .. without getting "Permission denied"
 setopt autocd
 
 # Set neovim as default editor and reader.
 export EDITOR=nvim
 export VISUAL=nvim
+
+# [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5C' forward-word
+# [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[1;5D' backward-word
 
 # zplugin
 source '/home/dundar/.zplugin/bin/zplugin.zsh'
