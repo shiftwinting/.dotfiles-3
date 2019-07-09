@@ -53,6 +53,12 @@ light romkatv/powerlevel10k
 
 ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
+ice wait"1"; light paulirish/git-open
+
+ice wait"1" atload"
+  unalias gi gcf gss gclean"
+light wfxr/forgit
+
 ice wait blockf; snip PZT::modules/completion/init.zsh
 
 ice wait atload"
