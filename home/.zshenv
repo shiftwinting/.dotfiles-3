@@ -68,6 +68,8 @@ alias ssha="source ~/.runSSH"
 # Global alias
 alias -g A="| ack"
 alias -g T="| tail"
+alias -g NE="2> /dev/null"
+alias -g NUL="&> /dev/null"
 
 # python
 alias py="python3"
