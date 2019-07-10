@@ -65,8 +65,9 @@ alias wifi="nmtui connect"
 # gantenbein
 alias ssha="source ~/.runSSH"
 
-# ack
+# Global alias
 alias -g A="| ack"
+alias -g T="| tail"
 
 # python
 alias py="python3"
@@ -85,9 +86,6 @@ alias chrome="chromium &> /dev/null &"
 
 # rmdir
 alias rmd="rmdir *"
-
-# Important folder locations
-alias -g DOT="~/.dotfiles"
 
 # Restore dotfiles
 alias restore="d && gco ."
