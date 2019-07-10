@@ -59,6 +59,8 @@ ice wait"1" has"git"; light paulirish/git-open
 ice wait"1" has"git" atload"unalias gi gcf gss gclean"
 light wfxr/forgit
 
+ice wait"1"; light hcgraf/zsh-sudo
+
 ice wait pick'manydots-magic' compile'manydots-magic'
 light knu/zsh-manydots-magic
 
