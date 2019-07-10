@@ -71,9 +71,10 @@ alias -g A="| ack"
 # python
 alias py="python3"
 
-# Safe ops
+# Safe/verbose ops
 alias rm="rm -iv" 
 alias mv="mv -iv" 
+alias mkdir="mkdir -pv" 
 
 # xclip
 alias clip="xclip -sel clip <"
