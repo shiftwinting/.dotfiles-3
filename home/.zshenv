@@ -58,6 +58,7 @@ alias gpF="git push -f"
 alias gra="git rebase --abort "
 alias gri="git rebase -i --root"
 alias gs="git status"
+alias go="git open"
 
 # wifi
 alias wifi="nmtui connect"
