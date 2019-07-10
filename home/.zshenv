@@ -100,4 +100,4 @@ alias 90='date +%Y:%m:%d -d "90 day ago"'
 # Functions
 
 # Automatically run ls after using cd.
-function chpwd(){ls}
+function chpwd(){la}
