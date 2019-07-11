@@ -33,6 +33,16 @@ alias ice="zpl ice silent"
 alias snip="zpl snippet"
 alias light="zpl light"
 
+#git plugins
+ice wait"1"; light zdharma/zsh-diff-so-fancy
+
+ice wait"1" has"git"; light paulirish/git-open
+
+ice wait"1" has"git" atload"unalias gi gcf gss gclean"
+light wfxr/forgit
+
+####
+
 ice atload"
   unsetopt HIST_BEEP
   unalias history-stat"
@@ -41,8 +51,6 @@ snip PZT::modules/history/init.zsh
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice wait"1"; light djui/alias-tips
-
-ice wait"1"; light zdharma/zsh-diff-so-fancy
 
 ice wait"1"; light zuxfoucault/colored-man-pages_mod
 
@@ -53,11 +61,6 @@ ice atload"
 light romkatv/powerlevel10k
 
 ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
-
-ice wait"1" has"git"; light paulirish/git-open
-
-ice wait"1" has"git" atload"unalias gi gcf gss gclean"
-light wfxr/forgit
 
 ice wait"1"; light hcgraf/zsh-sudo
 
