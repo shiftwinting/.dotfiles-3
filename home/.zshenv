@@ -100,8 +100,6 @@ alias red="killall -q redshift; while pgrep -u $UID -x redshift >/dev/null; do s
 # date of 90 days prior
 alias 90='date +%Y:%m:%d -d "90 day ago"'
 
-# wiki update
-alias wiki="cd ~/zplugin_readme.wiki && source update_wiki.sh"
 #####################
 # Functions
 
