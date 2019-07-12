@@ -58,6 +58,7 @@ autoload -Uz _zplugin
 alias ice="zpl ice silent"
 alias snip="zpl snippet"
 alias light="zpl light"
+alias load="zpl load"
 
 #git plugins
 ice wait"1" has"git"; light zdharma/zsh-diff-so-fancy
@@ -73,7 +74,7 @@ ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice wait"1"; light djui/alias-tips
 
-ice wait"1"; light zuxfoucault/colored-man-pages_mod
+ice wait"1"; load zuxfoucault/colored-man-pages_mod
 
 ice atload"
   POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -96,4 +97,4 @@ ice wait atload"
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
-unalias zplg snip light ice 
+unalias zplg snip light ice load

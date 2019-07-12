@@ -29,6 +29,7 @@ alias d="cd ~/.dotfiles"
 alias c="cd ~/.dotfiles/config/.config"
 alias z="cd ~/.zplugin"
 alias zs="cd ~/.zplugin/snippets"
+alias zp="cd ~/.zplugin/plugins"
 
 #config
 alias ali="vi ~/.zshenv"
