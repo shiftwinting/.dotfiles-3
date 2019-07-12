@@ -86,7 +86,7 @@ alias clip="xclip -sel clip <"
 
 # web
 alias fire="firefox &> /dev/null &"
-alias chrome="chromium &> /dev/null &"
+function chrome() {chromium $1 NUL}
 
 # rmdir
 alias rmd="rmdir *"
