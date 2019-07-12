@@ -79,7 +79,10 @@ ice wait"1"; load zuxfoucault/colored-man-pages_mod
 ice atload"
   POWERLEVEL9K_PROMPT_ON_NEWLINE=true
   POWERLEVEL9K_DISABLE_RPROMPT=true 
-  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)" 
+  POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=true
+  POWERLEVEL9K_BATTERY_HIDE_ABOVE_THRESHOLD=20
+  POWERLEVEL9K_VI_VISUAL_MODE_STRING=VISUAL
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery vi_mode)"
 light romkatv/powerlevel10k
 
 ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
