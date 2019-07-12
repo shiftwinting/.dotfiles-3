@@ -34,7 +34,7 @@ alias snip="zpl snippet"
 alias light="zpl light"
 
 #git plugins
-ice wait"1"; light zdharma/zsh-diff-so-fancy
+ice wait"1" has"git"; light zdharma/zsh-diff-so-fancy
 
 ice wait"1" has"git"; light paulirish/git-open
 
