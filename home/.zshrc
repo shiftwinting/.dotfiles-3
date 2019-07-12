@@ -81,8 +81,7 @@ ice atload"
   POWERLEVEL9K_DISABLE_RPROMPT=true 
   POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=true
   POWERLEVEL9K_BATTERY_HIDE_ABOVE_THRESHOLD=20
-  POWERLEVEL9K_VI_VISUAL_MODE_STRING=VISUAL
-  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery vi_mode)"
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
 
 ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
