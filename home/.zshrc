@@ -52,26 +52,14 @@ source '/home/dundar/.zplugin/bin/zplugin.zsh'
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-alias ice="zpl ice silent"
+alias ice="zpl$wait ice silent"
 alias snip="zpl snippet"
 alias light="zpl light"
 alias load="zpl load"
 
-# git plugins
-ice wait"1" has"git"; light zdharma/zsh-diff-so-fancy
-
-ice wait"1" has"git"; light paulirish/git-open
-
-ice wait"1" has"git" atload"unalias gi gcf gss gclean"
-light wfxr/forgit
-
-###
+# No wait
 
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
-
-ice wait"1"; light djui/alias-tips
-
-ice wait"1"; load zuxfoucault/colored-man-pages_mod
 
 ice atload"
   POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -81,9 +69,7 @@ ice atload"
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
 
-#ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
-
-ice wait"1"; light hcgraf/zsh-sudo
+# wait 0
 
 ice wait pick'manydots-magic' compile'manydots-magic'
 light knu/zsh-manydots-magic
@@ -95,5 +81,22 @@ ice wait atload"
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
+
+# wait 1
+
+ice wait"1" has"git"; light zdharma/zsh-diff-so-fancy
+
+ice wait"1" has"git"; light paulirish/git-open
+
+ice wait"1" has"git" atload"unalias gi gcf gss gclean"
+light wfxr/forgit
+
+ice wait"1"; light djui/alias-tips
+
+ice wait"1"; load zuxfoucault/colored-man-pages_mod
+
+#ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
+
+ice wait"1"; light hcgraf/zsh-sudo
 
 unalias zplg snip light ice load
