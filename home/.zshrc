@@ -19,7 +19,7 @@ fi
 #
 
 # Allow .. without getting "Permission denied"
-setopt autocd
+setopt auto_cd
 
 # Set neovim as default editor and reader.
 export EDITOR=nvim
@@ -84,14 +84,14 @@ ice atload"
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
 
-ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
+#ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
 ice wait"1"; light hcgraf/zsh-sudo
 
 ice wait pick'manydots-magic' compile'manydots-magic'
 light knu/zsh-manydots-magic
 
-ice wait blockf; snip PZT::modules/completion/init.zsh
+#ice wait blockf; snip PZT::modules/completion/init.zsh
 
 ice wait atload"
   _zsh_autosuggest_start
