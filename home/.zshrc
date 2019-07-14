@@ -74,7 +74,7 @@ light romkatv/powerlevel10k
 ice wait pick'manydots-magic' compile'manydots-magic'
 light knu/zsh-manydots-magic
 
-#ice wait blockf; snip PZT::modules/completion/init.zsh
+ice wait blockf atclone"echo 'Download complete!'"; snip PZT::modules/completion/init.zsh
 
 ice wait atload"
   _zsh_autosuggest_start
