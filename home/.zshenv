@@ -42,7 +42,6 @@ alias ali="vi ~/.zshenv"
 alias rc="vi ~/.zshrc"
 alias bsp="vi ~/.config/bspwm/bspwmrc"
 alias sxh="vi ~/.config/sxhkd/sxhkdrc"
-alias bar="vi ~/.dotfiles/polybar/config.ini"
 
 # reload
 alias reload="exec zsh"
