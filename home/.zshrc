@@ -67,6 +67,8 @@ ice atload"
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
 
+#ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
+
 ice wait pick'manydots-magic' compile'manydots-magic'
 light knu/zsh-manydots-magic
 
@@ -88,8 +90,6 @@ light wfxr/forgit
 ice wait"1"; light djui/alias-tips
 
 ice wait"1"; light zuxfoucault/colored-man-pages_mod
-
-#ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
 ice wait"1"; light hcgraf/zsh-sudo
 
