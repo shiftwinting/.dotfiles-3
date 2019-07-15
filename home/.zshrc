@@ -57,8 +57,6 @@ alias ice="zpl ice silent"
 alias snip="zpl snippet"
 alias light="zpl light"
 
-# No wait
-
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice atload"
@@ -68,8 +66,6 @@ ice atload"
   POWERLEVEL9K_BATTERY_HIDE_ABOVE_THRESHOLD=20
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
-
-# wait 0
 
 ice wait pick'manydots-magic' compile'manydots-magic'
 light knu/zsh-manydots-magic
@@ -81,8 +77,6 @@ ice wait atload"
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
-
-# wait 1
 
 ice wait"1" has"git"; light zdharma/zsh-diff-so-fancy
 
