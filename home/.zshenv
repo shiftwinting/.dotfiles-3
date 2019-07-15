@@ -5,12 +5,6 @@ alias \$=''
 alias vi="nvim"
 alias svi="sudo nvim"
 
-# Faster Zplugin documentation
-alias vr="code README.md"
-alias cr="chrome README.md"
-alias vs="code _Sidebar.md"
-alias cs="chrome _Sidebar.md"
-
 # ls
 alias ls="~/.dotfiles/.Misc/ls --color=auto --group-directories-first -X"
 alias la="ls -A"
