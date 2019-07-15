@@ -18,8 +18,9 @@ fi
 # General options
 #
 
-setopt auto_cd				# Allow .. without getting "Permission denied"
-setopt no_beep				# Don't beep on error
+zstyle ':*:*:*' case-sensitive 'yes'	# Case sensitive completion.
+setopt auto_cd				# Allow .. without getting "Permission denied".
+setopt no_beep				# Don't beep on error.
 
 # History options
 setopt bang_hist			# Treat the '!' character specially during expansion.
@@ -40,8 +41,8 @@ SAVEHIST=10000                   	# The maximum number of events to save in the 
 export EDITOR=nvim			# Set neovim as default editor.
 export VISUAL=nvim			# Set neovim as default reader.
 
-bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word
-bindkey '^[[1;5D' backward-word		# [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word.
+bindkey '^[[1;5D' backward-word		# [Ctrl-LeftArrow] - move backward one word.
 
 ######################################################
 #
@@ -52,10 +53,9 @@ source '/home/dundar/.zplugin/bin/zplugin.zsh'
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-alias ice="zpl$wait ice silent"
+alias ice="zpl ice silent"
 alias snip="zpl snippet"
 alias light="zpl light"
-alias load="zpl load"
 
 # No wait
 
@@ -93,10 +93,10 @@ light wfxr/forgit
 
 ice wait"1"; light djui/alias-tips
 
-ice wait"1"; load zuxfoucault/colored-man-pages_mod
+ice wait"1"; light zuxfoucault/colored-man-pages_mod
 
 #ice wait"1" cloneonly atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
 ice wait"1"; light hcgraf/zsh-sudo
 
-unalias zplg snip light ice load
+unalias zplg snip light ice
