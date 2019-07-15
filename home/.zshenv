@@ -6,8 +6,9 @@ alias vi="nvim"
 alias svi="sudo nvim"
 
 # Faster Zplugin documentation
-alias vr="vi README.md"
+alias vr="code README.md"
 alias cr="chrome README.md"
+alias vs="code _Sidebar.md"
 alias cs="chrome _Sidebar.md"
 
 # ls
