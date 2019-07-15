@@ -69,7 +69,7 @@ light romkatv/powerlevel10k
 
 #ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-ice wait pick'manydots-magic' compile'manydots-magic'
+ice wait pick'manydots-magic'
 light knu/zsh-manydots-magic
 
 ice wait blockf atclone"echo 'Download complete!'"; snip PZT::modules/completion/init.zsh
