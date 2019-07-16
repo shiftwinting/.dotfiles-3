@@ -11,15 +11,14 @@ alias la="ls -A"
 alias ll="la -l"
 
 # pacman
-alias pacman="sudo pacman"
 alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
 alias show="yay -Si"
 alias search="yay -Ss"
 alias list="reset; yay -Qe"
-alias remove="pacman -Rs"
+alias remove="sudo pacman -Rs"
 alias up="source ~/.dotfiles/.Misc/upgrade.sh"
 alias mirror="sudo pacman-mirrors --geoip"
-alias orphan="yay -Qtd"
+alias orphan="sudo pacman -Rs $(pacman -Qqtd)"
 
 # VSCode
 alias code="code ."
