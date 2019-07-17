@@ -67,7 +67,7 @@ ice atload"
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
 
-ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
+#ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
 ice wait blockf atclone"echo 'Download complete!'"; snip PZT::modules/completion/init.zsh
 
