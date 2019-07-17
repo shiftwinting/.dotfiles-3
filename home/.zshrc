@@ -78,7 +78,7 @@ ice wait atload"
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
-ice wait atinit"
+ice atinit"
   zpcompinit
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
