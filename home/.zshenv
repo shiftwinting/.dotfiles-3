@@ -60,7 +60,7 @@ alias gs="git status"
 alias go="git open"
 
 # wifi
-alias wifi="nmtui connect"
+alias wifi="sudo nmtui connect"
 
 # gantenbein
 alias ssha="source ~/.runSSH"
