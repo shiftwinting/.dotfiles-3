@@ -57,6 +57,8 @@ alias ice="zpl ice silent"
 alias snip="zpl snippet"
 alias light="zpl light"
 
+#ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
+
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice atload"
@@ -67,8 +69,6 @@ ice atload"
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
 
-#ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
-
 ice wait blockf atclone"echo 'Download complete!'"; snip PZT::modules/completion/init.zsh
 
 ice wait atload"
@@ -76,6 +76,11 @@ ice wait atload"
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
+
+ice wait atinit"
+  zpcompinit
+  zpcdreplay"
+light zdharma/fast-syntax-highlighting
 
 ice wait"1" has"git"; light zdharma/zsh-diff-so-fancy
 
