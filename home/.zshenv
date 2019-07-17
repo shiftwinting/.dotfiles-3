@@ -30,6 +30,8 @@ alias z="cd ~/.zplugin"
 alias zs="cd ~/.zplugin/snippets"
 alias zp="cd ~/.zplugin/plugins"
 alias zb="cd ~/.zplugin/bin"
+alias ki="cd ~/.config/kitty"
+alias kit="cd ~/.config/kitty/kitty-themes/themes"
 
 #config
 alias ali="vi ~/.zshenv"
