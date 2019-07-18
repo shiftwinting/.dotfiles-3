@@ -101,6 +101,9 @@ alias 90='date +%Y:%m:%d -d "90 day ago"'
 
 # Download youtube as mp3
 alias yget="youtube-dl --extract-audio --audio-format mp3" 
+
+# pip
+alias pip="sudo pip"
 #####################
 # Functions
 
