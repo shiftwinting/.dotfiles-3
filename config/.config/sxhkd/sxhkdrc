@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	gnome-terminal || kitty || konsole
+	kitty || gnome-terminal || konsole
 
 # program launcher
 super + d
