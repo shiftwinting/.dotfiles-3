@@ -48,7 +48,7 @@ ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 ice atload"
   unsetopt hist_beep
   unalias history-stat" 
-snip PZT::modules/history/init.zsh
+light DundarGoc/prezto-history
 
 ice atload"
   POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -61,7 +61,7 @@ light romkatv/powerlevel10k
 ice wait; light willghatch/zsh-saneopt
 
 ice wait blockf atclone"echo 'Download complete!'";
-snip PZT::modules/completion/init.zsh
+light DundarGoc/prezto-completion
 
 ice wait atload"
   _zsh_autosuggest_start
