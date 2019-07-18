@@ -80,7 +80,7 @@ light wfxr/forgit
 
 ice wait"1"; light djui/alias-tips
 
-ice wait"1"; light zuxfoucault/colored-man-pages_mod
+ice wait"1"; light ael-code/zsh-colored-man-pages
 
 ice wait"1"; light hcgraf/zsh-sudo
 
