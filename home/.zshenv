@@ -99,6 +99,8 @@ alias restore="d && gco ."
 # date of 90 days prior
 alias 90='date +%Y:%m:%d -d "90 day ago"'
 
+# Download youtube as mp3
+alias yget="youtube-dl --extract-audio --audio-format mp3" 
 #####################
 # Functions
 
