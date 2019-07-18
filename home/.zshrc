@@ -50,13 +50,17 @@ ice atload"
   unalias history-stat" 
 light DundarGoc/prezto-history
 
-ice atload"
+ice cloneonly atload"
   POWERLEVEL9K_PROMPT_ON_NEWLINE=true
   POWERLEVEL9K_DISABLE_RPROMPT=true 
   POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=true
   POWERLEVEL9K_BATTERY_HIDE_ABOVE_THRESHOLD=20
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
+
+GEOMETRY_COLOR_DIR=152
+ice atload"prompt_geometry_render"
+light geometry-zsh/geometry
 
 ice wait; light willghatch/zsh-saneopt
 
