@@ -39,6 +39,7 @@ autoload -Uz _zplugin
 alias ice="zpl ice silent"
 alias snip="zpl snippet"
 alias light="zpl light"
+alias load="zpl load"
 
 #ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
@@ -64,7 +65,7 @@ snip PZT::modules/completion/init.zsh
 
 ice wait atload"
   _zsh_autosuggest_start
-  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
+  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
@@ -86,4 +87,4 @@ ice wait"1"; light ael-code/zsh-colored-man-pages
 
 ice wait"1"; light hcgraf/zsh-sudo
 
-unalias zplg snip light ice
+unalias zplg ice snip light load
