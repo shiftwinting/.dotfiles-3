@@ -43,6 +43,9 @@ alias load="zpl load"
 
 #ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
+ice atclone"dircolors -b LS_COLORS > clrs.zsh" atpull"%atclone" pick"clrs.zsh" nocompile"!"
+light trapd00r/LS_COLORS
+
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice atload"
