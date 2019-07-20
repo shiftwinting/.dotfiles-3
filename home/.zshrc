@@ -61,12 +61,8 @@ ice cloneonly atload"
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
 light romkatv/powerlevel10k
 
-ice cloneonly pick"async.zsh" src"pure.zsh"
+ice pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
-
-GEOMETRY_COLOR_DIR=152
-ice atload"prompt_geometry_render"
-light geometry-zsh/geometry
 
 ice wait; light willghatch/zsh-saneopt
 
