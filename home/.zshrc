@@ -63,7 +63,7 @@ light romkatv/powerlevel10k
 
 ice wait; light willghatch/zsh-saneopt
 
-ice wait blockf atclone"echo 'Download complete!'";
+ice wait blockf;
 light DundarGoc/prezto-completion
 
 ice wait atload"
