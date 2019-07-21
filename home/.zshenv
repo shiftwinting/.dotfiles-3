@@ -109,6 +109,8 @@ alias random_file="ls | shuf -n 1"
 
 # Don't record in history.
 alias vlc=" vlc"
+
+alias antora="$(npm bin)/antora"
 #####################
 # Functions
 
