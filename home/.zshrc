@@ -46,12 +46,17 @@ alias load="zpl load"
 ice atclone"dircolors -b LS_COLORS > clrs.zsh" atpull"%atclone" pick"clrs.zsh" nocompile"!"
 light trapd00r/LS_COLORS
 
+ice atinit"
+  zstyle ':prezto:module:editor' dot-expansion 'yes'
+  zstyle ':prezto:module:editor' key-bindings 'vi' "
+snip PZT::modules/editor/init.zsh
+
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice atload"
   unsetopt hist_beep
   unalias history-stat" 
-light DundarGoc/prezto-history
+snip PZT::modules/history/init.zsh
 
 ice cloneonly atload"
   POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -67,7 +72,7 @@ light sindresorhus/pure
 ice wait; light willghatch/zsh-saneopt
 
 ice wait blockf;
-light DundarGoc/prezto-completion
+snip PZT::modules/completion/init.zsh
 
 ice wait atload"
   _zsh_autosuggest_start
