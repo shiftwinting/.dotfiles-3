@@ -103,10 +103,12 @@ alias yget="youtube-dl --extract-audio --audio-format mp3"
 
 # pip
 alias pip="sudo pip"
-alias bundle="sudo bundle"
 
 # Print random file in current folder
 alias random_file="ls | shuf -n 1"
+
+# Don't record in history.
+alias vlc=" vlc"
 #####################
 # Functions
 
