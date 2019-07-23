@@ -10,10 +10,11 @@ alias ls="~/.dotfiles/.Misc/ls --color=auto --group-directories-first -X"
 alias la="ls -A"
 alias ll="la -l"
 
-# pacman
+# pacman/yay
 alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
 alias show="yay -Si"
 alias search="yay -Ss"
+alias searchf="yay -Fs"
 alias list="reset; yay -Qe"
 alias remove="yay -Rs"
 alias up="source ~/.dotfiles/.Misc/upgrade.sh"
@@ -110,6 +111,7 @@ alias random_file="ls | shuf -n 1"
 # Don't record in history.
 alias vlc=" vlc"
 
+# Run antora locally
 alias antora="$(npm bin)/antora "
 #####################
 # Functions
