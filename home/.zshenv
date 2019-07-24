@@ -113,6 +113,9 @@ alias vlc=" vlc"
 
 # Run antora locally
 alias antora="$(npm bin)/antora "
+
+# flameshot
+alias flame="flameshot gui -p ~/Pics"
 #####################
 # Functions
 
