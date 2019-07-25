@@ -18,7 +18,7 @@ alias searchf="yay -Fs"
 alias list="reset; yay -Qe"
 alias remove="yay -Rs"
 alias up="source ~/.dotfiles/.Misc/upgrade.sh"
-alias mirror="sudo pacman-mirrors --geoip"
+alias mirror="sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu"
 alias orphan="yay -Rs $(yay -Qqtd)"
 
 # VSCode
