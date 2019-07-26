@@ -97,7 +97,7 @@ alias rmd="rmdir *"
 alias restore="d && gco ."
 
 # date of 90 days prior
-alias 90='date +%d:%m:%Y -d "90 day ago"'
+alias 60='date +%d:%m:%Y -d "60 day ago"'
 
 # Download youtube as mp3
 alias yget="youtube-dl --extract-audio --audio-format mp3" 
