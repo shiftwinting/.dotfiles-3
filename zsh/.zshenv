@@ -114,7 +114,7 @@ alias cd=" cd"
 
 # Run npm packages locally
 alias antora="$(npm bin)/antora "
-alias mmdc="$(npm bin)/mmdc "
+alias mmdc="$(npm bin)/mmdc -p puppeteer-config.json -i flowchart.mmd -o output.png"
 
 # flameshot
 alias flame="flameshot gui -p ~/Pics"
