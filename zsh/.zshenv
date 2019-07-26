@@ -112,8 +112,9 @@ alias random_file="ls | shuf -n 1"
 alias vlc=" vlc"
 alias cd=" cd"
 
-# Run antora locally
+# Run npm packages locally
 alias antora="$(npm bin)/antora "
+alias mmdc="$(npm bin)/mmdc "
 
 # flameshot
 alias flame="flameshot gui -p ~/Pics"
