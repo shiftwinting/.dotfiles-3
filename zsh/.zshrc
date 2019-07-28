@@ -58,14 +58,6 @@ ice atload"
   unalias history-stat" 
 snip PZT::modules/history/init.zsh
 
-ice cloneonly atload"
-  POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-  POWERLEVEL9K_DISABLE_RPROMPT=true 
-  POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=true
-  POWERLEVEL9K_BATTERY_HIDE_ABOVE_THRESHOLD=20
-  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs background_jobs disk_usage battery)"
-light romkatv/powerlevel10k
-
 ice pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
 
