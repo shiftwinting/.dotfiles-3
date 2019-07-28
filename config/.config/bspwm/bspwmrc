@@ -5,8 +5,6 @@ bspc config gapless_monocle true
 bspc config single_monocle true
 
 bspc rule -r '*' 
-bspc rule -a Firefox desktop='^2' 
-bspc rule -a Chromium desktop='^2' 
 bspc rule -a Code desktop='^3' 
 
 ~/.config/polybar/launch.sh
