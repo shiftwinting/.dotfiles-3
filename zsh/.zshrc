@@ -88,4 +88,4 @@ ice wait"1"; light djui/alias-tips
 
 ice wait"1"; light ael-code/zsh-colored-man-pages
 
-unalias zplg ice snip light load
+unalias ice snip light load
