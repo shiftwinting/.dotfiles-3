@@ -59,6 +59,7 @@ alias gf="git add .; git commit -m 'Quick update, squash later.'"
 alias gt="git add .; git commit -m 'Test commit, will likely delete after.'"
 alias gl="forgit::log"
 alias gp="git push"
+alias gpl="git pull"
 alias gpF="git push -f"
 alias gra="git rebase --abort "
 alias gri="git rebase -i --root"
@@ -66,7 +67,7 @@ alias gs="git status"
 alias go="git open"
 
 # wifi
-alias wifi="sudo nmtui connect"
+alias wifi="sudo nmtui"
 
 # gantenbein
 alias ssha="source ~/.runSSH"
