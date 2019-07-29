@@ -88,7 +88,7 @@ alias mkdir="mkdir -pv"
 alias clip="xclip -sel clip <"
 
 # web
-alias fire="firefox &> /dev/null &"
+function fire() {firefox $1 NUL}
 function chrome() {chromium $1 NUL}
 
 # rmdir
