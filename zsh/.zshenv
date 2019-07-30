@@ -120,6 +120,9 @@ alias mmdc="$(npm bin)/mmdc -p puppeteer-config.json -i flowchart.mmd -o output.
 
 # Screenshot
 alias ss="gnome-screenshot NUL"
+
+# Brightness
+alias bright="xrandr --output eDP1 --brightness"
 #####################
 # Functions
 
