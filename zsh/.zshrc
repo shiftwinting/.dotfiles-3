@@ -61,7 +61,7 @@ ice atload"
 snip PZT::modules/history/init.zsh
 
 GEOMETRY_COLOR_DIR=152
-ice cloneonly atload"prompt_geometry_render"
+ice atload"prompt_geometry_render"
 light geometry-zsh/geometry
 
 ice cloneonly pick"async.zsh" src"pure.zsh"
@@ -93,16 +93,3 @@ light wfxr/forgit
 ice wait"1"; light ael-code/zsh-colored-man-pages
 
 unalias ice snip light load
-
-#zplugin ice nocompletions atclone'prompt_zinc_compile' atpull'%atclone' \
-#    compile"{zinc_functions/*,segments/*,zinc.zsh}"
-#zplugin load robobenklein/zinc
-
-## ZINC git info is already async, but if you want it 
-## even faster with gitstatus in Turbo mode:
-## https://github.com/romkatv/gitstatus
-#zplugin ice wait'1' atload'zinc_optional_depenency_loaded'
-#zplugin load romkatv/gitstatus
-
-#zplugin ice wait'!' lucid atload'true; _p9k_precmd' nocd
-#zplugin light romkatv/powerlevel10k
