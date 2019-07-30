@@ -62,7 +62,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gpF="git push -f"
 alias gra="git rebase --abort "
-alias gri="git rebase -i --root"
+function gri(){git rebase -i HEAD~$1}
 alias gs="git status"
 alias go="git open"
 
