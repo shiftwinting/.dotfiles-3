@@ -51,8 +51,6 @@ ice atinit"
   zstyle ':prezto:module:editor' key-bindings 'vi' "
 snip PZT::modules/editor/init.zsh
 
-light mafredri/zsh-async
-
 ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
 
 ice atload"
@@ -93,3 +91,6 @@ light wfxr/forgit
 ice wait"1"; light ael-code/zsh-colored-man-pages
 
 unalias ice snip light load
+
+#zplugin ice svn
+#zplugin snippet OMZ::plugins/osx
