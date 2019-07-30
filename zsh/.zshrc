@@ -58,8 +58,15 @@ ice atload"
   unalias history-stat" 
 snip PZT::modules/history/init.zsh
 
-ice pick"async.zsh" src"pure.zsh"
+GEOMETRY_COLOR_DIR=152
+ice atload"prompt_geometry_render"
+light geometry-zsh/geometry
+
+ice cloneonly pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
+
+#zplugin ice pick"powerless.zsh" src"utilities.zsh"
+#zplugin light martinrotter/powerless
 
 ice wait; light willghatch/zsh-saneopt
 
@@ -87,3 +94,25 @@ light wfxr/forgit
 ice wait"1"; light ael-code/zsh-colored-man-pages
 
 unalias ice snip light load
+
+#zplugin light mafredri/zsh-async  # dependency
+#zplugin ice svn silent atload'prompt sorin'
+#zplugin snippet PZT::modules/prompt
+#
+#zplugin ice atload"fpath+=( \$PWD );"
+#zplugin light chauncey-garrett/zsh-prompt-garrett
+#zplugin ice svn atload"prompt garrett"
+#zplugin snippet PZT::modules/prompt
+#
+#zplugin ice nocompletions atclone'prompt_zinc_compile' atpull'%atclone' \
+#    compile"{zinc_functions/*,segments/*,zinc.zsh}"
+#zplugin load robobenklein/zinc
+#
+## ZINC git info is already async, but if you want it 
+## even faster with gitstatus in Turbo mode:
+## https://github.com/romkatv/gitstatus
+#zplugin ice wait'1' atload'zinc_optional_depenency_loaded'
+#zplugin load romkatv/gitstatus
+#
+#zplugin ice wait'!' lucid atload'true; _p9k_precmd' nocd
+#zplugin light romkatv/powerlevel10k
