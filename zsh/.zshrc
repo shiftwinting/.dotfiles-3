@@ -59,11 +59,14 @@ ice atload"
 snip PZT::modules/history/init.zsh
 
 GEOMETRY_COLOR_DIR=152
-ice atload"prompt_geometry_render"
+ice cloneonly atload"prompt_geometry_render"
 light geometry-zsh/geometry
 
 ice cloneonly pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
+
+ice wait"!" atload"source ~/.p10k.zsh; _p9k_precmd" nocd
+light romkatv/powerlevel10k
 
 ice wait; light willghatch/zsh-saneopt
 
