@@ -91,6 +91,3 @@ light wfxr/forgit
 ice wait"1"; light ael-code/zsh-colored-man-pages
 
 unalias ice snip light load
-
-#zplugin ice svn
-#zplugin snippet OMZ::plugins/osx

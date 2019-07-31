@@ -60,7 +60,7 @@ alias gt="git add .; git commit -m 'Test commit, will likely delete after.'"
 alias gl="forgit::log"
 alias gp="git push"
 alias gpl="git pull"
-alias gpF="git push -f"
+alias gpF="git push --force-with-lease"
 alias gra="git rebase --abort "
 function gri(){git rebase -i HEAD~${1:-10}}
 alias gs="git status"
