@@ -76,6 +76,7 @@ alias ssha="source ~/.runSSH"
 
 # Global alias
 alias -g A="| ack"
+alias -g C="| xclip -selection clipboard"
 alias -g NE="2> /dev/null"
 alias -g NUL="&> /dev/null"
 
