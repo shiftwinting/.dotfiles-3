@@ -50,7 +50,6 @@ alias reset="tput reset"
 
 # git 
 alias gac="git add .; git commit"
-alias gap="git add -p"
 alias gb="git branch"
 alias gc="git commit"
 alias gcl="git clone"
