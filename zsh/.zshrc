@@ -42,56 +42,57 @@ alias snip="zpl snippet"
 alias light="zpl light"
 alias load="zpl load"
 
-#ice cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
+#ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-ice atclone"dircolors -b LS_COLORS > clrs.zsh" atpull"%atclone" pick"clrs.zsh" nocompile"!"
+ice id-as"LS_COLORS" atclone"dircolors -b LS_COLORS > clrs.zsh" atpull"%atclone" pick"clrs.zsh" nocompile"!"
 light trapd00r/LS_COLORS
 
-ice atinit"
+ice id-as"editor" atinit"
   zstyle ':prezto:module:editor' dot-expansion 'yes'
   zstyle ':prezto:module:editor' key-bindings 'vi' "
 snip PZT::modules/editor/init.zsh
 
-ice atclone"./install" atload"source ~/.fzf.zsh"; light junegunn/fzf
+ice id-as"fzf" atclone"./install" atload"source ~/.fzf.zsh"
+light junegunn/fzf
 
-ice atload"
+ice id-as"history" atload"
   unsetopt hist_beep
   unalias history-stat" 
 snip PZT::modules/history/init.zsh
 
 GEOMETRY_COLOR_DIR=152
-ice cloneonly atload"prompt_geometry_render"
+ice id-as"geometry" cloneonly atload"prompt_geometry_render"
 light geometry-zsh/geometry
 
-ice cloneonly pick"async.zsh" src"pure.zsh"
+ice id-as"pure" cloneonly pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
 
-ice wait"!" atload"source ~/.p10k.zsh; _p9k_precmd" nocd
+ice id-as"powerlevel10k" wait"!" atload"source ~/.p10k.zsh; _p9k_precmd" nocd
 light romkatv/powerlevel10k
 
-ice wait; light willghatch/zsh-saneopt
+ice id-as"zsh-saneopt" wait; light willghatch/zsh-saneopt
 
-ice wait blockf;
+ice id-as"completion" wait blockf;
 snip PZT::modules/completion/init.zsh
 
-ice wait atload"
+ice id-as"zsh-autosuggestions" wait atload"
   _zsh_autosuggest_start
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
-ice wait atinit"
+ice id-as"fast-syntax-highlighting" wait atinit"
   zpcompinit
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
 
-ice wait"1" has"git"; light zdharma/zsh-diff-so-fancy
+ice id-as"zsh-diff-so-fancy" wait"1" has"git"; light zdharma/zsh-diff-so-fancy
 
-ice wait"1" has"git"; light paulirish/git-open
+ice id-as"git-open" wait"1" has"git"; light paulirish/git-open
 
-ice wait"1" has"git" atload"unalias gi gcf gss gclean"
+ice id-as"forgit" wait"1" has"git" atload"unalias gi gcf gss gclean"
 light wfxr/forgit
 
-ice wait"1"; light ael-code/zsh-colored-man-pages
+ice id-as"zsh-colored-man-pages" wait"1"; light ael-code/zsh-colored-man-pages
 
 unalias ice snip light load
