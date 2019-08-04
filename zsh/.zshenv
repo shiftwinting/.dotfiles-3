@@ -50,8 +50,10 @@ alias reset="tput reset"
 
 # git 
 alias gac="git add .; git commit"
+alias gap="git add -p"
 alias gb="git branch"
 alias gc="git commit"
+alias gdc="forgit::diff --cached"
 alias gcl="git clone"
 alias gcl1="git clone --depth=1"
 alias gco="git checkout"
@@ -125,6 +127,10 @@ alias ss="gnome-screenshot NUL"
 
 # Brightness
 alias bright="xrandr --output eDP1 --brightness"
+
+# MkDocs
+alias serve="cd ~/zplugin_readme && mkdocs serve NUL &"
+alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
 #####################
 # Functions
 
