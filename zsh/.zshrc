@@ -67,6 +67,7 @@ light geometry-zsh/geometry
 ice id-as"pure" cloneonly pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
 
+PS1="..." 
 ice id-as"powerlevel10k" wait"!" atload"source ~/.p10k.zsh; _p9k_precmd" nocd
 light romkatv/powerlevel10k
 
