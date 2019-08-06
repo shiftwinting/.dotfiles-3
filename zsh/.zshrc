@@ -89,7 +89,7 @@ ice id-as"zsh-colored-man-pages" wait"1"
 light ael-code/zsh-colored-man-pages
 
 # Themes
-PS1="..." 
+PS1="~ "
 
 GEOMETRY_COLOR_DIR=152
 ice id-as"geometry" cloneonly atload"prompt_geometry_render"
