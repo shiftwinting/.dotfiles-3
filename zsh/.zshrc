@@ -92,10 +92,10 @@ light ael-code/zsh-colored-man-pages
 PS1="~ "
 
 GEOMETRY_COLOR_DIR=152
-ice id-as"geometry" cloneonly atload"prompt_geometry_render"
+ice cloneonly id-as"geometry" atload"prompt_geometry_render"
 light geometry-zsh/geometry
 
-ice id-as"pure" cloneonly pick"async.zsh" src"pure.zsh"
+ice cloneonly id-as"pure" pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
 
 ice id-as"powerlevel10k" wait"!" atload"source ~/.p10k.zsh; _p9k_precmd" nocd
