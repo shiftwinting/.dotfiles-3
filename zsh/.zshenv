@@ -100,7 +100,7 @@ function chrome() {chromium $1 NUL}
 alias rmd="rmdir *"
 
 # Restore dotfiles
-alias restore="d && gco ."
+alias restore="d && gco . && reload"
 
 # date of 90 days prior
 alias 90='date +%d:%m:%Y -d "90 day ago"'
