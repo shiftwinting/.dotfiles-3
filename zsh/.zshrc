@@ -44,7 +44,9 @@ alias load="zpl load"
 
 #ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-ice id-as"LS_COLORS" atclone"dircolors -b LS_COLORS > clrs.zsh" atpull"%atclone" pick"clrs.zsh" nocompile"!"
+ice id-as"LS_COLORS" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
+  sed -i '/DIR/c\DIR 34;40' LS_COLORS
+  dircolors -b LS_COLORS > clrs.zsh"
 light trapd00r/LS_COLORS
 
 ice id-as"editor" atinit"
