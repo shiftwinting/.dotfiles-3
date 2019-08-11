@@ -4,7 +4,7 @@
 [alias]
   plog = log --graph --pretty=format:'%h -%d %s %n' --abbrev-commit --date=relative --branches
   nuke = "!sh -c \"git checkout $1 && git fetch --all && git reset --hard origin/$1  && git clean -df && git submodule update --init --recursive\" -"
-	sync = !zsh -ic git-sync
+  bisect-all = !git bisect start && git bisect bad && git bisect good `git rev-list --max-parents=0 --first-parent HEAD`
 [merge]
 	tool = meld
 [rerere]
