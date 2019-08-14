@@ -69,6 +69,9 @@ function gri(){git rebase -i HEAD~${1:-10}}
 alias gs="git status"
 alias go="git open"
 
+# Subversion
+alias svc="svn checkout"
+
 # wifi
 alias wifi="sudo nmtui"
 
