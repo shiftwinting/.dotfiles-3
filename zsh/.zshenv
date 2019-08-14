@@ -1,3 +1,25 @@
+# git 
+alias gac="git add .; git commit"
+alias gap="git add -p"
+alias gb="git branch"
+alias gc="git commit"
+alias gdc="forgit::diff --cached"
+alias gcl="git clone"
+alias gcl1="git clone --depth=1"
+alias gco="git checkout"
+alias gf="git add .; git commit -m 'Quick update, squash later.'"
+alias gt="git add .; git commit -m 'Test commit, will likely delete after.'"
+alias gl="forgit::log"
+alias gp="git push"
+alias gpl="git pull"
+alias gpf='git push --force-with-lease'
+alias gpf!='git push --force'
+alias gra="git rebase --abort "
+function gri(){git rebase -i HEAD~${1:-10}}
+alias gs="git status"
+alias go="git open"
+alias gu="git remote update"
+
 # Remove first dollar in commands
 alias \$=''
 
@@ -47,27 +69,6 @@ alias reload="exec zsh"
 
 # reset
 alias reset="tput reset"
-
-# git 
-alias gac="git add .; git commit"
-alias gap="git add -p"
-alias gb="git branch"
-alias gc="git commit"
-alias gdc="forgit::diff --cached"
-alias gcl="git clone"
-alias gcl1="git clone --depth=1"
-alias gco="git checkout"
-alias gf="git add .; git commit -m 'Quick update, squash later.'"
-alias gt="git add .; git commit -m 'Test commit, will likely delete after.'"
-alias gl="forgit::log"
-alias gp="git push"
-alias gpl="git pull"
-alias gpf='git push --force-with-lease'
-alias gpf!='git push --force'
-alias gra="git rebase --abort "
-function gri(){git rebase -i HEAD~${1:-10}}
-alias gs="git status"
-alias go="git open"
 
 # Subversion
 alias svc="svn checkout"
