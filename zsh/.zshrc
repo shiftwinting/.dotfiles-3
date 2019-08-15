@@ -69,7 +69,7 @@ snip PZT::modules/completion/init.zsh
 
 ice id-as"zsh-autosuggestions" wait atload"
   _zsh_autosuggest_start
-  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
