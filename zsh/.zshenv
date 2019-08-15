@@ -124,7 +124,6 @@ alias cd=" cd"
 
 # Run npm packages locally
 alias antora="$(npm bin)/antora "
-alias mmdc="$(npm bin)/mmdc -p puppeteer-config.json -i flowchart.mmd -o output.png"
 
 # Screenshot
 alias ss="gnome-screenshot NUL"
