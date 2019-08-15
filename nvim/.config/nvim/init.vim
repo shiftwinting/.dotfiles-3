@@ -5,6 +5,9 @@ Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
+colorscheme onedark
+
 set runtimepath^=~/.vim runtimepath+=/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
+
