@@ -19,6 +19,7 @@ function gri(){git rebase -i HEAD~${1:-10}}
 alias gs="git status"
 alias go="git open"
 alias gu="git remote update"
+alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
 # Remove first dollar in commands
 alias \$=''
