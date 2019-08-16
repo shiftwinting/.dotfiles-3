@@ -62,12 +62,12 @@ ice id-as"history" atload"
   unalias history-stat" 
 snip PZT::modules/history/init.zsh
 
-ice id-as"zsh-saneopt" wait; light willghatch/zsh-saneopt
+ice id-as"saneopt" wait; light willghatch/zsh-saneopt
 
 ice id-as"completion" wait blockf;
 snip PZT::modules/completion/init.zsh
 
-ice id-as"zsh-autosuggestions" wait atload"
+ice id-as"autosuggestions" wait atload"
   _zsh_autosuggest_start
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
@@ -78,7 +78,7 @@ ice id-as"fast-syntax-highlighting" wait atinit"
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
 
-ice id-as"zsh-diff-so-fancy" wait"1" has"git"
+ice id-as"diff-so-fancy" wait"1" has"git"
 light zdharma/zsh-diff-so-fancy
 
 ice id-as"git-open" wait"1" has"git"
@@ -87,7 +87,7 @@ light paulirish/git-open
 ice id-as"forgit" wait"1" has"git" atload"unalias gi gcf gss gclean"
 light wfxr/forgit
 
-ice id-as"zsh-colored-man-pages" wait"1"
+ice id-as"colored-man-pages" wait"1"
 light ael-code/zsh-colored-man-pages
 
 # Themes
