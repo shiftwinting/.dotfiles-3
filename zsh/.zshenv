@@ -123,9 +123,6 @@ alias random_file="ls | shuf -n 1"
 alias vlc=" vlc"
 alias cd=" cd"
 
-# Run npm packages locally
-alias antora="$(npm bin)/antora "
-
 # Screenshot
 alias ss="gnome-screenshot NUL"
 
