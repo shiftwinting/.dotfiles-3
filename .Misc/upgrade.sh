@@ -3,8 +3,8 @@ reset
 
 line="__________________________________________________ \n\n"
 
-printf "pacman\n\n"
-yay
+printf "yay\n\n"
+yay -Syu --needed --nocleanmenu --nodiffmenu --removemake
 printf $line
 
 printf "zplugin modules\n\n"
