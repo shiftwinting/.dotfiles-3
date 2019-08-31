@@ -124,7 +124,7 @@ alias vlc=" vlc"
 alias cd=" cd"
 
 # Screenshot
-alias ss="gnome-screenshot NUL"
+function ss(){gnome-screenshot NUL -d ${1:-10} &}
 
 # Brightness
 alias bright="xrandr --output eDP1 --brightness"
