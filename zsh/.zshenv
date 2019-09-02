@@ -132,6 +132,9 @@ alias bright="xrandr --output eDP1 --brightness"
 # MkDocs
 alias serve="cd ~/zplugin_readme && mkdocs serve NUL &"
 alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
+
+# Automatic logging into Gantenbein.
+alias gant="source ~/.gantenbein.sh"
 #####################
 # Functions
 
