@@ -35,6 +35,7 @@ alias ll="la -l"
 
 # pacman/yay
 alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
+alias pinstall="sudo powerpill -S"
 alias show="yay -Si"
 alias search="yay -Ss"
 alias fsearch="yay -Fs"
