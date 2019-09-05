@@ -142,3 +142,5 @@ alias gant="source ~/.gantenbein.sh"
 
 # Automatically run ls after using cd.
 function chpwd(){la}
+
+alias make="make -s"
