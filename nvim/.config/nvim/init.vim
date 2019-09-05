@@ -3,6 +3,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
