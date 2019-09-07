@@ -139,10 +139,11 @@ alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
 
 # Automatic logging into Gantenbein.
 alias gant="source ~/.gantenbein.sh"
+
+# Use make without printing the input.
+alias make="make -s"
 #####################
 # Functions
 
 # Automatically run ls after using cd.
 function chpwd(){la}
-
-alias make="make -s"
