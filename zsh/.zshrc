@@ -25,6 +25,11 @@ setopt globdots				# Dotfiles are matched without explicitly specifying the dot
 export EDITOR=nvim			# Set neovim as default editor.
 export VISUAL=nvim			# Set neovim as default reader.
 
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  export TERM=xterm-256color		# Set the term variable if I'm using SSH so my terminal (kitty) doesn't break.
+fi
+
+
 bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word.
 bindkey '^[[1;5D' backward-word		# [Ctrl-LeftArrow] - move backward one word.
 
