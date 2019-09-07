@@ -21,6 +21,7 @@ fi
 zstyle ':*:*:*' case-sensitive 'yes'	# Case sensitive completion.
 setopt auto_cd				# Allow .. without getting "Permission denied".
 setopt globdots				# Dotfiles are matched without explicitly specifying the dot
+setopt extendedglob			# Add additional features for identifying files. 
 
 export EDITOR=nvim			# Set neovim as default editor.
 export VISUAL=nvim			# Set neovim as default reader.
