@@ -80,9 +80,6 @@ alias svc="svn checkout"
 # wifi
 alias wifi="sudo nmtui"
 
-# gantenbein
-alias ssha="source ~/.runSSH"
-
 # Global alias
 alias -g A="| ack"
 alias -g C="| xclip -selection clipboard"
