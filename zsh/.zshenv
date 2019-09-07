@@ -69,7 +69,7 @@ alias bsp="vi ~/.config/bspwm/bspwmrc"
 alias sxh="vi ~/.config/sxhkd/sxhkdrc"
 
 # reload
-alias reload="exec zsh"
+alias reload="exec zsh -o NO_GLOBAL_RCS"
 
 # reset
 alias reset="tput reset"
