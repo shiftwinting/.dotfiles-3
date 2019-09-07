@@ -11,6 +11,7 @@ alias gco="git checkout"
 alias gf="git add .; git commit -m 'Quick update, squash later.'"
 alias gt="git add .; git commit -m 'Test commit, will likely delete after.'"
 alias gl="forgit::log"
+alias glr="forgit::log HEAD..origin"
 alias gp="git push"
 alias gpl="git pull"
 alias gpf='git push --force-with-lease'
