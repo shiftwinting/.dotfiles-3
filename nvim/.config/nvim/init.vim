@@ -8,8 +8,6 @@ Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
-"colorscheme onedark
-
 set background=dark
 colorscheme palenight
 set termguicolors
