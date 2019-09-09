@@ -5,6 +5,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
