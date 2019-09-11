@@ -17,6 +17,7 @@ alias gpl="git pull"
 alias gpf='git push --force-with-lease'
 alias gpf!='git push --force'
 alias gra="git rebase --abort "
+alias gres="git reset ."
 function gri(){git rebase -i HEAD~${1:-10}}
 alias gs="git status"
 alias gopen="git open"
