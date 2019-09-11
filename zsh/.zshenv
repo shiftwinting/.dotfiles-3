@@ -66,8 +66,9 @@ alias ali="vi ~/.zshenv"
 alias rc="vi ~/.zshrc"
 alias vimrc="vi ~/.vimrc"
 alias nvimrc="vi ~/.config/nvim/init.vim"
-alias bsp="vi ~/.config/bspwm/bspwmrc"
-alias sxh="vi ~/.config/sxhkd/sxhkdrc"
+alias bsprc="vi ~/.config/bspwm/bspwmrc"
+alias sxhrc="vi ~/.config/sxhkd/sxhkdrc"
+alias tmuxrc="vi ~/.tmux.conf"
 
 # reload
 alias reload="exec zsh -o NO_GLOBAL_RCS"
