@@ -105,7 +105,7 @@ function fire() {firefox $1 NUL}
 function chrome() {chromium $1 NUL}
 
 # rmdir
-alias rmd="rmdir *"
+alias rmd="rmdir --ignore-fail-on-non-empty *"
 
 # Restore dotfiles
 alias restore="pushd && cd ~/.dotfiles && git checkout . && popd && reload"
