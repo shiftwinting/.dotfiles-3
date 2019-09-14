@@ -9,11 +9,18 @@ Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
-set background=dark
-colorscheme palenight
-set termguicolors
-
 set runtimepath^=~/.vim runtimepath+=/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
+"My own personal settings
+set background=dark
+colorscheme palenight
+set termguicolors
+
+noremap <F3> :Autoformat<CR>
+noremap <F9> :Make!<CR>
+
+let g:syntastic_mode_map = {
+      \ "mode": "active",
+      \ "passive_filetypes": ["tex"] }
