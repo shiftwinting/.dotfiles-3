@@ -100,7 +100,7 @@ light ael-code/zsh-colored-man-pages
 PS1="~ "
 
 GEOMETRY_COLOR_DIR=152
-ice cloneonly id-as"geometry" atload"prompt_geometry_render"
+ice cloneonly id-as"geometry" atload"geometry::prompt"
 light geometry-zsh/geometry
 
 ice cloneonly id-as"pure" pick"async.zsh" src"pure.zsh"
