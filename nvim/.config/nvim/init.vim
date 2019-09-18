@@ -4,6 +4,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-dispatch'
+Plug 'scrooloose/nerdtree'
+Plug 'edkolev/tmuxline.vim'
 
 " Themes
 Plug 'joshdick/onedark.vim'
@@ -26,6 +28,7 @@ colorscheme gruvbox
 
 noremap <F3> :Autoformat<CR>
 noremap <F9> :Make!<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 let g:syntastic_mode_map = {
       \ "mode": "active",
