@@ -108,10 +108,9 @@ light sindresorhus/pure
 
 ice id-as"powerlevel10k"
 light romkatv/powerlevel10k
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 # End of themes
 
 unalias ice snip light load
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
