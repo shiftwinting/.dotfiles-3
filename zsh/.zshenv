@@ -144,6 +144,8 @@ alias make="make -s"
 
 # Google Calendar in termianl
 alias gcal="gcalcli"
+alias gcalw="gcalcli calw"
+alias gcalm="gcalcli calm"
 #####################
 # Functions
 
