@@ -141,6 +141,9 @@ alias gant="sshpass -f "~/.gantenbein" ssh -o StrictHostKeyChecking=no dundar@ga
 
 # Use make without printing the input.
 alias make="make -s"
+
+# Google Calendar in termianl
+alias gcal="gcalcli"
 #####################
 # Functions
 
