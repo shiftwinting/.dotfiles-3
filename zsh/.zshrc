@@ -106,9 +106,12 @@ light geometry-zsh/geometry
 ice cloneonly id-as"pure" pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
 
-ice id-as"powerlevel10k" wait"!" atload"source ~/.p10k.zsh; _p9k_precmd" nocd
+ice id-as"powerlevel10k"
 light romkatv/powerlevel10k
 
 # End of themes
 
 unalias ice snip light load
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
