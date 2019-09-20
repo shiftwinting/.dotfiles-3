@@ -30,9 +30,11 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   export TERM=xterm-256color		# Set the term variable if I'm using SSH so my terminal (kitty) doesn't break.
 fi
 
-
 bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word.
 bindkey '^[[1;5D' backward-word		# [Ctrl-LeftArrow] - move backward one word.
+
+# Enable thefuck
+eval $(thefuck --alias)
 
 ######################################################
 #
@@ -113,4 +115,5 @@ light romkatv/powerlevel10k
 # End of themes
 
 unalias ice snip light load
+
 
