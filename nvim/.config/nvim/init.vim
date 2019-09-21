@@ -10,7 +10,6 @@ Plug 'edkolev/tmuxline.vim'
 " Themes
 Plug 'joshdick/onedark.vim'
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -20,11 +19,9 @@ source ~/.vimrc
 
 "My own personal settings
 
-"set background=dark
-"colorscheme palenight
-"set termguicolors
-
-colorscheme gruvbox
+set background=dark
+colorscheme palenight
+set termguicolors
 
 noremap <F3> :Autoformat<CR>
 noremap <F9> :Make!<CR>
