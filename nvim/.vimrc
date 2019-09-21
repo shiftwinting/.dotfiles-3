@@ -3,3 +3,5 @@ set clipboard+=unnamedplus
 
 "esc removes highlighed text
 nnoremap <esc> :noh<return><esc>
+
+set foldmethod=syntax
