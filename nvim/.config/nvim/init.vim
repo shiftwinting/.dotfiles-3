@@ -23,12 +23,11 @@ set background=dark
 colorscheme palenight
 set termguicolors
 
-noremap <F3> :Autoformat<CR>
-noremap <F9> :Make!<CR>
-map <C-n> :NERDTreeToggle<CR>
-
 let g:syntastic_mode_map = {
       \ "mode": "active",
       \ "passive_filetypes": ["tex"] }
 let g:syntastic_always_populate_loc_list = 1
 
+noremap <F3> :Autoformat<CR>
+noremap <F9> :Make!<CR>
+map <C-n> :NERDTreeToggle<CR>
