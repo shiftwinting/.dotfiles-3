@@ -29,5 +29,7 @@ let g:syntastic_mode_map = {
 let g:syntastic_always_populate_loc_list = 1
 
 noremap <F3> :Autoformat<CR>
+noremap <F8> :lnext<CR>
+noremap <S-F8> :lprev<CR>
 noremap <F9> :Make!<CR>
 map <C-n> :NERDTreeToggle<CR>
