@@ -2,6 +2,7 @@
 alias gac="git add .; git commit"
 alias gap="git add -p"
 alias gb="git branch"
+function gbD(){git push origin --delete $1}
 alias gc="git commit"
 alias gdc="forgit::diff --cached"
 alias gcl="git clone --recursive"
