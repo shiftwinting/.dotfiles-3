@@ -5,9 +5,6 @@ set clipboard+=unnamedplus
 nnoremap <esc> :noh<return><esc>
 
 set foldmethod=syntax
-"set foldlevel=1
-set foldclose=all
-
 "Not shit folding
 function! MyFoldText() " {{{
     let line = getline(v:foldstart)
