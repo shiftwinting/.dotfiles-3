@@ -33,9 +33,6 @@ fi
 bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word.
 bindkey '^[[1;5D' backward-word		# [Ctrl-LeftArrow] - move backward one word.
 
-# Enable thefuck
-eval $(thefuck --alias)
-
 ######################################################
 #
 # Zplugin
@@ -98,15 +95,18 @@ light wfxr/forgit
 ice id-as"colored-man-pages" wait"1"
 light ael-code/zsh-colored-man-pages
 
+ice id-as"thefuck" wait"1"
+light laggardkernel/zsh-thefuck
+
 # Themes
 PS1="~ "
 
-GEOMETRY_COLOR_DIR=152
-ice cloneonly id-as"geometry" atload"geometry::prompt"
-light geometry-zsh/geometry
+#GEOMETRY_COLOR_DIR=152
+#ice cloneonly id-as"geometry" atload"geometry::prompt"
+#light geometry-zsh/geometry
 
-ice cloneonly id-as"pure" pick"async.zsh" src"pure.zsh"
-light sindresorhus/pure
+#ice cloneonly id-as"pure" pick"async.zsh" src"pure.zsh"
+#light sindresorhus/pure
 
 ice id-as"powerlevel10k"
 light romkatv/powerlevel10k
