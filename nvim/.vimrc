@@ -5,6 +5,7 @@ set clipboard+=unnamedplus
 nnoremap <esc> :noh<return><esc>
 
 set foldmethod=syntax
+set foldopen-=block
 function! MyFoldText() " {{{
     let line = getline(v:foldstart)
 
