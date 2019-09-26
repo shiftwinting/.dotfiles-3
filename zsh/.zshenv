@@ -147,6 +147,9 @@ alias make="make -s"
 alias gcal="gcalcli"
 alias gcalw="gcalcli calw"
 alias gcalm="gcalcli calm"
+
+#Make ag not print Permission denied
+alias ag="ag --silent"
 #####################
 # Functions
 
