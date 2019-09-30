@@ -150,6 +150,9 @@ alias gcalm="gcalcli calm"
 
 #Make ag not print Permission denied
 alias ag="ag --silent"
+
+# Make du automatically human-readable
+alias du="du -h"
 #####################
 # Functions
 
