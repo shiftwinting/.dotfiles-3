@@ -5,6 +5,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-dispatch'
 Plug 'scrooloose/nerdtree'
+Plug 'dense-analysis/ale'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
