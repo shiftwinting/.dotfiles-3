@@ -6,6 +6,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-dispatch'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'neomake/neomake'
 
 " tmux
 Plug 'edkolev/tmuxline.vim'
@@ -30,6 +31,7 @@ let g:syntastic_mode_map = {
 let g:syntastic_always_populate_loc_list = 1
 
 noremap <F3> :Autoformat<CR>
+noremap <F5> :Neomake<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
 noremap <F9> :Make<CR>
@@ -41,3 +43,6 @@ command! PI PlugInstall
 command! PC PlugClean!
 
 let g:airline#extensions#tmuxline#enabled = 0
+
+" When writing a buffer (no delay).
+let g:neomake_open_list = 2
