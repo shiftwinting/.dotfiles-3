@@ -6,6 +6,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-dispatch'
 Plug 'scrooloose/nerdtree'
 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
+
 " tmux
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
