@@ -33,6 +33,10 @@ fi
 bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word.
 bindkey '^[[1;5D' backward-word		# [Ctrl-LeftArrow] - move backward one word.
 
+if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
+    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi
+
 ######################################################
 #
 # Zplugin
