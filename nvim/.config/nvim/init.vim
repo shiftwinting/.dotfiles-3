@@ -36,3 +36,4 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Define custom command to update and upgrade in one go.
 command! PU PlugUpdate | PlugUpgrade
+command! PC PlugClean!
