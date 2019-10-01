@@ -6,6 +6,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-dispatch'
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
@@ -42,3 +43,6 @@ map <C-n> :NERDTreeToggle<CR>
 command! PU PlugUpdate | PlugUpgrade
 command! PI PlugInstall
 command! PC PlugClean!
+
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 0
