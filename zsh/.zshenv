@@ -109,7 +109,7 @@ function chrome() {chromium $1 NUL}
 alias rmd="rmdir --ignore-fail-on-non-empty *"
 
 # Restore dotfiles
-alias restore="pushd && cd ~/.dotfiles && git checkout . && popd && reload"
+alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && reload"
 
 # date of 90 days prior
 alias 90='date +%d:%m:%Y -d "90 day ago"'
