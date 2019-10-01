@@ -5,12 +5,13 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-dispatch'
 Plug 'scrooloose/nerdtree'
+
+" tmux
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Themes
 Plug 'joshdick/onedark.vim'
-Plug 'drewtempelmeyer/palenight.vim'
 
 call plug#end()
 
@@ -20,9 +21,7 @@ source ~/.vimrc
 
 "My own personal settings
 
-set background=dark
-colorscheme palenight
-set termguicolors
+colorscheme onedark
 
 let g:syntastic_mode_map = {
       \ "mode": "active",
