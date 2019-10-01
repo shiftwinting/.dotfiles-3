@@ -138,7 +138,7 @@ alias serve="cd ~/zplugin_readme && mkdocs serve NUL &"
 alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
 
 # Automatic logging into Gantenbein.
-alias gant="sshpass -f "~/.gantenbein" ssh -o StrictHostKeyChecking=no dundar@gantenbein.math.chalmers.se"
+alias gant="sshpass -f "~/.gantenbein" ssh dundar@gantenbein.math.chalmers.se"
 
 # Use make without printing the input.
 alias make="make -s"
