@@ -69,7 +69,7 @@ alias vimrc="vi ~/.vimrc"
 alias nvimrc="vi ~/.config/nvim/init.vim"
 alias bsprc="vi ~/.config/bspwm/bspwmrc"
 alias sxhrc="vi ~/.config/sxhkd/sxhkdrc"
-alias tmuxrc="vi ~/.tmux.conf"
+alias trc="vi ~/.tmux.conf"
 
 # reload
 alias reload="exec zsh -o NO_GLOBAL_RCS"
