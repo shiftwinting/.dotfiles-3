@@ -33,6 +33,7 @@ fi
 bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word.
 bindkey '^[[1;5D' backward-word		# [Ctrl-LeftArrow] - move backward one word.
 
+# Automatically attach tmux session named ssh-tmux. If it doesn't exist then just create a new one.
 if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
     tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
 fi
