@@ -103,6 +103,9 @@ light ael-code/zsh-colored-man-pages
 ice id-as"thefuck" wait"1"
 light laggardkernel/zsh-thefuck
 
+ice from"gh-r" as"program" mv"pandoc*/bin/pandoc -> pandoc" bpick"*linux*"
+light jgm/pandoc
+
 # Themes
 PS1="~ "
 
