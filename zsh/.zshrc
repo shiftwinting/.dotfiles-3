@@ -106,6 +106,9 @@ light laggardkernel/zsh-thefuck
 ice from"gh-r" as"program" mv"pandoc*/bin/pandoc -> pandoc" bpick"*linux*"
 light jgm/pandoc
 
+ice from"gh-r" as"program" mv"hyperfine*/hyperfine -> hyperfine" bpick"*linux*"
+light sharkdp/hyperfine
+
 # Themes
 PS1="~ "
 
