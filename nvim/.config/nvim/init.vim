@@ -43,5 +43,3 @@ command! PI PlugInstall
 command! PC PlugClean!
 
 let g:airline#extensions#tmuxline#enabled = 0
-
-call neomake#configure#automake('w')
