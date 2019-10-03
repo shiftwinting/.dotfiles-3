@@ -153,6 +153,9 @@ alias ag="ag --silent"
 
 # Make du automatically human-readable
 alias du="du -h"
+
+# Fast tmux
+alias t="tmux"
 #####################
 # Functions
 
