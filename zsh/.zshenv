@@ -156,6 +156,10 @@ alias du="du -h"
 
 # Fast tmux
 alias t="tmux"
+
+# Print PATH
+alias path="tr ':' '\n' <<< "$PATH""
+
 #####################
 # Functions
 
