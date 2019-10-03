@@ -44,5 +44,4 @@ command! PC PlugClean!
 
 let g:airline#extensions#tmuxline#enabled = 0
 
-" When writing a buffer (no delay).
-let g:neomake_open_list = 2
+call neomake#configure#automake('w')
