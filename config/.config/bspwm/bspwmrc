@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-bspc monitor -d I II III IV V
+bspc monitor -d I II III IV V VI VII VIII IX X
 bspc config gapless_monocle true
 bspc config single_monocle true
 
