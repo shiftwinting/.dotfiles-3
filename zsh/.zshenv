@@ -55,7 +55,6 @@ alias code="code ."
 # goto
 alias d="cd ~/.dotfiles"
 alias c="cd ~/.dotfiles/config/.config"
-alias z="cd ~/.zplugin"
 alias zs="cd ~/.zplugin/snippets"
 alias zp="cd ~/.zplugin/plugins"
 alias zb="cd ~/.zplugin/bin"
@@ -159,6 +158,9 @@ alias t="tmux"
 
 # Print PATH
 alias path="tr ':' '\n' <<< "$PATH""
+
+# Fast zathura
+alias z="zathura"
 
 #####################
 # Functions
