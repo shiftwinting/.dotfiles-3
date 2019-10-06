@@ -130,7 +130,10 @@ alias cd=" cd"
 function ss(){gnome-screenshot NUL -d ${1:-10} &}
 
 # Brightness
-alias bright="xrandr --output eDP1 --brightness"
+alias x="xbacklight"
+alias x+="xbacklight -inc 10"
+alias x-="xbacklight -dec 1"
+alias xg="xbacklight -get"
 
 # MkDocs
 alias serve="cd ~/zplugin_readme && mkdocs serve NUL &"
