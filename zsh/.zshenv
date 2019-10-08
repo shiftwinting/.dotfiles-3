@@ -143,7 +143,7 @@ alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
 alias gant="sshpass -f "~/.gantenbein" ssh dundar@gantenbein.math.chalmers.se"
 
 # Use make without printing the input.
-alias make="make -s"
+alias make="make -j -s"
 
 # Google Calendar in termianl
 alias gcal="gcalcli"
