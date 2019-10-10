@@ -142,7 +142,7 @@ alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
 # Automatic logging into Gantenbein.
 alias gant="sshpass -f "~/.gantenbein" ssh dundar@gantenbein.math.chalmers.se"
 
-# Use make without printing the input.
+# Use make without printing the input and automatically use parallel jobs.
 alias make="make -j -s"
 
 # Google Calendar in termianl
