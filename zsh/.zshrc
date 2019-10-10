@@ -100,12 +100,6 @@ light ael-code/zsh-colored-man-pages
 ice id-as"thefuck" wait"1"
 light laggardkernel/zsh-thefuck
 
-ice from"gh-r" as"program" mv"pandoc*/bin/pandoc -> pandoc" bpick"*linux*"
-light jgm/pandoc
-
-ice from"gh-r" as"program" mv"hyperfine*/hyperfine -> hyperfine" bpick"*linux*"
-light sharkdp/hyperfine
-
 # Themes
 PS1="~ "
 
@@ -120,7 +114,13 @@ ice id-as"powerlevel10k"
 light romkatv/powerlevel10k
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-# End of themes
+# Required programs I have on my local laptop but not on remote ssh.
+
+ice if'[[ -n "$SSH_CONNECTION" ]]' from"gh-r" as"program" mv"pandoc*/bin/pandoc -> pandoc" bpick"*linux*"
+light jgm/pandoc
+
+ice if'[[ -n "$SSH_CONNECTION" ]]' from"gh-r" as"program" mv"hyperfine*/hyperfine -> hyperfine" bpick"*linux*"
+light sharkdp/hyperfine
 
 unalias ice snip light load
 
