@@ -147,8 +147,8 @@ alias make="make -j -s"
 
 # Google Calendar in termianl
 alias gcal="gcalcli"
-alias gcalw="gcalcli calw"
-alias gcalm="gcalcli calm"
+alias gcalw="gcalcli calw --monday"
+alias gcalm="gcalcli calm --monday"
 
 #Make ag not print Permission denied
 alias ag="ag --silent"
