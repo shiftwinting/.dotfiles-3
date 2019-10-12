@@ -31,7 +31,7 @@ let g:syntastic_mode_map = {
       \ "passive_filetypes": ["tex"] }
 let g:syntastic_always_populate_loc_list = 1
 
-noremap <F3> :Autoformat<CR>
+noremap <F3> :Uncrustify<CR>
 noremap <F5> :Neomake<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
