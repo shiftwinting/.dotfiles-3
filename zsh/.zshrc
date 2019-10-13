@@ -104,6 +104,10 @@ light laggardkernel/zsh-thefuck
 ice
 light mafredri/zsh-async
 
+ice wait
+light b4b4r07/enhancd
+export ENHANCD_DISABLE_HOME=1
+
 # Themes
 PS1="~ "
 
