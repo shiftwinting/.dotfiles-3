@@ -51,17 +51,17 @@ alias load="zpl load"
 
 #ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-ice id-as"LS_COLORS" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
+ice atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
   sed -i '/DIR/c\DIR 34;20' LS_COLORS
   dircolors -b LS_COLORS > clrs.zsh"
 light trapd00r/LS_COLORS
 
-ice id-as"editor" atinit"
+ice atinit"
   zstyle ':prezto:module:editor' dot-expansion 'yes'
   zstyle ':prezto:module:editor' key-bindings 'vi' "
 snip PZT::modules/editor/init.zsh
 
-ice id-as"fzf" atclone"./install" atload"source ~/.fzf.zsh"
+ice atclone"./install" atload"source ~/.fzf.zsh"
 light junegunn/fzf
 
 ice id-as"history" atload"
@@ -69,35 +69,36 @@ ice id-as"history" atload"
   unalias history-stat" 
 snip PZT::modules/history/init.zsh
 
-ice id-as"saneopt" wait; light willghatch/zsh-saneopt
+ice wait
+light willghatch/zsh-saneopt
 
 ice id-as"completion" wait blockf;
 snip PZT::modules/completion/init.zsh
 
-ice id-as"autosuggestions" wait atload"
+ice wait atload"
   _zsh_autosuggest_start
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
-ice id-as"fast-syntax-highlighting" wait atinit"
+ice wait atinit"
   zpcompinit
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
 
-ice id-as"diff-so-fancy" wait"1" has"git"
+ice wait"1" has"git"
 light zdharma/zsh-diff-so-fancy
 
-ice id-as"git-open" wait"1" has"git"
+ice wait"1" has"git"
 light paulirish/git-open
 
-ice id-as"forgit" wait"1" has"git" atload"unalias gi gcf gss gclean"
+ice wait"1" has"git" atload"unalias gi gcf gss gclean"
 light wfxr/forgit
 
-ice id-as"colored-man-pages" wait"1"
+ice wait"1"
 light ael-code/zsh-colored-man-pages
 
-ice id-as"thefuck" wait"1"
+ice wait"1"
 light laggardkernel/zsh-thefuck
 
 light mafredri/zsh-async
@@ -106,13 +107,12 @@ light mafredri/zsh-async
 PS1="~ "
 
 #GEOMETRY_COLOR_DIR=152
-#ice cloneonly id-as"geometry" atload"geometry::prompt"
+#ice cloneonly atload"geometry::prompt"
 #light geometry-zsh/geometry
 
-#ice cloneonly id-as"pure" pick"async.zsh" src"pure.zsh"
+#ice cloneonly pick"async.zsh" src"pure.zsh"
 #light sindresorhus/pure
 
-ice id-as"powerlevel10k"
 light romkatv/powerlevel10k
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
