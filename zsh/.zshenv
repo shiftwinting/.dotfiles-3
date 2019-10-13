@@ -59,7 +59,6 @@ alias zs="cd ~/.zplugin/snippets"
 alias zp="cd ~/.zplugin/plugins"
 alias zb="cd ~/.zplugin/bin"
 alias m="cd /usr/share/texmf-dist/tex/latex/moderncv"
-alias cv="cd ~/CV"
 
 #config
 alias ali="vi ~/.zshenv"
