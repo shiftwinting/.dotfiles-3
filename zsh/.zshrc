@@ -101,6 +101,7 @@ light ael-code/zsh-colored-man-pages
 ice wait"1"
 light laggardkernel/zsh-thefuck
 
+ice
 light mafredri/zsh-async
 
 # Themes
