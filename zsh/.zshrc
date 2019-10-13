@@ -113,6 +113,7 @@ PS1="~ "
 #ice cloneonly pick"async.zsh" src"pure.zsh"
 #light sindresorhus/pure
 
+ice
 light romkatv/powerlevel10k
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
