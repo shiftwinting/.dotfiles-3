@@ -100,6 +100,8 @@ light ael-code/zsh-colored-man-pages
 ice id-as"thefuck" wait"1"
 light laggardkernel/zsh-thefuck
 
+light mafredri/zsh-async
+
 # Themes
 PS1="~ "
 
