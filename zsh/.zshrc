@@ -111,16 +111,12 @@ export ENHANCD_DISABLE_HOME=1
 # Themes
 PS1="~ "
 
-#GEOMETRY_COLOR_DIR=152
-#ice cloneonly atload"geometry::prompt"
-#light geometry-zsh/geometry
+GEOMETRY_COLOR_DIR=152
+ice atload"geometry::prompt"
+light geometry-zsh/geometry
 
 #ice cloneonly pick"async.zsh" src"pure.zsh"
 #light sindresorhus/pure
-
-ice
-light romkatv/powerlevel10k
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 # Required programs I have on my local laptop but not on remote ssh.
 
