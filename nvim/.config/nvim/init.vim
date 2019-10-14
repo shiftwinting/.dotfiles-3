@@ -14,7 +14,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Themes
-Plug 'joshdick/onedark.vim'
+Plug 'tomasr/molokai'
 
 call plug#end()
 
@@ -24,7 +24,7 @@ source ~/.vimrc
 
 "My own personal settings
 
-colorscheme onedark
+colorscheme molokai
 
 let g:syntastic_mode_map = {
       \ "mode": "active",
