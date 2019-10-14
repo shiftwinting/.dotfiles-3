@@ -101,9 +101,6 @@ light ael-code/zsh-colored-man-pages
 ice wait"1"
 light laggardkernel/zsh-thefuck
 
-ice
-light mafredri/zsh-async
-
 ice wait
 light b4b4r07/enhancd
 export ENHANCD_DISABLE_HOME=1
@@ -111,12 +108,8 @@ export ENHANCD_DISABLE_HOME=1
 # Themes
 PS1="~ "
 
-GEOMETRY_COLOR_DIR=152
-ice atload"geometry::prompt"
-light geometry-zsh/geometry
-
-#ice cloneonly pick"async.zsh" src"pure.zsh"
-#light sindresorhus/pure
+ice pick"async.zsh" src"pure.zsh"
+light sindresorhus/pure
 
 # Required programs I have on my local laptop but not on remote ssh.
 
