@@ -75,9 +75,8 @@ light willghatch/zsh-saneopt
 ice wait id-as"completion" blockf;
 snip PZT::modules/completion/init.zsh
 
-ice wait
+ice wait atinit"export ENHANCD_DISABLE_HOME=1"
 light b4b4r07/enhancd
-export ENHANCD_DISABLE_HOME=1
 
 ice wait atload"
   _zsh_autosuggest_start
