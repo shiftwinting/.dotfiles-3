@@ -160,8 +160,9 @@ alias du="du -h"
 # Fast tmux
 alias t="tmux"
 
-# Print PATH
+# Print PATH and fpath
 alias path="tr ':' '\n' <<< "$PATH""
+alias fpath="tr ':' '\n' <<< "$FPATH""
 
 # Fast zathura
 alias z="zathura"
