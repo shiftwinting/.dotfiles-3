@@ -37,7 +37,7 @@ noremap <F5> :Neomake<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
 noremap <F9> :Make<CR>
-map <C-n> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 
 " Define custom command to update and upgrade in one go.
 command! PU PlugUpdate | PlugUpgrade
