@@ -1,4 +1,5 @@
 # git 
+alias cdg="cd-gitroot"
 alias gac="git add .; git commit"
 alias gap="git add -p"
 alias gb="git branch"

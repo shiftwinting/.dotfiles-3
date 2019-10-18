@@ -109,6 +109,9 @@ light jgm/pandoc
 ice wait"1" if'[[ -n "$SSH_CONNECTION" ]]' from"gh-r" as"program" mv"hyperfine*/hyperfine -> hyperfine" bpick"*linux*"
 light sharkdp/hyperfine
 
+ice wait"1"
+light mollifier/cd-gitroot
+
 ice wait"1" atinit"
   zpcompinit
   zpcdreplay"
