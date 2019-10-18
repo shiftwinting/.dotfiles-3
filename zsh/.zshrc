@@ -72,8 +72,12 @@ snip PZT::modules/history/init.zsh
 ice wait
 light willghatch/zsh-saneopt
 
-ice id-as"completion" wait blockf;
+ice wait id-as"completion" blockf;
 snip PZT::modules/completion/init.zsh
+
+ice wait
+light b4b4r07/enhancd
+export ENHANCD_DISABLE_HOME=1
 
 ice wait atload"
   _zsh_autosuggest_start
@@ -81,10 +85,9 @@ ice wait atload"
   bindkey '^ ' autosuggest-accept"
 light zsh-users/zsh-autosuggestions
 
-ice wait atinit"
-  zpcompinit
-  zpcdreplay"
-light zdharma/fast-syntax-highlighting
+PS1="- "
+ice wait"!" pick"async.zsh" src"pure.zsh"
+light sindresorhus/pure
 
 ice wait"1" has"git"
 light zdharma/zsh-diff-so-fancy
@@ -101,24 +104,15 @@ light ael-code/zsh-colored-man-pages
 ice wait"1"
 light laggardkernel/zsh-thefuck
 
-ice wait
-light b4b4r07/enhancd
-export ENHANCD_DISABLE_HOME=1
-
-# Themes
-PS1="~ "
-
-ice pick"async.zsh" src"pure.zsh"
-light sindresorhus/pure
-
-# Required programs I have on my local laptop but not on remote ssh.
-
-ice if'[[ -n "$SSH_CONNECTION" ]]' from"gh-r" as"program" mv"pandoc*/bin/pandoc -> pandoc" bpick"*linux*"
+ice wait"1" if'[[ -n "$SSH_CONNECTION" ]]' from"gh-r" as"program" mv"pandoc*/bin/pandoc -> pandoc" bpick"*linux*"
 light jgm/pandoc
 
-ice if'[[ -n "$SSH_CONNECTION" ]]' from"gh-r" as"program" mv"hyperfine*/hyperfine -> hyperfine" bpick"*linux*"
+ice wait"1" if'[[ -n "$SSH_CONNECTION" ]]' from"gh-r" as"program" mv"hyperfine*/hyperfine -> hyperfine" bpick"*linux*"
 light sharkdp/hyperfine
 
+ice wait"1" atinit"
+  zpcompinit
+  zpcdreplay"
+light zdharma/fast-syntax-highlighting
+
 unalias ice snip light load
-
-
