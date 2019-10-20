@@ -51,11 +51,6 @@ alias load="zpl load"
 
 #ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
-ice atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
-  sed -i '/DIR/c\DIR 34;20' LS_COLORS
-  dircolors -b LS_COLORS > clrs.zsh"
-light trapd00r/LS_COLORS
-
 ice atinit"
   zstyle ':prezto:module:editor' dot-expansion 'yes'
   zstyle ':prezto:module:editor' key-bindings 'vi' "
@@ -108,6 +103,11 @@ light laggardkernel/zsh-thefuck
 
 ice wait"1"
 light mollifier/cd-gitroot
+
+ice wait"1" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
+  sed -i '/DIR/c\DIR 34;20' LS_COLORS
+  dircolors -b LS_COLORS > clrs.zsh"
+light trapd00r/LS_COLORS
 
 # Download plugins if command doesn't already exist.
 
