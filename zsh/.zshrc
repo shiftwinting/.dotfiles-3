@@ -104,6 +104,9 @@ light laggardkernel/zsh-thefuck
 ice wait"1"
 light mollifier/cd-gitroot
 
+ice wait"1"
+light hlissner/zsh-autopair
+
 ice wait"1" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
   sed -i '/DIR/c\DIR 34;20' LS_COLORS
   dircolors -b LS_COLORS > clrs.zsh"
@@ -123,5 +126,6 @@ ice wait"1" atinit"
   zpcompinit
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
+
 
 unalias ice snip light load
