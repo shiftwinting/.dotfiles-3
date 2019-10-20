@@ -127,5 +127,4 @@ ice wait"1" atinit"
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
 
-
 unalias ice snip light load
