@@ -164,6 +164,9 @@ alias fpath="tr ':' '\n' <<< "$FPATH""
 # Fast zathura
 alias z="zathura"
 
+# Allows leaving from deleted directories
+alias ..='command .. 2>/dev/null || cd $(dirname $PWD)'
+
 #####################
 # Functions
 
