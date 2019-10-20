@@ -103,14 +103,18 @@ light ael-code/zsh-colored-man-pages
 ice wait"1"
 light laggardkernel/zsh-thefuck
 
+ice wait"1"
+light mollifier/cd-gitroot
+
+# Download plugins if command doesn't already exist.
+
 ice wait"1" if'[[ -z "$commands[cloc]" ]]' from"gh-r" as"program" mv"pandoc*/bin/pandoc -> pandoc" bpick"*linux*"
 light jgm/pandoc
 
 ice wait"1" if'[[ -z "$commands[cloc]" ]]' from"gh-r" as"program" mv"hyperfine*/hyperfine -> hyperfine" bpick"*linux*"
 light sharkdp/hyperfine
 
-ice wait"1"
-light mollifier/cd-gitroot
+# Syntax highlighter "needs" to be last.
 
 ice wait"1" atinit"
   zpcompinit
