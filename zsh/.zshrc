@@ -69,6 +69,9 @@ ice id-as"history" atload"
   unalias history-stat" 
 snip PZT::modules/history/init.zsh
 
+ice wait pick'async.zsh'
+light mafredri/zsh-async
+
 ice wait
 light willghatch/zsh-saneopt
 
