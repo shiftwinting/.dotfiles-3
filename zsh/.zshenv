@@ -33,8 +33,8 @@ alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgree
 alias \$=''
 
 # vim
-alias vi="nvim"
-alias svi="sudo nvim"
+alias vi="$EDITOR"
+alias svi="sudo $EDITOR"
 
 # ls
 alias ls="~/.dotfiles/.Misc/ls --color=auto --group-directories-first -X"
@@ -65,14 +65,14 @@ alias zb="cd ~/.zplugin/bin"
 alias m="cd /usr/share/texmf-dist/tex/latex/moderncv"
 
 #config
-alias ali="vi ~/.zshenv"
-alias rc="vi ~/.zshrc"
-alias vimrc="vi ~/.vimrc"
-alias nvimrc="vi ~/.config/nvim/init.vim"
-alias bsprc="vi ~/.config/bspwm/bspwmrc"
-alias sxhrc="vi ~/.config/sxhkd/sxhkdrc"
-alias trc="vi ~/.tmux.conf"
-alias un="vi ~/.dotfiles/home/.uncrustify.cfg"
+alias ali="$EDITOR ~/.zshenv"
+alias rc="$EDITOR ~/.zshrc"
+alias vimrc="$EDITOR ~/.vimrc"
+alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
+alias bsprc="$EDITOR ~/.config/bspwm/bspwmrc"
+alias sxhrc="$EDITOR ~/.config/sxhkd/sxhkdrc"
+alias trc="$EDITOR ~/.tmux.conf"
+alias un="$EDITOR ~/.dotfiles/home/.uncrustify.cfg"
 
 # reload
 alias reload="exec zsh -o NO_GLOBAL_RCS"
