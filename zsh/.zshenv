@@ -1,10 +1,10 @@
 # git 
-alias cdg="cd-gitroot"
 alias gac="git add .; git commit"
 alias gap="git add -p"
 alias gb="git branch"
 function gbD(){git push origin --delete $1}
 alias gc="git commit"
+alias gcd="cd-gitroot"
 alias gdc="forgit::diff --cached"
 alias gcl="git clone --recursive"
 alias gcl1="git clone --depth=1"
