@@ -23,9 +23,6 @@ setopt auto_cd				# Allow .. without getting "Permission denied".
 setopt globdots				# Dotfiles are matched without explicitly specifying the dot
 setopt extendedglob			# Add additional features for identifying files. 
 
-export EDITOR=nvim			# Set neovim as default editor.
-export VISUAL=nvim			# Set neovim as default reader.
-
 bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word.
 bindkey '^[[1;5D' backward-word		# [Ctrl-LeftArrow] - move backward one word.
 

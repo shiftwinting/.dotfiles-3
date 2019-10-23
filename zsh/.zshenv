@@ -1,3 +1,6 @@
+export EDITOR=nvim			# Set neovim as default editor.
+export VISUAL=nvim			# Set neovim as default reader.
+
 # git 
 alias gac="git add .; git commit"
 alias gap="git add -p"
