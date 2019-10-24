@@ -2,7 +2,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 Plug 'Chiel92/vim-autoformat'
-Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-dispatch'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
@@ -26,11 +25,6 @@ source ~/.vimrc
 "My own personal settings
 
 colorscheme molokai
-
-let g:syntastic_mode_map = {
-      \ "mode": "active",
-      \ "passive_filetypes": ["tex"] }
-let g:syntastic_always_populate_loc_list = 1
 
 noremap <F3> :Uncrustify<CR>
 noremap <F5> :Neomake<CR>
