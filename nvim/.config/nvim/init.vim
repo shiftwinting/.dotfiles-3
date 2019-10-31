@@ -27,6 +27,7 @@ source ~/.vimrc
 colorscheme molokai
 
 noremap <F3> :Uncrustify<CR>
+noremap <F4> :Autoformat<CR>
 noremap <F5> :Neomake<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
