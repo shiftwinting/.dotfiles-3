@@ -109,14 +109,6 @@ ice wait"1" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
   dircolors -b LS_COLORS > clrs.zsh"
 light trapd00r/LS_COLORS
 
-# Download plugins if command doesn't already exist.
-
-ice wait"1" if'[[ -z "$commands[pandoc]" ]]' from"gh-r" as"program" mv"pandoc*/bin/pandoc -> pandoc" bpick"*linux*"
-light jgm/pandoc
-
-ice wait"1" if'[[ -z "$commands[hyperfine]" ]]' from"gh-r" as"program" mv"hyperfine*/hyperfine -> hyperfine" bpick"*linux*"
-light sharkdp/hyperfine
-
 # Syntax highlighter "needs" to be last.
 
 ice wait"1" atinit"
