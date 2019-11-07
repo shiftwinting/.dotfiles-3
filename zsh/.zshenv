@@ -170,8 +170,5 @@ alias ..='command .. 2>/dev/null || cd $(dirname $PWD)'
 # allow sudo to expand aliases as well as run anything in $PATH
 alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"  '
 
-#####################
-# Functions
-
 # Automatically run ls after using cd.
 function chpwd(){la}
