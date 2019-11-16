@@ -92,7 +92,7 @@ light paulirish/git-open
 ice wait"1" has"git" atload"unalias gi gcf gss gclean"
 light wfxr/forgit
 
-zpl wait"1" silent depth"1" id-as"auto" for \
+zpl wait"1" silent depth"1" id-as"auto" light-mode for \
 	ael-code/zsh-colored-man-pages \
 	laggardkernel/zsh-thefuck
 
