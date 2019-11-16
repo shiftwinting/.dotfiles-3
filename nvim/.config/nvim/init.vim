@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'neomake/neomake'
 Plug 'embear/vim-uncrustify'
 Plug 'Konfekt/FastFold'
+Plug 'zplugin/zplugin-vim-syntax'
 
 " tmux
 Plug 'edkolev/tmuxline.vim'
