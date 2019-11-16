@@ -89,16 +89,12 @@ light zdharma/zsh-diff-so-fancy
 ice wait"1" has"git"
 light paulirish/git-open
 
-ice wait"1" has"git" atload"unalias gi gcf gss gclean"
-light wfxr/forgit
-
 zpl wait"1" silent depth"1" light-mode for \
+	has"git" atload"unalias gi gcf gss gclean" wfxr/forgit \
 	ael-code/zsh-colored-man-pages \
 	laggardkernel/zsh-thefuck \
-	mollifier/cd-gitroot
-
-ice wait"1"
-light hlissner/zsh-autopair
+	mollifier/cd-gitroot \
+	hlissner/zsh-autopair \
 
 ice wait"1" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
   sed -i '/DIR/c\DIR 34;20' LS_COLORS
