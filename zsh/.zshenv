@@ -134,6 +134,8 @@ function ss(){gnome-screenshot NUL -d ${1:-10} &}
 alias x="xbacklight"
 alias x+="xbacklight -inc 10"
 alias x-="xbacklight -dec 1"
+alias xmax="xbacklight -inc 100"
+alias xmin="xbacklight -inc 100 && xbacklight -dec 99"
 alias xg="xbacklight -get"
 
 # MkDocs
