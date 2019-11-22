@@ -83,13 +83,9 @@ PS1="- "
 ice wait"!" pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
 
-ice wait"1" has"git"
-light zdharma/zsh-diff-so-fancy
-
-ice wait"1" has"git"
-light paulirish/git-open
-
 zpl wait"1" silent depth"1" light-mode for \
+	has"git" zdharma/zsh-diff-so-fancy \
+	has"git" paulirish/git-open \
 	has"git" atload"unalias gi gcf gss gclean" wfxr/forgit \
 	ael-code/zsh-colored-man-pages \
 	laggardkernel/zsh-thefuck \
