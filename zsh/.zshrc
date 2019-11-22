@@ -41,6 +41,7 @@ source '/home/dundar/.zplugin/bin/zplugin.zsh'
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
+alias z="zpl silent depth"1" light-mode"
 alias ice="zpl ice silent depth'1' id-as'auto'"
 alias snip="zpl snippet"
 alias light="zpl light"
@@ -83,7 +84,7 @@ PS1="- "
 ice wait"!" pick"async.zsh" src"pure.zsh"
 light sindresorhus/pure
 
-zpl wait"1" silent depth"1" light-mode for \
+z wait"1" for \
 	has"git" zdharma/zsh-diff-so-fancy \
 	has"git" paulirish/git-open \
 	has"git" atload"unalias gi gcf gss gclean" wfxr/forgit \
@@ -104,4 +105,4 @@ ice wait"1" atinit"
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
 
-unalias ice snip light load
+unalias ice snip light load z
