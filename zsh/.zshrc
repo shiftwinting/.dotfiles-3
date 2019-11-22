@@ -41,7 +41,7 @@ source '/home/dundar/.zplugin/bin/zplugin.zsh'
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-alias z="zpl silent depth"1" light-mode"
+alias z="zpl silent depth"1" light-mode id-as"auto""
 alias ice="zpl ice silent depth'1' id-as'auto'"
 alias snip="zpl snippet"
 alias light="zpl light"
