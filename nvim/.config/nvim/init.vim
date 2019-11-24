@@ -9,6 +9,7 @@ Plug 'neomake/neomake'
 Plug 'embear/vim-uncrustify'
 Plug 'Konfekt/FastFold'
 Plug 'zplugin/zplugin-vim-syntax'
+Plug 'kalekundert/vim-coiled-snake'
 
 " tmux
 Plug 'edkolev/tmuxline.vim'
