@@ -95,6 +95,7 @@ alias -g NUL="&> /dev/null"
 
 # python
 alias py="python3"
+alias pip="sudo pip3"
 
 # Safe/verbose ops
 alias rm="rm -iv" 
