@@ -67,7 +67,6 @@ alias m="cd /usr/share/texmf-dist/tex/latex/moderncv"
 #config
 alias ali="$EDITOR ~/.zshenv"
 alias rc="$EDITOR ~/.zshrc"
-alias vimrc="$EDITOR ~/.vimrc"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias bsprc="$EDITOR ~/.config/bspwm/bspwmrc"
 alias sxhrc="$EDITOR ~/.config/sxhkd/sxhkdrc"
