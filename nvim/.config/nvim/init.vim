@@ -17,6 +17,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Themes
 Plug 'tomasr/molokai'
+Plug 'sjl/badwolf'
 
 call plug#end()
 
@@ -24,9 +25,18 @@ set runtimepath^=~/.vim runtimepath+=/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
-"My own personal settings
+"----------------------
+"Colors
 
-colorscheme molokai
+"Molokai
+"colorscheme molokai
+"highlight Folded ctermfg=204
+
+"Badwolf
+colorscheme badwolf
+
+"------------------------------------
+"Other settings
 
 noremap <F3> :Uncrustify<CR>
 noremap <F5> :Neomake<CR>
@@ -42,7 +52,6 @@ command! PC PlugClean!
 
 let g:airline#extensions#tmuxline#enabled = 0
 
-highlight Folded ctermfg=204
 
 set clipboard+=unnamedplus
 
