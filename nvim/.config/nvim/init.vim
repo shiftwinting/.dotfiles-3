@@ -18,6 +18,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " Themes
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
+Plug 'TroyFletcher/vim-colors-synthwave'
 
 call plug#end()
 
@@ -33,7 +34,11 @@ source ~/.vimrc
 "highlight Folded ctermfg=204
 
 "Badwolf
-colorscheme badwolf
+"colorscheme badwolf
+
+colorscheme synthwave
+highlight Folded ctermfg=204
+highlight Folded ctermbg=000
 
 "------------------------------------
 "Other settings
