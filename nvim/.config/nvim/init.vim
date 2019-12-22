@@ -9,6 +9,9 @@ Plug 'neomake/neomake'
 Plug 'embear/vim-uncrustify'
 Plug 'Konfekt/FastFold'
 Plug 'zplugin/zplugin-vim-syntax'
+
+" Language specific plugins
+" Python
 Plug 'kalekundert/vim-coiled-snake'
 
 " tmux
@@ -43,7 +46,8 @@ highlight Folded ctermbg=000
 "------------------------------------
 "Other settings
 
-noremap <F3> :Uncrustify<CR>
+"noremap <F3> :Uncrustify<CR>
+noremap <F3> :Autoformat<CR>
 noremap <F5> :Neomake<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
@@ -72,7 +76,7 @@ nnoremap <esc> :noh<return><esc>
 "    let windowwidth = winwidth(0) - nucolwidth - 3
 "    let foldedlinecount = v:foldend - v:foldstart
 
-    " expand tabs into spaces
+" expand tabs into spaces
 "    let onetab = strpart('          ', 0, &tabstop)
 "    let line = substitute(line, '\t', onetab, 'g')
 
