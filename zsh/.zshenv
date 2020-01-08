@@ -153,8 +153,9 @@ alias gcalm="gcalcli calm --monday"
 #Make ag not print Permission denied
 alias ag="ag --silent"
 
-# Make du automatically human-readable
+# Make du and df automatically human-readable
 alias du="du -h"
+alias df="df -h"
 
 # Fast tmux
 alias t="tmux"
