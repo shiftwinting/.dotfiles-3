@@ -145,11 +145,6 @@ alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
 # Use make without printing the input and automatically use parallel jobs.
 alias make="make -j -s"
 
-# Google Calendar in termianl
-alias gcal="gcalcli"
-alias gcalw="gcalcli calw --monday"
-alias gcalm="gcalcli calm --monday"
-
 #Make ag not print Permission denied
 alias ag="ag --silent"
 
