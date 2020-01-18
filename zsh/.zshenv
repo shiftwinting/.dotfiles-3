@@ -92,10 +92,6 @@ alias -g L="| less"
 alias -g NE="2> /dev/null"
 alias -g NUL="&> /dev/null"
 
-# python
-alias py="python3"
-alias pip="sudo pip3"
-
 # Safe/verbose ops
 alias rm="rm -iv" 
 alias mv="mv -iv" 
