@@ -3,9 +3,9 @@
 # Install all missing programs
 # 
 
-# zplugin
-if [ ! -d "${HOME}/.zplugin" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+# zinit
+if [ ! -d "${HOME}/.zinit" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 fi
 
 # vim-plug
@@ -34,12 +34,21 @@ fi
 
 ######################################################
 #
-# Zplugin
+# Zinit
 # 
 
-source '/home/dundar/.zplugin/bin/zplugin.zsh'
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
+    command mkdir -p $HOME/.zinit
+    command git clone https://github.com/zdharma/zinit $HOME/.zinit/bin && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%F" || \
+        print -P "%F{160}▓▒░ The clone has failed.%F"
+fi
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+### End of Zinit installer's chunk
 
 alias z="zpl silent depth"1" light-mode id-as"auto""
 alias ice="zpl ice silent depth'1' id-as'auto'"
