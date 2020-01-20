@@ -20,7 +20,6 @@ fi
 
 zstyle ':*:*:*' case-sensitive 'yes'	# Case sensitive completion.
 setopt auto_cd				# Allow .. without getting "Permission denied".
-setopt globdots				# Dotfiles are matched without explicitly specifying the dot
 setopt extendedglob			# Add additional features for identifying files. 
 
 bindkey '^[[1;5C' forward-word		# [Ctrl-RightArrow] - move forward one word.
