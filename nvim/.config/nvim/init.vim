@@ -67,6 +67,8 @@ set clipboard+=unnamedplus
 "esc removes highlighed text
 nnoremap <esc> :noh<return><esc>
 
+autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
+
 "set foldmethod=syntax
 "set foldopen-=block
 "function! MyFoldText() " {{{
