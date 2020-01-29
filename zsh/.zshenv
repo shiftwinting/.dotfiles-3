@@ -63,6 +63,7 @@ alias zs="cd ~/.zplugin/snippets"
 alias zp="cd ~/.zplugin/plugins"
 alias zb="cd ~/.zplugin/bin"
 alias m="cd /usr/share/texmf-dist/tex/latex/moderncv"
+alias ft="cd ~/.config/nvim/ftplugin"
 
 #config
 alias ali="$EDITOR ~/.zshenv"
