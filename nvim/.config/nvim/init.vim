@@ -66,4 +66,4 @@ set clipboard+=unnamedplus
 "esc removes highlighed text
 nnoremap <esc> :noh<return><esc>
 
-"autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
+autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
