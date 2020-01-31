@@ -13,6 +13,8 @@ Plug 'zplugin/zplugin-vim-syntax'
 " Language specific plugins
 " Python
 Plug 'kalekundert/vim-coiled-snake'
+"HTML, CSS
+Plug 'mattn/emmet-vim'
 
 " tmux
 Plug 'edkolev/tmuxline.vim'
@@ -67,3 +69,7 @@ set clipboard+=unnamedplus
 nnoremap <esc> :noh<return><esc>
 
 autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
+
+
+let g:user_emmet_leader_key=','
+
