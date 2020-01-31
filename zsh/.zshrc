@@ -31,6 +31,9 @@ if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
     	tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
 fi
 
+
+PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
+
 ######################################################
 #
 # Zinit
@@ -114,3 +117,4 @@ ice wait"1" atinit"
 light zdharma/fast-syntax-highlighting
 
 unalias ice snip light load z
+
