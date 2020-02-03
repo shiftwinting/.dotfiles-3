@@ -166,3 +166,6 @@ alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b
 
 # Automatically run ls after using cd.
 function chpwd(){la}
+
+# Make npm automatically global.
+alias npm="sudo npm -g"
