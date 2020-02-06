@@ -1,7 +1,7 @@
 export EDITOR=nvim			# Set neovim as default editor.
 export VISUAL=nvim			# Set neovim as default reader.
 
-# git 
+# git
 alias gac="git add .; git commit"
 alias gap="git add -p"
 alias gb="git branch"
@@ -42,7 +42,13 @@ alias la="ls -A"
 alias ll="la -l"
 
 # pacman/yay
-alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
+if [[ $(lsb_release -is) = ManjaroLinux ]]
+then
+	alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
+else
+	alias install="sudo apt install"
+fi
+
 alias pinstall="sudo powerpill -S"
 alias show="yay -Si"
 alias search="yay -Ss"
@@ -94,9 +100,9 @@ alias -g NE="2> /dev/null"
 alias -g NUL="&> /dev/null"
 
 # Safe/verbose ops
-alias rm="rm -iv" 
-alias mv="mv -iv" 
-alias mkdir="mkdir -pv" 
+alias rm="rm -iv"
+alias mv="mv -iv"
+alias mkdir="mkdir -pv"
 
 # xclip
 alias clip="xclip -sel clip <"
@@ -115,7 +121,7 @@ alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && rel
 alias 90='date +%d:%m:%Y -d "90 day ago"'
 
 # Download youtube as mp3
-alias yget="youtube-dl --extract-audio --audio-format mp3" 
+alias yget="youtube-dl --extract-audio --audio-format mp3"
 
 # Print random file in current folder
 alias random_file="ls | shuf -n 1"
