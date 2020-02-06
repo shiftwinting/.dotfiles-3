@@ -45,19 +45,19 @@ alias ll="la -l"
 if [[ $(lsb_release -is) = ManjaroLinux ]]
 then
 	alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
+	alias pinstall="sudo powerpill -S"
+	alias show="yay -Si"
+	alias search="yay -Ss"
+	alias fsearch="yay -F"
+	alias list="reset; yay -Qe"
+	alias remove="yay -Rs"
+	alias mirror="sudo pacman-mirrors --geoip && sudo pacman -Syyu"
+	alias orphan='yay -Rs $(yay -Qqtd)'
 else
 	alias install="sudo apt install"
 fi
 
-alias pinstall="sudo powerpill -S"
-alias show="yay -Si"
-alias search="yay -Ss"
-alias fsearch="yay -F"
-alias list="reset; yay -Qe"
-alias remove="yay -Rs"
 alias up="source ~/.dotfiles/.Misc/upgrade.sh"
-alias mirror="sudo pacman-mirrors --geoip && sudo pacman -Syyu"
-alias orphan='yay -Rs $(yay -Qqtd)'
 
 # VSCode
 alias code="code ."
