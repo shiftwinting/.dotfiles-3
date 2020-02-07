@@ -56,7 +56,6 @@ alias z="zpl silent depth"1" light-mode id-as"auto""
 alias ice="zpl ice silent depth'1' id-as'auto'"
 alias snip="zpl snippet"
 alias light="zpl light"
-alias load="zpl load"
 
 #ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
@@ -116,5 +115,4 @@ ice wait"1" atinit"
   zpcdreplay"
 light zdharma/fast-syntax-highlighting
 
-unalias ice snip light load z
-
+unalias ice snip light z
