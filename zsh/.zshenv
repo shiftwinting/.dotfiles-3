@@ -155,9 +155,10 @@ alias make="make -j -s"
 #Make ag not print Permission denied
 alias ag="ag --silent"
 
-# Make du and df automatically human-readable
+# Make commands human-readable.
 alias du="du -h"
 alias df="df -h"
+alias free="free -h"
 
 # Fast tmux
 alias t="tmux"
