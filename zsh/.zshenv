@@ -181,3 +181,13 @@ function chpwd(){la}
 
 # Make npm automatically global.
 alias npm="sudo npm -g"
+
+#Enable/Disable touchpad
+device="Synaptics TM2985-009"
+enabled=$(xinput --list-props "$device" | grep "Device Enabled" | awk '{print $NF}')
+
+if [[ "$enabled" == "1" ]]; then
+    alias toggle="xinput --disable '$device' && reload"
+else
+    alias toggle="xinput --enable '$device' && reload"
+fi
