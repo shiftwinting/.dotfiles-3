@@ -52,10 +52,10 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit installer's chunk
 
-alias z="zpl silent depth"1" light-mode id-as"auto""
-alias ice="zpl ice silent depth'1' id-as'auto'"
-alias snip="zpl snippet"
-alias light="zpl light"
+alias z="zinit silent depth"1" light-mode id-as"auto""
+alias ice="zinit ice silent depth'1' id-as'auto'"
+alias snip="zinit snippet"
+alias light="zinit light"
 
 #ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
 
