@@ -182,10 +182,15 @@ alias npm="sudo npm -g"
 
 #Enable/Disable touchpad
 device="Synaptics TM2985-009"
-enabled=$(xinput --list-props "$device" | grep "Device Enabled" | awk '{print $NF}')
+
+
+if [[ $(lsb_release -is) = ManjaroLinux ]]
+then
+	enabled=$(xinput --list-props "$device" | grep "Device Enabled" | awk '{print $NF}')
+fi
 
 if [[ "$enabled" == "1" ]]; then
-    alias toggle="xinput --disable '$device' && reload"
+	alias toggle="xinput --disable '$device' && reload"
 else
-    alias toggle="xinput --enable '$device' && reload"
+	alias toggle="xinput --enable '$device' && reload"
 fi
