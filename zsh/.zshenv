@@ -40,8 +40,6 @@ alias svi="sudo $EDITOR"
 if [[ $(lsb_release -is) = ManjaroLinux ]]
 then
 	alias ls="~/.dotfiles/.Misc/ls --color=auto --group-directories-first -X"
-else
-	alias ls="colorls"
 fi
 alias la="ls -A"
 alias ll="la -l"
