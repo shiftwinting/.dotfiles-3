@@ -1,6 +1,39 @@
 export EDITOR=nvim			# Set neovim as default editor.
 export VISUAL=nvim			# Set neovim as default reader.
 
+
+# Distro-specific alias and functions.
+if [[ $(lsb_release -is) = ManjaroLinux ]]
+then
+	alias ls="~/.dotfiles/.Misc/ls --color=auto --group-directories-first -X"
+
+	alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
+	alias pinstall="sudo powerpill -S"
+	alias show="yay -Si"
+	alias search="yay -Ss"
+	alias fsearch="yay -F"
+	alias list="reset; yay -Qe"
+	alias remove="yay -Rs"
+	alias mirror="sudo pacman-mirrors --geoip && sudo pacman -Syyu"
+	alias orphan='yay -Rs $(yay -Qqtd)'
+
+	#Enable/Disable touchpad
+	device="Synaptics TM2985-009"
+
+	enabled=$(xinput --list-props "$device" | grep "Device Enabled" | awk '{print $NF}')
+
+	if [[ "$enabled" == "1" ]]; then
+		alias toggle="xinput --disable '$device' && reload"
+	else
+		alias toggle="xinput --enable '$device' && reload"
+	fi
+else
+	# Ubuntu
+	alias ls="ls --color"
+	alias install="sudo apt install"
+fi
+
+
 # git
 alias gac="git add .; git commit"
 alias gap="git add -p"
@@ -36,31 +69,9 @@ alias \$=''
 alias vi="$EDITOR"
 alias svi="sudo $EDITOR"
 
-# ls
-if [[ $(lsb_release -is) = ManjaroLinux ]]
-then
-	alias ls="~/.dotfiles/.Misc/ls --color=auto --group-directories-first -X"
-else
-	alias ls="ls --color"
-fi
+#ls
 alias la="ls -A"
 alias ll="la -l"
-
-# pacman/yay
-if [[ $(lsb_release -is) = ManjaroLinux ]]
-then
-	alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
-	alias pinstall="sudo powerpill -S"
-	alias show="yay -Si"
-	alias search="yay -Ss"
-	alias fsearch="yay -F"
-	alias list="reset; yay -Qe"
-	alias remove="yay -Rs"
-	alias mirror="sudo pacman-mirrors --geoip && sudo pacman -Syyu"
-	alias orphan='yay -Rs $(yay -Qqtd)'
-else
-	alias install="sudo apt install"
-fi
 
 alias up="source ~/.dotfiles/.Misc/upgrade.sh"
 
@@ -182,17 +193,3 @@ function chpwd(){la}
 # Make npm automatically global.
 alias npm="sudo npm -g"
 
-#Enable/Disable touchpad
-device="Synaptics TM2985-009"
-
-
-if [[ $(lsb_release -is) = ManjaroLinux ]]
-then
-	enabled=$(xinput --list-props "$device" | grep "Device Enabled" | awk '{print $NF}')
-fi
-
-if [[ "$enabled" == "1" ]]; then
-	alias toggle="xinput --disable '$device' && reload"
-else
-	alias toggle="xinput --enable '$device' && reload"
-fi
