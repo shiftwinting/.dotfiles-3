@@ -31,6 +31,11 @@ else
 	# Ubuntu
 	alias ls="ls --color"
 	alias install="sudo apt install"
+
+	# WSL - i.e. running Ubuntu through Windows.
+	if [[ $(uname -r) =~ Microsoft$ ]]; then
+		alias cd2="cd /mnt/c/Users/gocdu/"
+	fi
 fi
 
 
