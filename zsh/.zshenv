@@ -35,6 +35,7 @@ else
 	# WSL - i.e. running Ubuntu through Windows.
 	if [[ $(uname -r) =~ Microsoft$ ]]; then
 		alias cd2="cd /mnt/c/Users/gocdu/"
+		alias cd3="cd /mnt/c/Users/gocdu/Desktop/cmt"
 	fi
 fi
 
