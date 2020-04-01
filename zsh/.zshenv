@@ -15,7 +15,7 @@ then
 	alias list="reset; yay -Qe"
 	alias remove="yay -Rs"
 	alias mirror="sudo pacman-mirrors --geoip && sudo pacman -Syyu"
-	alias orphan='yay -Rs $(yay -Qqtd)'
+	alias orphan='yay -Qdtq | yay -Rs -'
 
 	#Enable/Disable touchpad
 	device="Synaptics TM2985-009"
