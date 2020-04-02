@@ -54,45 +54,46 @@ autoload -Uz _zinit
 
 alias z="zinit silent depth"1" light-mode id-as"auto""
 alias ice="zinit ice silent depth'1' id-as'auto'"
-alias snip="zinit snippet"
-alias light="zinit light"
+alias snippet="zinit snippet"
+alias load="zinit light"
 
-#ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"; light sebastiencs/icons-in-terminal
+#ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"
+#load sebastiencs/icons-in-terminal
 
 ice atinit"
   zstyle ':prezto:module:editor' dot-expansion 'yes'
   zstyle ':prezto:module:editor' key-bindings 'vi' "
-snip PZT::modules/editor/init.zsh
+snippet PZT::modules/editor/init.zsh
 
 ice atclone"./install" atload"source ~/.fzf.zsh"
-light junegunn/fzf
+load junegunn/fzf
 
 ice id-as"history" atload"
   unsetopt hist_beep
   unalias history-stat" 
-snip PZT::modules/history/init.zsh
+snippet PZT::modules/history/init.zsh
 
 ice wait pick'async.zsh'
-light mafredri/zsh-async
+load mafredri/zsh-async
 
 ice wait
-light willghatch/zsh-saneopt
+load willghatch/zsh-saneopt
 
 ice wait id-as"completion" blockf;
-snip PZT::modules/completion/init.zsh
+snippet PZT::modules/completion/init.zsh
 
 ice wait atinit"export ENHANCD_DISABLE_HOME=1"
-light b4b4r07/enhancd
+load b4b4r07/enhancd
 
 ice wait atload"
   _zsh_autosuggest_start
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept"
-light zsh-users/zsh-autosuggestions
+load zsh-users/zsh-autosuggestions
 
 PS1="- "
 ice wait"!" pick"async.zsh" src"pure.zsh"
-light sindresorhus/pure
+load sindresorhus/pure
 
 z wait"1" for \
 	has"git" zdharma/zsh-diff-so-fancy \
@@ -106,13 +107,13 @@ z wait"1" for \
 ice wait"1" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
   sed -i '/DIR/c\DIR 34;20' LS_COLORS
   dircolors -b LS_COLORS > clrs.zsh"
-light trapd00r/LS_COLORS
+load trapd00r/LS_COLORS
 
 # Syntax highlighter "needs" to be last.
 
 ice wait"1" atinit"
   zpcompinit
   zpcdreplay"
-light zdharma/fast-syntax-highlighting
+load zdharma/fast-syntax-highlighting
 
-unalias ice snip light z
+unalias ice snippet load z
