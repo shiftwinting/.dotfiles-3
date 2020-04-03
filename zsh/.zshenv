@@ -79,7 +79,6 @@ alias c="cd ~/.dotfiles/config/.config"
 alias zs="cd ~/.zplugin/snippets"
 alias zp="cd ~/.zplugin/plugins"
 alias zb="cd ~/.zplugin/bin"
-alias m="cd /usr/share/texmf-dist/tex/latex/moderncv"
 alias ft="cd ~/.config/nvim/ftplugin"
 
 #config
@@ -128,14 +127,8 @@ alias rmd="rmdir --ignore-fail-on-non-empty *"
 # Restore dotfiles
 alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && reload"
 
-# date of 90 days prior
-alias 90='date +%d:%m:%Y -d "90 day ago"'
-
 # Download youtube as mp3
 alias yget="youtube-dl --extract-audio --audio-format mp3"
-
-# Print random file in current folder
-alias random_file="ls | shuf -n 1"
 
 # Don't record in history.
 alias vlc=" vlc"
@@ -184,6 +177,3 @@ alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b
 
 # Automatically run ls after using cd.
 function chpwd(){la}
-
-# Make npm automatically global.
-alias npm="sudo npm -g"
