@@ -3,11 +3,6 @@
 # Install all missing programs
 # 
 
-# zinit
-if [ ! -d "${HOME}/.zinit" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-fi
-
 # vim-plug
 if [ ! -e "${HOME}/.local/share/nvim/site/autoload/plug.vim" ]; then
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
