@@ -1,7 +1,6 @@
 export EDITOR=nvim			# Set neovim as default editor.
 export VISUAL=nvim			# Set neovim as default reader.
 
-
 # Distro-specific alias and functions.
 if [[ $(lsb_release -is) = ManjaroLinux ]]
 then
@@ -188,4 +187,3 @@ function chpwd(){la}
 
 # Make npm automatically global.
 alias npm="sudo npm -g"
-

@@ -103,6 +103,9 @@ ice wait"1" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
   dircolors -b LS_COLORS > clrs.zsh"
 load trapd00r/LS_COLORS
 
+ice wait"1"
+load tmux-plugins/tpm
+
 # Syntax highlighter "needs" to be last.
 
 ice wait"1" atinit"
