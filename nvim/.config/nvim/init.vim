@@ -37,11 +37,11 @@ source ~/.vimrc
 "highlight Folded ctermfg=204
 
 "Badwolf
-"colorscheme badwolf
+colorscheme badwolf
 
-colorscheme synthwave
-highlight Folded ctermfg=204
-highlight Folded ctermbg=000
+"colorscheme synthwave
+"highlight Folded ctermfg=204
+"highlight Folded ctermbg=000
 
 "------------------------------------
 "Other settings
