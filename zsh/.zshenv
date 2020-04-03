@@ -16,17 +16,6 @@ then
 	alias remove="yay -Rs"
 	alias mirror="sudo pacman-mirrors --geoip && sudo pacman -Syyu"
 	alias orphan='yay -Qdtq | yay -Rs -'
-
-	#Enable/Disable touchpad
-	device="Synaptics TM2985-009"
-
-	enabled=$(xinput --list-props "$device" | grep "Device Enabled" | awk '{print $NF}')
-
-	if [[ "$enabled" == "1" ]]; then
-		alias toggle="xinput --disable '$device' && reload"
-	else
-		alias toggle="xinput --enable '$device' && reload"
-	fi
 else
 	# Ubuntu
 	alias ls="ls --color"
