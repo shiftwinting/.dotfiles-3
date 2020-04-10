@@ -42,10 +42,6 @@ setopt hist_ignore_space         # Do not record an event starting with a space.
 setopt hist_save_no_dups         # Do not write a duplicate event to the history file.
 setopt hist_verify               # Do not execute immediately upon history expansion.
 
-HISTFILE="${HISTFILE:-${ZDOTDIR:-$HOME}/.zhistory}"  # The path to the history file.
-HISTSIZE=10000                   # The maximum number of events to save in the internal history.
-SAVEHIST=10000                   # The maximum number of events to save in the history file.
-
 ######################################################
 #
 # Alias
