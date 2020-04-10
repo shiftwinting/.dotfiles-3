@@ -27,11 +27,6 @@ snippet PZT::modules/editor/init.zsh
 ice atclone"./install" atload"source ~/.fzf.zsh"
 load junegunn/fzf
 
-ice id-as"history" atload"
-  unsetopt hist_beep
-  unalias history-stat" 
-snippet PZT::modules/history/init.zsh
-
 ice wait pick'async.zsh'
 load mafredri/zsh-async
 
