@@ -5,7 +5,7 @@ XDG_DATA_HOME=$HOME/.local/share
 XDG_DATA_DIRS=/usr/local/share:/usr/share
 XDG_CONFIG_DIRS=/etc/xdg
 
-HISTFILE=$HOME/.cache/.zhistory  # The path to the history file.
+HISTFILE=$XDG_CACHE_HOME/zhistory  # The path to the history file.
 HISTSIZE=10000                   # The maximum number of events to save in the internal history.
 SAVEHIST=10000                   # The maximum number of events to save in the history file.
 
