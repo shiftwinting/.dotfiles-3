@@ -84,9 +84,10 @@ alias zb="cd ~/.zplugin/bin"
 alias ft="cd ~/.config/nvim/ftplugin"
 
 #config
-alias ali="$EDITOR ~/.aliases"
+alias ali="$EDITOR ~/.aliases.sh"
 alias rc="$EDITOR ~/.zshrc"
 alias zenv="$EDITOR ~/.zshenv"
+alias zi="$EDITOR ~/.zinit.zsh"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias bsprc="$EDITOR ~/.config/bspwm/bspwmrc"
 alias sxhrc="$EDITOR ~/.config/sxhkd/sxhkdrc"

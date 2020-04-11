@@ -43,7 +43,7 @@ setopt hist_save_no_dups         # Do not write a duplicate event to the history
 setopt hist_verify               # Do not execute immediately upon history expansion.
 
 [ -f ~/.zinit.zsh ] && source ~/.zinit.zsh
-[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.aliases.sh ] && source ~/.aliases.sh
 
 # Automatically run ls after using cd.
 function chpwd(){ls -A}
