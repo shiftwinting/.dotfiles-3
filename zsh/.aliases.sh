@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ######################################################
 #
 # Alias
@@ -34,7 +36,7 @@ fi
 alias gac="git add .; git commit"
 alias gap="git add -p"
 alias gb="git branch"
-function gbD(){git push origin --delete $1}
+function gbD(){ git push origin --delete "$1"; }
 alias gc="git commit"
 alias gcd="cd-gitroot"
 alias gdc="forgit::diff --cached"
@@ -53,7 +55,7 @@ alias gpf='git push --force-with-lease'
 alias gpf!='git push --force'
 alias gra="git rebase --abort "
 alias gres="git reset ."
-function gri(){git rebase -i HEAD~${1:-10}}
+function gri(){ git rebase -i HEAD~"${1:-10}" ;}
 alias gs="git status"
 alias gopen="git open"
 alias gu="git remote update"
@@ -63,8 +65,8 @@ alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgree
 alias \$=''
 
 # vim
-alias vi="$EDITOR"
-alias svi="sudo $EDITOR"
+alias vi='$EDITOR'
+alias svi='sudo $EDITOR'
 
 #ls
 alias la="ls -A"
@@ -84,15 +86,16 @@ alias zb="cd ~/.zplugin/bin"
 alias ft="cd ~/.config/nvim/ftplugin"
 
 #config
-alias ali="$EDITOR ~/.aliases.sh"
-alias rc="$EDITOR ~/.zshrc"
-alias zenv="$EDITOR ~/.zshenv"
-alias zi="$EDITOR ~/.zinit.zsh"
-alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
-alias bsprc="$EDITOR ~/.config/bspwm/bspwmrc"
-alias sxhrc="$EDITOR ~/.config/sxhkd/sxhkdrc"
-alias trc="$EDITOR ~/.tmux.conf"
-alias un="$EDITOR ~/.dotfiles/home/.uncrustify.cfg"
+alias ali='$EDITOR ~/.aliases.sh'
+alias rc='$EDITOR ~/.zshrc'
+alias brc='$EDITOR ~/.bashrc'
+alias zenv='$EDITOR ~/.zshenv'
+alias zi='$EDITOR ~/.zinit.zsh'
+alias nvimrc='$EDITOR ~/.config/nvim/init.vim'
+alias bsprc='$EDITOR ~/.config/bspwm/bspwmrc'
+alias sxhrc='$EDITOR ~/.config/sxhkd/sxhkdrc'
+alias trc='$EDITOR ~/.tmux.conf'
+alias un='$EDITOR ~/.dotfiles/home/.uncrustify.cfg'
 
 # reload
 alias reload="exec zsh -o NO_GLOBAL_RCS"
@@ -122,8 +125,8 @@ alias mkdir="mkdir -pv"
 alias clip="xclip -sel clip <"
 
 # web
-function fire() {firefox $1 NUL}
-function chrome() {chromium $1 NUL}
+function fire() { firefox "$1" NUL;}
+function chrome() { chromium "$1" NUL;}
 
 # rmdir
 alias rmd="rmdir --ignore-fail-on-non-empty *"
@@ -138,7 +141,7 @@ alias yget="youtube-dl --extract-audio --audio-format mp3"
 alias vlc=" vlc"
 
 # Screenshot
-function ss(){gnome-screenshot NUL -d ${1:-10} &}
+function ss(){ gnome-screenshot NUL -d "${1:-10}" &}
 
 # Brightness
 alias x="xbacklight"
@@ -167,11 +170,11 @@ alias free="free -h"
 alias t="tmux"
 
 # Print PATH and fpath
-alias path="tr ':' '\n' <<< "$PATH""
-alias fpath="tr ':' '\n' <<< "$FPATH""
+alias path="tr ':' '\n' <<< $PATH"
+alias fpath="tr ':' '\n' <<< $FPATH"
 
 # Fast zathura
-function z(){zathura $1 &}
+function z(){ zathura "$1" &}
 
 # Allows leaving from deleted directories
 alias ..='command .. 2>/dev/null || cd $(dirname $PWD)'
