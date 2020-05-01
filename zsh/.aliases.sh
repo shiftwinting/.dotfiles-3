@@ -101,7 +101,11 @@ alias un='$EDITOR ~/.dotfiles/home/.uncrustify.cfg'
 alias reload="exec zsh -o NO_GLOBAL_RCS"
 
 # reset
-alias reset="tput reset"
+if [[ "$TMUX" ]]; then
+	alias reset="clear; tmux clearhist"
+else
+	alias reset="tput reset"
+fi
 
 # Subversion
 alias svc="svn checkout"
