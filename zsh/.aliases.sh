@@ -59,9 +59,6 @@ alias gopen="git open"
 alias gu="git remote update"
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
-# Remove first dollar in commands
-alias \$=''
-
 # vim
 alias vi='$EDITOR'
 alias svi='sudo $EDITOR'
@@ -111,12 +108,17 @@ alias svc="svn checkout"
 # wifi
 alias wifi="sudo nmtui"
 
-# Global alias
-alias -g A="| ack"
-alias -g C="| xclip -selection clipboard"
-alias -g L="| less"
-alias -g NE="2> /dev/null"
-alias -g NUL="&> /dev/null"
+# zsh-only aliases (mostly global aliases)
+if [[ $ZSH_NAME ]]; then
+	alias -g A="| ack"
+	alias -g C="| xclip -selection clipboard"
+	alias -g L="| less"
+	alias -g NE="2> /dev/null"
+	alias -g NUL="&> /dev/null"
+
+	# Remove first dollar in commands
+	alias \$=''
+fi
 
 # Safe/verbose ops
 alias rm="rm -iv"
