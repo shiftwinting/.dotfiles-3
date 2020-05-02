@@ -78,6 +78,7 @@ alias c="cd ~/.dotfiles/config/.config"
 alias zs="cd ~/.zplugin/snippets"
 alias zp="cd ~/.zplugin/plugins"
 alias zb="cd ~/.zplugin/bin"
+alias ds='cd ~/.dotfiles/shells'
 alias ft="cd ~/.config/nvim/ftplugin"
 
 #config
