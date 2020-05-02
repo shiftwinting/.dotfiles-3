@@ -46,7 +46,6 @@ colorscheme badwolf
 "------------------------------------
 "Other settings
 
-"noremap <F3> :Uncrustify<CR>
 noremap <F3> :Autoformat<CR>
 noremap <F5> :Neomake<CR>
 noremap <F8> :lnext<CR>
@@ -65,5 +64,3 @@ set clipboard+=unnamedplus
 
 "esc removes highlighed text
 nnoremap <esc> :noh<return><esc>
-
-autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
