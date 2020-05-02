@@ -1,3 +1,6 @@
+#Import helper functions
+[ -f ~/.shell_functions.sh ] && source ~/.shell_functions.sh
+
 ######################################################
 #
 # Install all missing programs
@@ -42,8 +45,8 @@ setopt hist_ignore_space      # Do not record an event starting with a space.
 setopt hist_save_no_dups      # Do not write a duplicate event to the history file.
 setopt hist_verify            # Do not execute immediately upon history expansion.
 
-[ -f ~/.zinit.zsh ] && source ~/.zinit.zsh
-[ -f ~/.aliases.sh ] && source ~/.aliases.sh
+include ~/.zinit.zsh
+include ~/.aliases.sh
 
 # Automatically run ls after using cd.
 function chpwd() {ls -A}

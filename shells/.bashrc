@@ -52,8 +52,10 @@ ex() {
 }
 
 main() {
-
 	[[ $- != *i* ]] && return
+
+	#Import helper functions
+	[ -f ~/.shell_functions.sh ] && source ~/.shell_functions.sh
 
 	[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
