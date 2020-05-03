@@ -23,18 +23,18 @@ ex() {
 	fi
 }
 EnableColors() {
-	use_color=true
+	local use_color=true
 
 	# Set colorful PS1 only on colorful terminals.
 	# dircolors --print-database uses its own built-in database
 	# instead of using /etc/DIR_COLORS.  Try to use the external file
 	# first to take advantage of user additions.  Use internal bash
 	# globbing instead of external grep binary.
-	safe_term=${TERM//[^[:alnum:]]/?} # sanitize TERM
-	match_lhs=""
+	local safe_term=${TERM//[^[:alnum:]]/?} # sanitize TERM
+	local match_lhs=""
 	is_file ~/.dir_colors && match_lhs="${match_lhs}$(<~/.dir_colors)"
 	is_file /etc/DIR_COLORS && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
-	is_empty ${match_lhs} &&
+	is_empty "${match_lhs}" &&
 		type -P dircolors >/dev/null &&
 		match_lhs=$(dircolors --print-database)
 	[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
@@ -43,9 +43,9 @@ EnableColors() {
 		# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
 		if type -P dircolors >/dev/null; then
 			if is_file ~/.dir_colors; then
-				eval $(dircolors -b ~/.dir_colors)
+				eval "$(dircolors -b ~/.dir_colors)"
 			elif is_file /etc/DIR_COLORS; then
-				eval $(dircolors -b /etc/DIR_COLORS)
+				eval "$(dircolors -b /etc/DIR_COLORS)"
 			fi
 		fi
 
@@ -67,8 +67,6 @@ EnableColors() {
 			PS1='\u@\h \w \$ '
 		fi
 	fi
-
-	unset use_color safe_term match_lhs
 }
 
 main() {
