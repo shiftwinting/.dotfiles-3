@@ -28,9 +28,9 @@ colors() {
 	done
 }
 
-# # ex - archive extractor
-# # usage: ex <file>
 ex() {
+	# # ex - archive extractor
+	# # usage: ex <file>
 	if [ -f "$1" ]; then
 		case $1 in
 		*.tar.bz2) tar xjf "$1" ;;
