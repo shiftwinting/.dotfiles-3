@@ -22,6 +22,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
 Plug 'TroyFletcher/vim-colors-synthwave'
+Plug 'dracula/vim'
+Plug 'Badacadabra/vim-archery'
+Plug 'mhartington/oceanic-next'
 
 call plug#end()
 
@@ -32,16 +35,20 @@ source ~/.vimrc
 "----------------------
 "Colors
 
-"Molokai
 "colorscheme molokai
 "highlight Folded ctermfg=204
 
-"Badwolf
-colorscheme badwolf
+"colorscheme badwolf
 
 "colorscheme synthwave
 "highlight Folded ctermfg=204
 "highlight Folded ctermbg=000
+
+colorscheme dracula
+
+"colorscheme archery
+
+"colorscheme OceanicNext
 
 "------------------------------------
 "Other settings
@@ -75,3 +82,19 @@ au FileType sh let g:is_bash=1
 au FileType sh set foldmethod=syntax
 syntax enable
 
+function! MyFoldText() " {{{
+    let line = getline(v:foldstart)
+
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+    let foldedlinecount = v:foldend - v:foldstart
+
+    " expand tabs into spaces
+    let onetab = strpart('          ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+    let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
+    return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+endfunction " }}}
+set foldtext=MyFoldText()
