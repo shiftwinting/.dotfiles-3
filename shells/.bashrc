@@ -22,23 +22,7 @@ ex() {
 		echo "'$1' is not a valid file"
 	fi
 }
-
-main() {
-	[[ $- != *i* ]] && return
-
-	#Import helper functions
-	source ~/.shell_functions.sh
-
-	# Change the window title of X terminals
-	case ${TERM} in
-	xterm* | rxvt* | Eterm* | aterm | kterm | gnome* | interix | konsole*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-		;;
-	screen*)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-		;;
-	esac
-
+EnableColors() {
 	use_color=true
 
 	# Set colorful PS1 only on colorful terminals.
@@ -85,6 +69,25 @@ main() {
 	fi
 
 	unset use_color safe_term match_lhs sh
+}
+
+main() {
+	[[ $- != *i* ]] && return
+
+	#Import helper functions
+	source ~/.shell_functions.sh
+
+	# Change the window title of X terminals
+	case ${TERM} in
+	xterm* | rxvt* | Eterm* | aterm | kterm | gnome* | interix | konsole*)
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+		;;
+	screen*)
+		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+		;;
+	esac
+
+	EnableColors
 
 	xhost +local:root >/dev/null 2>&1
 
