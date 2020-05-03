@@ -1,5 +1,5 @@
 #Import helper functions
-[ -f ~/.shell_functions.sh ] && source ~/.shell_functions.sh
+source ~/.shell_functions.sh
 
 ######################################################
 #

@@ -55,7 +55,7 @@ main() {
 	[[ $- != *i* ]] && return
 
 	#Import helper functions
-	[ -f ~/.shell_functions.sh ] && source ~/.shell_functions.sh
+	source ~/.shell_functions.sh
 
 	# Change the window title of X terminals
 	case ${TERM} in
