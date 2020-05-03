@@ -94,7 +94,8 @@ alias trc='$EDITOR ~/.tmux.conf'
 alias un='$EDITOR ~/.dotfiles/home/.uncrustify.cfg'
 
 # reload
-alias reload="exec zsh -o NO_GLOBAL_RCS"
+alias re="exec zsh -o NO_GLOBAL_RCS"
+alias reb="exec bash"
 
 # reset
 if [[ "$TMUX" ]]; then
@@ -137,7 +138,7 @@ function chrome() { chromium "$1" NUL; }
 alias rmd="rmdir --ignore-fail-on-non-empty *"
 
 # Restore dotfiles
-alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && reload"
+alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && re"
 
 # Download youtube as mp3
 alias yget="youtube-dl --extract-audio --audio-format mp3"
