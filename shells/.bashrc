@@ -27,7 +27,6 @@ colors() {
 		echo
 	done
 }
-
 ex() {
 	# # ex - archive extractor
 	# # usage: ex <file>
