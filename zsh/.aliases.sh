@@ -93,9 +93,16 @@ alias sxhrc='$EDITOR ~/.config/sxhkd/sxhkdrc'
 alias trc='$EDITOR ~/.tmux.conf'
 alias un='$EDITOR ~/.dotfiles/home/.uncrustify.cfg'
 
-# reload
-alias re="exec zsh -o NO_GLOBAL_RCS"
-alias reb="exec bash"
+# reload current shell
+if [[ $ZSH_NAME ]]; then
+	alias reload="exec zsh -o NO_GLOBAL_RCS"
+else
+	alias reload="exec bash"
+fi
+
+# Exec new shell
+alias z="exec zsh -o NO_GLOBAL_RCS"
+alias b="exec bash"
 
 # reset
 if [[ "$TMUX" ]]; then
@@ -138,7 +145,7 @@ function chrome() { chromium "$1" NUL; }
 alias rmd="rmdir --ignore-fail-on-non-empty *"
 
 # Restore dotfiles
-alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && re"
+alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && reload"
 
 # Download youtube as mp3
 alias yget="youtube-dl --extract-audio --audio-format mp3"
@@ -178,9 +185,6 @@ alias t="tmux"
 # Print PATH and fpath
 alias path="tr ':' '\n' <<< $PATH"
 alias fpath="tr ':' '\n' <<< $FPATH"
-
-# Fast zathura
-function z() { zathura "$1" & }
 
 # Allows leaving from deleted directories
 alias ..='command .. 2>/dev/null || cd $(dirname $PWD)'
