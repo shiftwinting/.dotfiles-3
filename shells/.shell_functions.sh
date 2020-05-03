@@ -6,6 +6,12 @@ is_file() {
     [[ -f $file ]]
 }
 
+is_empty() {
+    local var=$1
+
+    [[ -z $var ]]
+}
+
 include () {
     is_file "$1" && source "$1"
 }

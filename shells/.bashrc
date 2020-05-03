@@ -50,7 +50,7 @@ main() {
 	match_lhs=""
 	is_file ~/.dir_colors && match_lhs="${match_lhs}$(<~/.dir_colors)"
 	is_file /etc/DIR_COLORS && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
-	[[ -z ${match_lhs} ]] &&
+	is_empty ${match_lhs} &&
 		type -P dircolors >/dev/null &&
 		match_lhs=$(dircolors --print-database)
 	[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
