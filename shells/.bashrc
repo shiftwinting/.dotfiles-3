@@ -57,8 +57,6 @@ main() {
 	#Import helper functions
 	[ -f ~/.shell_functions.sh ] && source ~/.shell_functions.sh
 
-	[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
-
 	# Change the window title of X terminals
 	case ${TERM} in
 	xterm* | rxvt* | Eterm* | aterm | kterm | gnome* | interix | konsole*)
