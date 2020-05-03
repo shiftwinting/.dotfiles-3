@@ -68,12 +68,7 @@ EnableColors() {
 		fi
 	fi
 }
-
-main() {
-	[[ $- != *i* ]] && return
-
-	#Import helper functions
-	source ~/.shell_functions.sh
+ChangeWindowTitle() {
 
 	# Change the window title of X terminals
 	case ${TERM} in
@@ -84,6 +79,16 @@ main() {
 		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
 		;;
 	esac
+
+}
+
+main() {
+	[[ $- != *i* ]] && return
+
+	#Import helper functions
+	source ~/.shell_functions.sh
+
+	ChangeWindowTitle
 
 	EnableColors
 
