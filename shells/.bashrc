@@ -131,7 +131,7 @@ main() {
 	# Enable history appending instead of overwriting.  #139609
 	shopt -s histappend
 
-	[ -f ~/.aliases.sh ] && source ~/.aliases.sh
+	include ~/.aliases.sh
 }
 
 main
