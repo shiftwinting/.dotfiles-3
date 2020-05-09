@@ -24,7 +24,7 @@ ice atinit"
   zstyle ':prezto:module:editor' key-bindings 'vi' "
 snippet PZT::modules/editor/init.zsh
 
-ice atclone"./install" atload"source ~/.fzf.zsh"
+ice atclone"./install --key-bindings --completion --no-update-rc" atload"source ~/.fzf.zsh"
 load junegunn/fzf
 
 ice wait pick'async.zsh'
