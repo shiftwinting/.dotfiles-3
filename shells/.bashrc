@@ -83,9 +83,10 @@ ChangeWindowTitle() {
 }
 
 main() {
+	# Exit if shell isn't interactive
 	[[ $- != *i* ]] && return
 
-	#Import helper functions
+	# Import helper functions
 	source ~/.shell_functions.sh
 
 	ChangeWindowTitle
