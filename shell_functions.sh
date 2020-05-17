@@ -11,8 +11,3 @@ is_empty() {
 
     [[ -z $var ]]
 }
-
-include () {
-    is_file "$1" && source "$1"
-}
-

@@ -87,7 +87,8 @@ main() {
 	[[ $- != *i* ]] && return
 
 	# Import helper functions
-	source ~/.shell_functions.sh
+	source ~/.dotfiles/loader.bash
+	include ~/.dotfiles/shell_functions.sh
 
 	ChangeWindowTitle
 

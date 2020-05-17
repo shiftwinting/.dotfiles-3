@@ -1,5 +1,6 @@
 #Import helper functions
-source ~/.shell_functions.sh
+source ~/.dotfiles/loader.zsh
+include ~/.dotfiles/shell_functions.sh
 
 ######################################################
 #
