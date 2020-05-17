@@ -94,7 +94,7 @@ alias trc='$EDITOR ~/.tmux.conf'
 alias un='$EDITOR ~/.dotfiles/home/.uncrustify.cfg'
 
 # reload current shell
-if [[ $ZSH_NAME ]]; then
+if [ -n "$ZSH_VERSION" ]; then
 	alias reload="exec zsh -o NO_GLOBAL_RCS"
 else
 	alias reload="exec bash"
@@ -118,7 +118,7 @@ alias svc="svn checkout"
 alias wifi="sudo nmtui"
 
 # zsh-only aliases (mostly global aliases)
-if [[ $ZSH_NAME ]]; then
+if [ -n "$ZSH_VERSION" ]; then
 	alias -g A="| ack"
 	alias -g C="| xclip -selection clipboard"
 	alias -g L="| less"
