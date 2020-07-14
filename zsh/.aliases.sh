@@ -7,7 +7,7 @@
 
 # Distro-specific alias and functions.
 if [[ $(lsb_release -is) == ManjaroLinux ]]; then
-	alias ls="~/.dotfiles/.Misc/ls --color=auto --group-directories-first -X"
+	alias ls="~/.dotfiles/.misc/ls --color=auto --group-directories-first -X"
 
 	alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
 	alias pinstall="sudo powerpill -S"
@@ -67,7 +67,7 @@ alias svi='sudo $EDITOR'
 alias la="ls -A"
 alias ll="la -l"
 
-alias up="source ~/.dotfiles/.Misc/upgrade.sh"
+alias up="source ~/.dotfiles/.misc/upgrade.sh"
 
 # VSCode
 alias code="code ."

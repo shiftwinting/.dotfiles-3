@@ -16,5 +16,5 @@ killall -q sxhkd feh compton unclutter
 
 sxhkd &
 compton -b -i 0.8 &
-feh --bg-fill '/home/dundar/.dotfiles/.Misc/disco.png'
+feh --bg-fill '/home/dundar/.dotfiles/.misc/disco.png'
 unclutter -idle 3.0 -root &
