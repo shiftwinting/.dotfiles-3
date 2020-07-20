@@ -1,6 +1,5 @@
 #Import helper functions
-source ~/.dotfiles/loader.zsh
-include ~/.dotfiles/shell_functions.sh
+source ~/.dotfiles/shell_functions.sh
 
 ######################################################
 #
@@ -46,8 +45,8 @@ setopt hist_ignore_space      # Do not record an event starting with a space.
 setopt hist_save_no_dups      # Do not write a duplicate event to the history file.
 setopt hist_verify            # Do not execute immediately upon history expansion.
 
-include ~/.zinit.zsh
-include ~/.aliases.sh
+source ~/.zinit.zsh
+source ~/.aliases.sh
 
 # Automatically run ls after using cd.
 function chpwd() {ls -A}

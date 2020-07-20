@@ -87,8 +87,7 @@ main() {
 	[[ $- != *i* ]] && return
 
 	# Import helper functions
-	source ~/.dotfiles/loader.bash
-	include ~/.dotfiles/shell_functions.sh
+	source ~/.dotfiles/shell_functions.sh
 
 	ChangeWindowTitle
 
@@ -111,7 +110,7 @@ main() {
 	# Enable history appending instead of overwriting.  #139609
 	shopt -s histappend
 
-	include ~/.aliases.sh
+	source ~/.aliases.sh
 }
 
 main
