@@ -172,7 +172,7 @@ alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
 alias make="make -j -s"
 
 #Make ag not print Permission denied
-alias ag="ag --silent"
+alias ag="ag --hidden --silent --ignore .git"
 
 # Make commands human-readable.
 alias du="du -h"
