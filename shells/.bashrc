@@ -1,5 +1,15 @@
 #!/bin/bash
 
+is_empty() {
+    local var=$1
+
+    [[ -z $var ]]
+}
+is_file() {
+    local file=$1
+
+    [[ -f $file ]]
+}
 ex() {
 	# # ex - archive extractor
 	# # usage: ex <file>
@@ -86,11 +96,7 @@ main() {
 	# Exit if shell isn't interactive
 	[[ $- != *i* ]] && return
 
-	# Import helper functions
-	source ~/.dotfiles/shell_functions.sh
-
 	ChangeWindowTitle
-
 	EnableColors
 
 	xhost +local:root >/dev/null 2>&1

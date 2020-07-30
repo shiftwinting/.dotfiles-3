@@ -1,6 +1,3 @@
-#Import helper functions
-source ~/.dotfiles/shell_functions.sh
-
 ######################################################
 #
 # Install all missing programs
