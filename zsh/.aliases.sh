@@ -34,7 +34,7 @@ fi
 alias gac="git add .; git commit"
 alias gap="git add -p"
 alias gb="git branch"
-function gbD() { git push origin --delete "$1"; }
+gbD() { git push origin --delete "$1"; }
 alias gc="git commit"
 alias gcd="cd-gitroot"
 alias gdc="forgit::diff --cached"
@@ -53,7 +53,7 @@ alias gpf='git push --force-with-lease'
 alias gpf!='git push --force'
 alias gra="git rebase --abort "
 alias gres="git reset ."
-function gri() { git rebase -i HEAD~"${1:-10}"; }
+gri() { git rebase -i HEAD~"${1:-10}"; }
 alias gs="git status"
 alias gopen="git open"
 alias gu="git remote update"
@@ -67,10 +67,8 @@ alias svi='sudo $EDITOR'
 alias la="ls -A"
 alias ll="la -l"
 
+# Upgrade
 alias up="source ~/.dotfiles/.misc/upgrade.sh"
-
-# VSCode
-alias code="code ."
 
 # goto
 alias d="cd ~/.dotfiles"
@@ -91,7 +89,6 @@ alias nvimrc='$EDITOR ~/.config/nvim/init.vim'
 alias bsprc='$EDITOR ~/.config/bspwm/bspwmrc'
 alias sxhrc='$EDITOR ~/.config/sxhkd/sxhkdrc'
 alias trc='$EDITOR ~/.tmux.conf'
-alias un='$EDITOR ~/.dotfiles/home/.uncrustify.cfg'
 
 # reload current shell
 if [ -n "$ZSH_VERSION" ]; then
@@ -110,9 +107,6 @@ if [[ "$TMUX" ]]; then
 else
 	alias reset="tput reset"
 fi
-
-# Subversion
-alias svc="svn checkout"
 
 # wifi
 alias wifi="sudo nmtui"
@@ -138,8 +132,8 @@ alias mkdir="mkdir -pv"
 alias clip="xclip -sel clip <"
 
 # web
-function fire() { firefox "$1" NUL; }
-function chrome() { chromium "$1" NUL; }
+fire() { firefox "$1" NUL; }
+chrome() { chromium "$1" NUL; }
 
 # rmdir
 alias rmd="rmdir --ignore-fail-on-non-empty *"
@@ -154,7 +148,7 @@ alias yget="youtube-dl --extract-audio --audio-format mp3"
 alias vlc=" vlc"
 
 # Screenshot
-function ss() { gnome-screenshot NUL -d "${1:-10}" & }
+ss() { gnome-screenshot NUL -d "${1:-10}" & }
 
 # Brightness
 alias x="xbacklight"
@@ -164,14 +158,10 @@ alias xmax="xbacklight -inc 100"
 alias xmin="xbacklight -inc 100 && xbacklight -dec 99"
 alias xg="xbacklight -get"
 
-# MkDocs
-alias serve="cd ~/zplugin_readme && mkdocs serve NUL &"
-alias build="cd ~/zplugin_readme && mkdocs build -d wiki"
-
 # Use make without printing the input and automatically use parallel jobs.
 alias make="make -j -s"
 
-#Make ag not print Permission denied
+# So ag doesn't print "Permission denied"
 alias ag="ag --hidden --silent --ignore .git"
 
 # Make commands human-readable.
