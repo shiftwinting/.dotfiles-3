@@ -3,8 +3,7 @@ reset
 
 line="__________________________________________________ \n\n"
 
-if [[ $(lsb_release -is) = ManjaroLinux ]]
-then
+if [[ $(lsb_release -is) = ManjaroLinux ]]; then
 	printf "yay\n\n"
 	yay -Syu --needed --nocleanmenu --nodiffmenu --removemake
 else
@@ -15,10 +14,10 @@ fi
 
 printf $line
 
-printf "zplugin modules\n\n"
-zpl update
+printf "zinit modules\n\n"
+zinit update -p
 printf $line
 
-printf "zplugin\n\n"
-zpl self-update
+printf "zinit\n\n"
+zinit self-update
 printf $line
