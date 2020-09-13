@@ -1,13 +1,8 @@
 #!/bin/bash
 
-######################################################
-#
-# Alias
-#
-
-# Distro-specific alias and functions.
+# Distro-specific
 if [[ $(lsb_release -is) == ManjaroLinux ]]; then
-	alias ls="~/.dotfiles/.misc/ls --color=auto --group-directories-first -X"
+	alias ls="$HOME/.dotfiles/.misc/ls --color=auto --group-directories-first -X"
 
 	alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
 	alias pinstall="sudo powerpill -S"
@@ -68,27 +63,27 @@ alias la="ls -A"
 alias ll="la -l"
 
 # Upgrade
-alias up="source ~/.dotfiles/.misc/upgrade.sh"
+alias up="source $HOME/.dotfiles/.misc/upgrade.sh"
 
 # goto
-alias d="cd ~/.dotfiles"
-alias c="cd ~/.dotfiles/config/.config"
-alias zs="cd ~/.zplugin/snippets"
-alias zp="cd ~/.zplugin/plugins"
-alias zb="cd ~/.zplugin/bin"
-alias ds='cd ~/.dotfiles/shells'
-alias ft="cd ~/.config/nvim/ftplugin"
+alias d="cd $HOME/.dotfiles"
+alias c="cd $HOME/.dotfiles/config/.config"
+alias zs="cd $HOME/.zplugin/snippets"
+alias zp="cd $HOME/.zplugin/plugins"
+alias zb="cd $HOME/.zplugin/bin"
+alias ds="cd $HOME/.dotfiles/shells"
+alias ft="cd $HOME/.config/nvim/ftplugin"
 
 #config
-alias ali='$EDITOR ~/.aliases.sh'
-alias rc='$EDITOR ~/.zshrc'
-alias brc='$EDITOR ~/.bashrc'
-alias zenv='$EDITOR ~/.zshenv'
-alias zi='$EDITOR ~/.zinit.zsh'
-alias nvimrc='$EDITOR ~/.config/nvim/init.vim'
-alias bsprc='$EDITOR ~/.config/bspwm/bspwmrc'
-alias sxhrc='$EDITOR ~/.config/sxhkd/sxhkdrc'
-alias trc='$EDITOR ~/.tmux.conf'
+alias ali='$EDITOR $HOME/.aliases.sh'
+alias rc='$EDITOR $HOME/.zshrc'
+alias brc='$EDITOR $HOME/.bashrc'
+alias zenv='$EDITOR $HOME/.zshenv'
+alias zi='$EDITOR $HOME/.zinit.zsh'
+alias nvimrc='$EDITOR $HOME/.config/nvim/init.vim'
+alias bsprc='$EDITOR $HOME/.config/bspwm/bspwmrc'
+alias sxhrc='$EDITOR $HOME/.config/sxhkd/sxhkdrc'
+alias trc='$EDITOR $HOME/.tmux.conf'
 
 # reload current shell
 if [ -n "$ZSH_VERSION" ]; then
