@@ -4,8 +4,14 @@
 if [[ $(lsb_release -is) == ManjaroLinux ]]; then
 	alias ls="$HOME/.dotfiles/.misc/ls --color=auto --group-directories-first -X"
 
-	alias install="yay -S --needed --nocleanmenu --nodiffmenu --removemake"
-	alias pinstall="sudo powerpill -S"
+	install() {
+		if pacman -Sqi $1 &> /dev/null; then
+			sudo powerpill -S $1
+		else
+			yay -S --needed --nocleanmenu --nodiffmenu --removemake $1
+		fi
+	}
+
 	alias show="yay -Si"
 	alias search="yay -Ss"
 	alias fsearch="yay -F"
