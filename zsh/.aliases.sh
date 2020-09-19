@@ -5,7 +5,7 @@ if [[ $(lsb_release -is) == ManjaroLinux ]]; then
 	alias ls="$HOME/.dotfiles/.misc/ls --color=auto --group-directories-first -X"
 
 	install() {
-		if pacman -Sqi $1 &> /dev/null; then
+		if pacman -Sqi $1 &>/dev/null; then
 			sudo powerpill -S $1
 		else
 			yay -S --needed --nocleanmenu --nodiffmenu --removemake $1

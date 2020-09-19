@@ -1,14 +1,14 @@
 #!/bin/bash
 
 is_empty() {
-    local var=$1
+	local var=$1
 
-    [[ -z $var ]]
+	[[ -z $var ]]
 }
 is_file() {
-    local file=$1
+	local file=$1
 
-    [[ -f $file ]]
+	[[ -f $file ]]
 }
 ex() {
 	# # ex - archive extractor
