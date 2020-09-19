@@ -38,6 +38,7 @@ alias gb="git branch"
 gbD() { git push origin --delete "$1"; }
 alias gc="git commit"
 alias gcd="cd-gitroot"
+alias gdc="forgit::diff"
 alias gdc="forgit::diff --cached"
 alias gcl="git clone --recursive"
 alias gcl1="git clone --depth=1"
