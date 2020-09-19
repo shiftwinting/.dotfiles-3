@@ -186,3 +186,7 @@ alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b
 
 # Alias for quick virtual environment activation.
 alias activate="source .virtual_environment*/bin/activate"
+
+# List explicitly installed packages by date.
+alias latest='reset; expac -Qs --timefmt="%y/%m/%d" "%l {%w} {%G} %n" | sort | grep explicit'
+
