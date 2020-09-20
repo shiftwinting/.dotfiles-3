@@ -188,7 +188,7 @@ alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b
 alias activate="source .virtual_environment*/bin/activate"
 
 # List explicitly installed packages by date.
-latest() {
+late() {
 	reset
 	output=$(expac -Qs --timefmt="%y/%m/%d" "%l {%w} {%G} %n" | sort | grep explicit)
 	echo $output
