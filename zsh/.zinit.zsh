@@ -58,11 +58,6 @@ z wait"1" for \
   mollifier/cd-gitroot \
   hlissner/zsh-autopair
 
-ice wait"1" atpull"%atclone" pick"clrs.zsh" nocompile"!" atclone"
-sed -i '/DIR/c\DIR 34;20' LS_COLORS
-dircolors -b LS_COLORS > clrs.zsh"
-load trapd00r/LS_COLORS
-
 ice wait"1"
 load tmux-plugins/tpm
 

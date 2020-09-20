@@ -11,3 +11,6 @@ export SAVEHIST=10000             # The maximum number of events to save in the 
 
 export EDITOR=nvim # Set neovim as default editor.
 export VISUAL=nvim # Set neovim as default reader.
+
+# Change ls colors. Possible colors schemes: ayu, jellybeans, molokai, snazzy, solarized-dark, solarized-light.
+export LS_COLORS="$(vivid generate snazzy)"
