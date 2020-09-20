@@ -5,11 +5,13 @@ is_empty() {
 
 	[[ -z $var ]]
 }
+
 is_file() {
 	local file=$1
 
 	[[ -f $file ]]
 }
+
 ex() {
 	# # ex - archive extractor
 	# # usage: ex <file>
@@ -32,6 +34,7 @@ ex() {
 		echo "'$1' is not a valid file"
 	fi
 }
+
 EnableColors() {
 	local use_color=true
 
@@ -78,6 +81,7 @@ EnableColors() {
 		fi
 	fi
 }
+
 ChangeWindowTitle() {
 
 	# Change the window title of X terminals
