@@ -1,21 +1,9 @@
 #!/bin/bash
 
-is_empty() {
-	local var=$1
-
-	[[ -z $var ]]
-}
-
-is_file() {
-	local file=$1
-
-	[[ -f $file ]]
-}
-
 ex() {
 	# # ex - archive extractor
 	# # usage: ex <file>
-	if is_file "$1"; then
+	if [[ -f "$1" ]]; then
 		case $1 in
 		*.tar.bz2) tar xjf "$1" ;;
 		*.tar.gz) tar xzf "$1" ;;
@@ -45,9 +33,9 @@ EnableColors() {
 	# globbing instead of external grep binary.
 	local safe_term=${TERM//[^[:alnum:]]/?} # sanitize TERM
 	local match_lhs=""
-	is_file ~/.dir_colors && match_lhs="${match_lhs}$(<~/.dir_colors)"
-	is_file /etc/DIR_COLORS && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
-	is_empty "${match_lhs}" &&
+	[[ -f ~/.dir_colors ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
+	[[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
+	[[ -z "${match_lhs}" ]] &&
 		type -P dircolors >/dev/null &&
 		match_lhs=$(dircolors --print-database)
 	[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
@@ -55,9 +43,9 @@ EnableColors() {
 	if ${use_color}; then
 		# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
 		if type -P dircolors >/dev/null; then
-			if is_file ~/.dir_colors; then
+			if [[ -f ~/.dir_colors ]]; then
 				eval "$(dircolors -b ~/.dir_colors)"
-			elif is_file /etc/DIR_COLORS; then
+			elif [[ -f /etc/DIR_COLORS ]]; then
 				eval "$(dircolors -b /etc/DIR_COLORS)"
 			fi
 		fi
