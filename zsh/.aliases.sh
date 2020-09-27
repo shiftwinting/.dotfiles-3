@@ -193,3 +193,5 @@ late() {
 	output=$(expac -Qs --timefmt="%y/%m/%d" "%l {%w} {%G} %n" | sort | grep explicit)
 	echo $output
 }
+
+alias logout="loginctl terminate-user dundar"
