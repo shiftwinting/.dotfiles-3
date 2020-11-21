@@ -190,7 +190,7 @@ alias activate="source .virtual_environment*/bin/activate"
 # List explicitly installed packages by date.
 late() {
 	reset
-	output=$(expac -Qs --timefmt="%y/%m/%d" "%l {%w} {%G} %n" | sort | grep explicit)
+	output=$(expac -Qs --timefmt="%s" "%l %w %n  {%G}" | grep explicit | sort | awk '{printf "%-40s %-40s\n", $3, $4}')
 	echo $output
 }
 
