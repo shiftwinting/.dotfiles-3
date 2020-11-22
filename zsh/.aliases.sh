@@ -174,9 +174,9 @@ alias free="free -h"
 # Fast tmux
 alias t="tmux"
 
-# Print PATH and fpath
-alias path="tr ':' '\n' <<< $PATH"
-alias fpath="tr ':' '\n' <<< $FPATH"
+# Print human-readable PATH and FPATH
+alias path="tr ':' '\n' <<< $PATH | sort"
+alias fpath="tr ':' '\n' <<< $FPATH | sort"
 
 # Allows leaving from deleted directories
 alias ..='command .. 2>/dev/null || cd $(dirname $PWD)'
