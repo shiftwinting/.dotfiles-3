@@ -75,9 +75,9 @@ alias up="source $HOME/.dotfiles/.misc/upgrade.sh"
 # goto
 alias d="cd $HOME/.dotfiles"
 alias c="cd $HOME/.dotfiles/config/.config"
-alias zs="cd $HOME/.zplugin/snippets"
-alias zp="cd $HOME/.zplugin/plugins"
-alias zb="cd $HOME/.zplugin/bin"
+alias zs="cd $HOME/.zinit/snippets"
+alias zp="cd $HOME/.zinit/plugins"
+alias zb="cd $HOME/.zinit/bin"
 alias ds="cd $HOME/.dotfiles/shells"
 alias ft="cd $HOME/.config/nvim/ftplugin"
 
