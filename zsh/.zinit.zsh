@@ -11,60 +11,63 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit installer's chunk
 
-alias z="zinit silent depth"1" light-mode id-as"auto""
-alias ice="zinit ice silent depth'1' id-as'auto'"
-alias snippet="zinit snippet"
-alias load="zinit light"
-
 #ice id-as"icons-in-terminal" cloneonly nocompile atclone"./install.sh"
 #load sebastiencs/icons-in-terminal
 
-ice atinit"
+zinit ice silent depth'1' id-as'auto' atinit"
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:module:editor' key-bindings 'vi' "
-snippet PZT::modules/editor/init.zsh
+zinit snippet PZT::modules/editor/init.zsh
 
-ice atclone"./install --key-bindings --completion --no-update-rc" atload"source ~/.fzf.zsh"
-load junegunn/fzf
+zinit ice silent depth'1' id-as'auto' atclone"./install --key-bindings --completion --no-update-rc" atload"source ~/.fzf.zsh"
+zinit load junegunn/fzf
 
-ice wait pick'async.zsh'
-load mafredri/zsh-async
+zinit ice silent depth'1' id-as'auto' wait pick'async.zsh'
+zinit load mafredri/zsh-async
 
-ice wait
-load willghatch/zsh-saneopt
+zinit ice silent depth'1' id-as'auto' wait
+zinit load willghatch/zsh-saneopt
 
-ice wait id-as"completion" blockf;
-snippet PZT::modules/completion/init.zsh
+zinit ice silent depth'1' id-as'auto' wait id-as"completion" blockf;
+zinit snippet PZT::modules/completion/init.zsh
 
-ice wait atinit"export ENHANCD_DISABLE_HOME=1"
-load b4b4r07/enhancd
+zinit ice silent depth'1' id-as'auto' wait atinit"export ENHANCD_DISABLE_HOME=1"
+zinit load b4b4r07/enhancd
 
-ice wait atload"
+zinit ice silent depth'1' id-as'auto' wait atload"
 _zsh_autosuggest_start
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
 bindkey '^ ' autosuggest-accept"
-load zsh-users/zsh-autosuggestions
+zinit load zsh-users/zsh-autosuggestions
 
 PS1="- "
-ice wait"!" pick"async.zsh" src"pure.zsh"
-load sindresorhus/pure
+zinit ice silent depth'1' id-as'auto' wait"!" pick"async.zsh" src"pure.zsh"
+zinit load sindresorhus/pure
 
-z wait"1" for \
-  has"git" zdharma/zsh-diff-so-fancy \
-  has"git" atload"unalias gi gcf gss gclean" wfxr/forgit \
-  ael-code/zsh-colored-man-pages \
-  laggardkernel/zsh-thefuck \
-  mollifier/cd-gitroot \
-  hlissner/zsh-autopair
+zinit ice silent depth"1" id-as"auto" wait"1" has"git" 
+zinit load zdharma/zsh-diff-so-fancy
 
-ice wait"1"
-load tmux-plugins/tpm
+zinit ice silent depth"1" id-as"auto" wait"1" has"git" atload"unalias gi gcf gss gclean" 
+zinit load wfxr/forgit
+
+zinit ice silent depth"1" id-as"auto" wait"1"
+zinit load ael-code/zsh-colored-man-pages
+
+zinit ice silent depth"1" id-as"auto" wait"1"
+zinit load laggardkernel/zsh-thefuck
+
+zinit ice silent depth"1" id-as"auto" wait"1"
+zinit load mollifier/cd-gitroot
+
+zinit ice silent depth"1" id-as"auto" wait"1"
+zinit load hlissner/zsh-autopair
+
+zinit ice silent depth'1' id-as'auto' wait"1"
+zinit load tmux-plugins/tpm
 
 # Syntax highlighter "needs" to be last.
 
-ice wait"1" atinit"
+zinit ice silent depth'1' id-as'auto' wait"1" atinit"
 zpcompinit
 zpcdreplay"
-load zdharma/fast-syntax-highlighting
-
-unalias ice snippet load z
+zinit load zdharma/fast-syntax-highlighting
