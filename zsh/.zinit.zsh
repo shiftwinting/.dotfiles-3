@@ -28,7 +28,7 @@ zinit load mafredri/zsh-async
 zinit ice silent depth'1' id-as'auto' wait
 zinit load willghatch/zsh-saneopt
 
-zinit ice silent depth'1' id-as'auto' wait id-as"completion" blockf;
+zinit ice silent depth'1' wait id-as"completion" blockf;
 zinit snippet PZT::modules/completion/init.zsh
 
 zinit ice silent depth'1' id-as'auto' wait atinit"export ENHANCD_DISABLE_HOME=1"
