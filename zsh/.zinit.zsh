@@ -51,7 +51,6 @@ load sindresorhus/pure
 
 z wait"1" for \
   has"git" zdharma/zsh-diff-so-fancy \
-  has"git" paulirish/git-open \
   has"git" atload"unalias gi gcf gss gclean" wfxr/forgit \
   ael-code/zsh-colored-man-pages \
   laggardkernel/zsh-thefuck \
