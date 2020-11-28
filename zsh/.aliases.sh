@@ -48,11 +48,14 @@ alias gco="git checkout"
 alias gf="git add .; git commit -m 'Quick update, squash later.'"
 alias gt="git add .; git commit -m 'Test commit, will likely delete after.'"
 alias gl="forgit::log"
+alias gla="forgit::log --all"
 alias glr="forgit::log HEAD..origin"
 alias gp="git push"
+alias gpa="git push --all"
 alias gpl="git pull"
 alias gpf='git push --force-with-lease'
 alias gpf!='git push --force'
+alias gpt="git push --tags"
 alias gra="git rebase --abort "
 alias gres="git reset ."
 gri() { git rebase -i HEAD~"${1:-10}"; }
