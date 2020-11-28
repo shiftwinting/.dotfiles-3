@@ -70,7 +70,7 @@ alias la="ls -A"
 alias ll="la -l"
 
 # Upgrade
-alias up="source $HOME/.dotfiles/.misc/upgrade.sh"
+alias upgrade="$HOME/.dotfiles/.misc/upgrade.sh"
 
 # goto
 alias d="cd $HOME/.dotfiles"
