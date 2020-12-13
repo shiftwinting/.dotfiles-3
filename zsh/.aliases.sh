@@ -73,7 +73,7 @@ alias la="ls -A"
 alias ll="la -l"
 
 # Upgrade
-alias upgrade="$HOME/.dotfiles/.misc/upgrade.sh"
+alias upgrade='$HOME/.dotfiles/.misc/upgrade.sh'
 
 # goto
 alias d="cd $HOME/.dotfiles"
@@ -156,12 +156,11 @@ alias vlc=" vlc"
 ss() { gnome-screenshot NUL -d "${1:-10}" & }
 
 # Brightness
-alias x="xbacklight"
-alias x+="xbacklight -inc 10"
-alias x-="xbacklight -dec 1"
-alias xmax="xbacklight -inc 100"
-alias xmin="xbacklight -inc 100 && xbacklight -dec 99"
-alias xg="xbacklight -get"
+alias x="brightnessctl set"
+alias x+="brightnessctl set +3%"
+alias x-="brightnessctl set 3%-"
+alias xmax="brightnessctl set 100%"
+alias xmin="brightnessctl set 1%"
 
 # Use make without printing the input and automatically use parallel jobs.
 alias make="make -j -s"
