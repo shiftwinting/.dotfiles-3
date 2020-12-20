@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+line="__________________________________________________ \n\n"
+
+source $HOME/.zinit/bin/zinit.zsh
+reset
+
+printf "powerpill\n\n"
+sudo powerpill -Syu --noconfirm
+printf "$line"
+
+printf "yay\n\n"
+yay -Syu --needed --nocleanmenu --nodiffmenu --removemake --noupgrademenu 
+printf "$line"
+
+printf "zinit modules\n\n"
+zinit update -p
+printf "$line"
+
+printf "zinit\n\n"
+zinit self-update
+printf "$line"
