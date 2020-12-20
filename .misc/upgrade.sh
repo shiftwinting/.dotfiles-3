@@ -3,14 +3,8 @@ reset
 
 line="__________________________________________________ \n\n"
 
-if [[ $(lsb_release -is) = ManjaroLinux ]]; then
-	printf "yay\n\n"
-	yay -Syu --needed --nocleanmenu --nodiffmenu --removemake
-else
-	printf "apt\n\n"
-	sudo apt update
-	sudo apt upgrade
-fi
+printf "yay\n\n"
+yay -Syu --needed --nocleanmenu --nodiffmenu --removemake
 
 printf $line
 
