@@ -197,3 +197,5 @@ late() {
 }
 
 alias logout="loginctl terminate-user dundar"
+
+alias hook="cd .git/hooks"
