@@ -196,3 +196,17 @@ late() {
 alias logout="loginctl terminate-user dundar"
 
 alias hook="cd .git/hooks"
+
+fid() {
+	image_array=()
+	image_array+=("$(findimagedupes -R -q -t ${1:-100} .)")
+	for i in "${image_array[@]}"; do
+		parsed_file=${i//$PWD/}
+
+		if (($# == 0)) || (($1 >= 98)); then
+			if [[ -n $parsed_file ]]; then
+				rm "$(echo $parsed_file | cut -d/ -f2)"
+			fi
+		fi
+	done
+}
