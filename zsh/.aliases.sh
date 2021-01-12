@@ -202,11 +202,13 @@ fid() {
 	image_array+=("$(findimagedupes -R -q -t ${1:-100} .)")
 	for i in "${image_array[@]}"; do
 		parsed_file=${i//$PWD/}
+		echo "$parsed_file"
 
 		if (($# == 0)) || (($1 >= 98)); then
-			if [[ -n $parsed_file ]]; then
-				rm "$(echo $parsed_file | cut -d/ -f2)"
-			fi
+			:
+			#if [[ -n $parsed_file ]]; then
+				#rm "$(echo $parsed_file | cut -d/ -f2)"
+			#fi
 		fi
 	done
 }
