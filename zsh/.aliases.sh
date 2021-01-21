@@ -141,7 +141,7 @@ fire() { firefox "$1" NUL; }
 chrome() { chromium "$1" NUL; }
 
 # rmdir
-alias rmd="rmdir --ignore-fail-on-non-empty *"
+alias rmd="find . -empty -delete"
 
 # Restore dotfiles
 alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && reload"
