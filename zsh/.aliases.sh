@@ -212,3 +212,5 @@ fid() {
 		fi
 	done
 }
+
+alias virtual="python -m venv .venv"
