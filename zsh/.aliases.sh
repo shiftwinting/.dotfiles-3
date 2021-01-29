@@ -184,7 +184,7 @@ alias fpath="tr ':' '\n' <<< $FPATH | sort"
 alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"  '
 
 # Alias for quick virtual environment activation.
-alias activate="source .virtual_environment*/bin/activate"
+alias activate="source .virtual_environment*/bin/activate 2>/dev/null || source .venv/bin/activate"
 
 # List explicitly installed packages by date.
 late() {
