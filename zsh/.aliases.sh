@@ -183,8 +183,23 @@ alias fpath="tr ':' '\n' <<< $FPATH | sort"
 # allow sudo to expand aliases as well as run anything in $PATH
 alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"  '
 
-# Alias for quick virtual environment activation.
-alias activate="source .virtual_environment*/bin/activate 2>/dev/null || source .venv/bin/activate"
+# Function for quick virtual environment activation.
+activate(){
+	activate_file="$(find . -type f -name "activate")"
+	number_of_files=$(echo $activate_file | wc -l)
+
+	if (( number_of_files == 0 )); then
+		echo "No activate file found. Exiting."
+		return 1
+	elif (( number_of_files > 1 )); then
+		echo "Multiple activate files found:"
+		echo "$activate_file"
+		echo "Exiting."
+		return 1
+	fi
+
+	source $activate_file
+}
 
 # List explicitly installed packages by date.
 late() {
