@@ -229,3 +229,16 @@ fid() {
 }
 
 alias virtual="python -m venv .venv"
+
+alias ch="reset; shellcheck -e SC2086"
+alias chs="ch -S style"
+alias chi="ch -S info"
+alias chw="ch -S warning"
+alias che="ch -S error"
+
+alias q="shellcheck -f diff"
+
+chr(){
+	reset
+	find . -name "*.sh" -exec shellcheck -W 0 -e SC2086 "$@" {} \;
+}
