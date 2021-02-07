@@ -97,3 +97,6 @@ function! MyFoldText() " {{{
 	return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
 endfunction " }}}
 set foldtext=MyFoldText()
+
+"set shiftwidth=8
+set tabstop=8
