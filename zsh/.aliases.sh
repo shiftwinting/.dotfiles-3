@@ -243,4 +243,9 @@ chr(){
 	find . -name "*.sh" -exec shellcheck -x -W 0 -e SC2086 "$@" {} \;
 }
 
+chra(){
+	reset
+	find . -type f -exec shellcheck -x -W 0 -e SC2086 "$@" {} \;
+}
+
 alias fo="shfmt -w -s"
