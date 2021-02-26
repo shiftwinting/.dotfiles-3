@@ -17,3 +17,5 @@ sxhkd &
 picom -b -i 0.8 &
 feh --bg-fill '/home/dundar/.dotfiles/.misc/disco.png'
 unclutter -idle 3.0 -root &
+
+wmname LG3D
