@@ -37,7 +37,9 @@ alias gap="git add -p"
 alias gb="git branch"
 alias gba="git branch --all"
 alias gbd="git branch --delete"
-gbD() { git push origin --delete "$1"; }
+gbD() {
+	git push origin --delete "$1"
+}
 alias gc="git commit"
 alias gcd="cd-gitroot"
 alias gdc="forgit::diff"
@@ -60,7 +62,9 @@ alias gpf!='git push --force'
 alias gpt="git push --tags"
 alias gra="git rebase --abort "
 alias gres="git reset ."
-gri() { git rebase -i HEAD~"${1:-10}"; }
+gri() {
+	git rebase -i HEAD~"${1:-10}"
+}
 alias gs="git status"
 alias gopen="git open"
 alias gu="git remote update"
@@ -139,8 +143,12 @@ alias mkdir="mkdir -pv"
 alias clip="xclip -sel clip <"
 
 # web
-fire() { firefox "$1" NUL; }
-chrome() { chromium "$1" NUL; }
+fire() {
+	firefox "$1" NUL
+}
+chrome() {
+	chromium "$1" NUL
+}
 
 # rmdir
 alias rmd="find . -empty -delete"
@@ -155,7 +163,9 @@ alias yget="youtube-dl --extract-audio --audio-format mp3"
 alias vlc=" vlc"
 
 # Screenshot
-ss() { gnome-screenshot NUL -d "${1:-10}" & }
+ss() {
+	gnome-screenshot NUL -d "${1:-10}" &
+}
 
 # Brightness
 alias x="brightnessctl set"
@@ -186,14 +196,14 @@ alias fpath="tr ':' '\n' <<< $FPATH | sort"
 alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"  '
 
 # Function for quick virtual environment activation.
-activate(){
+activate() {
 	activate_file="$(find . -type f -name "activate")"
 	number_of_files=$(echo $activate_file | wc -l)
 
-	if (( number_of_files == 0 )); then
+	if ((number_of_files == 0)); then
 		echo "No activate file found. Exiting."
 		return 1
-	elif (( number_of_files > 1 )); then
+	elif ((number_of_files > 1)); then
 		echo "Multiple activate files found:"
 		echo "$activate_file"
 		echo "Exiting."
@@ -224,7 +234,7 @@ fid() {
 		if (($# == 0)) || (($1 >= 98)); then
 			:
 			#if [[ -n $parsed_file ]]; then
-				#rm "$(echo $parsed_file | cut -d/ -f2)"
+			#rm "$(echo $parsed_file | cut -d/ -f2)"
 			#fi
 		fi
 	done
@@ -240,12 +250,12 @@ alias che="ch -S error"
 
 alias q="shellcheck -f diff"
 
-chr(){
+chr() {
 	reset
 	find . -name "*.sh" -exec shellcheck -x -W 0 -e SC2086 "$@" {} \;
 }
 
-chra(){
+chra() {
 	reset
 	find . -type f -exec shellcheck -x -W 0 -e SC2086 "$@" {} \;
 }
