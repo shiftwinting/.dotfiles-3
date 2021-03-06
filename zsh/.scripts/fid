@@ -1,0 +1,14 @@
+#!/bin/bash
+image_array=()
+
+while IFS="" read -r p || [ -n "$p" ]; do
+	image_array+=($p)
+done < <(findimagedupes -R -q -t ${1:-100} .)
+
+for i in "${image_array[@]}"; do
+	arguments=($(echo $i))
+	if [[ -n $i ]]; then
+		printf "%s\n\n\n" "$arguments"
+		viewnior $arguments 2>/dev/null
+	fi
+done

@@ -225,22 +225,6 @@ alias logout="loginctl terminate-user dundar"
 
 alias hook="cd .git/hooks"
 
-fid() {
-	image_array=()
-
-	while IFS="" read -r p || [ -n "$p" ]; do
-		image_array+=($p)
-	done < <(findimagedupes -R -q -t ${1:-100} .)
-
-	for i in "${image_array[@]}"; do
-		arguments=($(echo $i))
-		if [[ -n $i ]]; then
-			printf "%s\n\n\n" "$arguments"
-			viewnior $arguments 2>/dev/null
-		fi
-	done
-}
-
 alias virtual="python -m venv .venv"
 
 alias ch="reset; shellcheck -x -e SC2086"
