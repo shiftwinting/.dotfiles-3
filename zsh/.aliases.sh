@@ -226,16 +226,16 @@ alias hook="cd .git/hooks"
 
 fid() {
 	image_array=()
-	image_array+=("$(findimagedupes -R -q -t ${1:-100} .)")
-	for i in "${image_array[@]}"; do
-		parsed_file=${i//$PWD/}
-		echo "$parsed_file"
 
-		if (($# == 0)) || (($1 >= 98)); then
-			:
-			#if [[ -n $parsed_file ]]; then
-			#rm "$(echo $parsed_file | cut -d/ -f2)"
-			#fi
+	while IFS="" read -r p || [ -n "$p" ]; do
+		image_array+=($p)
+	done < <(findimagedupes -R -q -t ${1:-100} .)
+
+	for i in "${image_array[@]}"; do
+		arguments=($(echo $i))
+		if [[ -n $i ]]; then
+			printf "%s\n\n\n" "$arguments"
+			viewnior $arguments 2>/dev/null
 		fi
 	done
 }
@@ -261,3 +261,10 @@ chra() {
 }
 
 alias fo="shfmt -w -s"
+
+lower() {
+	for filename in "$@"; do
+		filename_lower=$(echo $filename | tr '[:upper:]' '[:lower:]')
+		mv $filename $filename_lower
+	done
+}
