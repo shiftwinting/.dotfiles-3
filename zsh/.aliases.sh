@@ -250,6 +250,6 @@ alias fo="shfmt -w -s"
 lower() {
 	for filename in "$@"; do
 		filename_lower=$(echo $filename | tr '[:upper:]' '[:lower:]')
-		mv $filename $filename_lower
+		mv -n $filename $filename_lower
 	done
 }
