@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import subprocess
+import os
+from pprint import pprint
+import imghdr
+import filetype
+
+
+def run(unparsed_arguments):
+    arguments = unparsed_arguments.split()
+    command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
+    return command.stdout
+
+for unparsed_file in os.scandir("."):
+    file=os.path.basename(unparsed_file.path)
+
+    if not os.path.isfile(file):
+        continue
+
+    kind=filetype.guess(file)
+    if kind is not None:
+        file_no_suffix=file.split(".")[0]
+        file_real_suffix=file_no_suffix + "." + kind.extension
+        os.rename(file, file_real_suffix)
