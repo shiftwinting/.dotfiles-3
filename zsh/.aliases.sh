@@ -89,6 +89,7 @@ alias zp="cd $HOME/.zinit/plugins"
 alias zb="cd $HOME/.zinit/bin"
 alias ds="cd $HOME/.dotfiles/shells"
 alias ft="cd $HOME/.config/nvim/ftplugin"
+alias sc="cd $HOME/.dotfiles/zsh/.scripts"
 
 #config
 alias ali='$EDITOR $HOME/.aliases.sh'
