@@ -1,14 +1,28 @@
-#!/bin/bash
-image_array=()
+#!/usr/bin/env python3
 
-while IFS="" read -r p || [ -n "$p" ]; do
-	image_array+=($p)
-done < <(findimagedupes -R -q -t ${1:-100} .)
+import argparse
+import subprocess
+import os
+from pprint import pprint
 
-for i in "${image_array[@]}"; do
-	arguments=($(echo $i))
-	if [[ -n $i ]]; then
-		printf "%s\n\n\n" "$arguments"
-		viewnior $arguments 2>/dev/null
-	fi
-done
+
+def run(unparsed_arguments):
+    arguments = unparsed_arguments.split()
+    command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
+    return command.stdout
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("accuracy")
+args = parser.parse_args()
+
+potential_duplicates = run("findimagedupes -R -q -t " + args.accuracy + " .")
+
+for duplicateSet in potential_duplicates.strip().split("\n"):
+    if not duplicateSet:
+        continue
+    current_folder = os.getcwd()
+    duplicate_array = duplicateSet.split()
+    pprint([i.replace(current_folder + "/", "") for i in duplicate_array])
+
+    run("viewnior " + duplicateSet)
