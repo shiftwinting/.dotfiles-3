@@ -253,3 +253,5 @@ lower() {
 		mv -n $filename $filename_lower
 	done
 }
+
+alias rename="perl-rename -i"
