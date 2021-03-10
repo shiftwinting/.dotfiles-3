@@ -3,24 +3,26 @@
 import subprocess
 import os
 from pprint import pprint
-import imghdr
-import filetype
-
+import sys
 
 def run(unparsed_arguments):
     arguments = unparsed_arguments.split()
     command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
     return command.stdout
 
+
+string_length = 0
+while True:
+    string_length += 1
+    files = [f[:string_length] for f in os.listdir(os.curdir) if os.path.isfile(f)]
+    if len(files) == len(set(files)):
+        break
+
 for unparsed_file in os.scandir("."):
-    file=os.path.basename(unparsed_file.path)
+    file = os.path.basename(unparsed_file.path)
 
     if not os.path.isfile(file):
         continue
 
-    kind=filetype.guess(file)
-    if kind is not None:
-        file_no_suffix=file.split(".")[0]
-        file_real_suffix=file_no_suffix + "." + kind.extension
-        if not os.path.isfile(file_real_suffix):
-            os.rename(file, file_real_suffix)
+    if not os.path.isfile(file[:string_length]):
+        os.rename(file, file[:string_length])
