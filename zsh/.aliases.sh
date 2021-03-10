@@ -17,7 +17,7 @@ if [[ $(lsb_release -is) == ManjaroLinux ]]; then
 	alias fsearch="yay -F"
 	alias list="reset; yay -Qe"
 	alias remove="yay -Rs"
-	alias mirror="sudo pacman-mirrors --geoip && sudo pacman -Syyu"
+	alias mirror="sudo pacman-mirrors -id"
 	alias orphan='yay -Qdtq | yay -Rs -'
 else
 	# Ubuntu
