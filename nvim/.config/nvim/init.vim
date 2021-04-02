@@ -74,12 +74,6 @@ set clipboard+=unnamedplus
 "esc removes highlighed text
 nnoremap <esc> :noh<return><esc>
 
-"Enable bash folding.
-set nocompatible
-filetype plugin indent on
-set foldenable
-set foldmethod=syntax
-
 function! MyFoldText() " {{{
 	let line = getline(v:foldstart)
 
