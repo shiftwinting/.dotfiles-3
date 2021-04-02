@@ -6,8 +6,8 @@ import os
 
 def run(unparsed_arguments):
 	arguments = unparsed_arguments.split()
-	command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
-	return command.stdout
+	command = subprocess.check_output(arguments, universal_newlines=True)
+	return command
 
 
 string_length = 0
