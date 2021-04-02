@@ -4,12 +4,6 @@ import subprocess
 import os
 
 
-def run(unparsed_arguments):
-	arguments = unparsed_arguments.split()
-	command = subprocess.check_output(arguments, text=True)
-	return command
-
-
 string_length = 0
 while True:
 	string_length += 1
