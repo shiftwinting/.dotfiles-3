@@ -74,8 +74,6 @@ set clipboard+=unnamedplus
 "esc removes highlighed text
 nnoremap <esc> :noh<return><esc>
 
-let g:python3_host_prog = '/home/dundar/.virtualenvs/pynvim/bin/python'
-
 "Enable bash folding.
 set nocompatible
 filetype plugin indent on
