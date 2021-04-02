@@ -2,8 +2,6 @@
 
 import subprocess
 import os
-from pprint import pprint
-import sys
 
 
 def run(unparsed_arguments):

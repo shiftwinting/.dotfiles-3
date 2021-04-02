@@ -2,9 +2,7 @@
 
 import argparse
 import subprocess
-import os
 from pprint import pprint
-import tempfile
 
 
 def run(arguments):
