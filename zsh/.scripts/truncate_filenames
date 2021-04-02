@@ -6,23 +6,23 @@ from pprint import pprint
 import sys
 
 def run(unparsed_arguments):
-    arguments = unparsed_arguments.split()
-    command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
-    return command.stdout
+	arguments = unparsed_arguments.split()
+	command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
+	return command.stdout
 
 
 string_length = 0
 while True:
-    string_length += 1
-    files = [f[:string_length] for f in os.listdir(os.curdir) if os.path.isfile(f)]
-    if len(files) == len(set(files)):
-        break
+	string_length += 1
+	files = [f[:string_length] for f in os.listdir(os.curdir) if os.path.isfile(f)]
+	if len(files) == len(set(files)):
+		break
 
 for unparsed_file in os.scandir("."):
-    file = os.path.basename(unparsed_file.path)
+	file = os.path.basename(unparsed_file.path)
 
-    if not os.path.isfile(file):
-        continue
+	if not os.path.isfile(file):
+		continue
 
-    if not os.path.isfile(file[:string_length]):
-        os.rename(file, file[:string_length])
+	if not os.path.isfile(file[:string_length]):
+		os.rename(file, file[:string_length])

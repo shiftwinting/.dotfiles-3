@@ -7,9 +7,9 @@ from pprint import pprint
 
 
 def run(unparsed_arguments):
-    arguments = unparsed_arguments.split()
-    command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
-    return command.stdout
+	arguments = unparsed_arguments.split()
+	command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
+	return command.stdout
 
 
 parser = argparse.ArgumentParser()
@@ -19,10 +19,10 @@ args = parser.parse_args()
 potential_duplicates = run("findimagedupes -R -q -t " + args.accuracy + " .")
 
 for duplicateSet in potential_duplicates.strip().split("\n"):
-    if not duplicateSet:
-        continue
-    current_folder = os.getcwd()
-    duplicate_array = duplicateSet.split()
-    pprint([i.replace(current_folder + "/", "") for i in duplicate_array])
+	if not duplicateSet:
+		continue
+	current_folder = os.getcwd()
+	duplicate_array = duplicateSet.split()
+	pprint([i.replace(current_folder + "/", "") for i in duplicate_array])
 
-    run("viewnior " + duplicateSet)
+	run("viewnior " + duplicateSet)

@@ -8,9 +8,9 @@ import tempfile
 
 
 def run(unparsed_arguments):
-    arguments = unparsed_arguments.split()
-    command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
-    return command.stdout
+	arguments = unparsed_arguments.split()
+	command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
+	return command.stdout
 
 
 parser = argparse.ArgumentParser()
@@ -21,11 +21,11 @@ input_files = args.input_files
 
 fd, path = tempfile.mkstemp()
 try:
-    with os.fdopen(fd, "w") as tmp:
-        for f in input_files:
-            tmp.write("file \'" + f + '\'\n')
-    run("ffmpeg -f concat -i " + path + " -codec copy output.mp4")
+	with os.fdopen(fd, "w") as tmp:
+		for f in input_files:
+			tmp.write("file \'" + f + '\'\n')
+	run("ffmpeg -f concat -i " + path + " -codec copy output.mp4")
 finally:
-    os.remove(path)
+	os.remove(path)
 
 print(os.getcwd())
