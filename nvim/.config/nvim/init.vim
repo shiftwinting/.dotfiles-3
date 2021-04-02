@@ -91,4 +91,5 @@ function! MyFoldText() " {{{
 endfunction " }}}
 set foldtext=MyFoldText()
 
-set tabstop=8
+" Make a tab an actual tab.
+set autoindent noexpandtab tabstop=4 shiftwidth=4 softtabstop=-1
