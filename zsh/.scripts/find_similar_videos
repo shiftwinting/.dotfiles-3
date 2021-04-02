@@ -6,7 +6,7 @@ from pprint import pprint
 
 
 def run(arguments):
-	return subprocess.check_output(arguments, universal_newlines=True)
+	return subprocess.check_output(arguments, text=True)
 
 
 parser = argparse.ArgumentParser()

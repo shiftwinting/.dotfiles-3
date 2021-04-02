@@ -7,7 +7,7 @@ import filetype
 
 def run(unparsed_arguments):
 	arguments = unparsed_arguments.split()
-	command = subprocess.check_output(arguments, universal_newlines=True)
+	command = subprocess.check_output(arguments, text=True)
 	return command
 
 
