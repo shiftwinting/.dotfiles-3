@@ -23,7 +23,7 @@ fd, path = tempfile.mkstemp()
 try:
 	with os.fdopen(fd, "w") as tmp:
 		for f in input_files:
-			tmp.write("file \'" + f + '\'\n')
+			tmp.write("file '" + f + "'\n")
 	run("ffmpeg -f concat -i " + path + " -codec copy output.mp4")
 finally:
 	os.remove(path)

@@ -5,6 +5,7 @@ import os
 from pprint import pprint
 import sys
 
+
 def run(unparsed_arguments):
 	arguments = unparsed_arguments.split()
 	command = subprocess.run(arguments, capture_output=True, universal_newlines=True)
