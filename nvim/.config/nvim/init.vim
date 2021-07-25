@@ -57,7 +57,6 @@ noremap <F3> :Autoformat<CR>
 noremap <F5> :Neomake<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
-noremap <F9> :Make<CR>
 noremap <C-n> :NERDTreeToggle<CR>
 
 " Define custom command to update and upgrade in one go.
