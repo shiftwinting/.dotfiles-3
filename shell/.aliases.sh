@@ -65,7 +65,7 @@ alias gl="git log --graph --full-history --pretty --oneline"
 alias gla="gl --all"
 alias glr="forgit::log HEAD..origin"
 alias gls="git log --stat"
-alias gp="git push"
+alias gp="git push --quiet"
 gps() {
 	current_branch=$(git rev-parse --abbrev-ref HEAD)
 	git push --set-upstream origin "$current_branch"
@@ -73,7 +73,7 @@ gps() {
 alias gpa="git push --all"
 alias gpl="git pull"
 alias gpla="git pull --all"
-alias gpf='git push --force-with-lease'
+alias gpf='git push --force-with-lease --quiet'
 alias gpf!='git push --force'
 alias gpt="git push --tags"
 alias gr="git remote"
