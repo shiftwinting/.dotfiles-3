@@ -306,7 +306,7 @@ go() {
 }
 
 nuke() {
-	if [[ $(pwd) != /home/dundar/programs/squash-typo-pr ]]; then
+	if [[ $(pwd) != /home/dundar/programs/squash-typo-pr ]] && [[ $(pwd) != /home/dundar/programs/labeler ]]; then
 		echo "RUNNING DANGEROUS COMMAND OUTSITE OF TESTING AREA. ABORT"
 		return 1
 	fi
