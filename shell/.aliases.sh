@@ -331,3 +331,5 @@ build() {
 	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path"
 	make -C "$neovim_path" install
 }
+
+alias black="black -C"
