@@ -296,9 +296,9 @@ codespell() {
 go() {
 	branch="$*"
 	gcbb "$branch"
-	sed -i "s|$*||g" highlight.c
+	sed -i "s|$branch||g" highlight.c
 	git add -A
-	git commit -m "$*"
+	git commit -m "$branch"
 	git push
 	gh pr create --fill
 	gh pr edit --add-label typo
