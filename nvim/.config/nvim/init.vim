@@ -1,13 +1,9 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'Chiel92/vim-autoformat'
-Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'neomake/neomake'
-Plug 'embear/vim-uncrustify'
 Plug 'Konfekt/FastFold'
 Plug 'zplugin/zplugin-vim-syntax'
-Plug 'nvie/vim-flake8'
 Plug 'farmergreg/vim-lastplace'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
@@ -54,10 +50,8 @@ colorscheme dracula
 "Other settings
 
 noremap <F3> :Autoformat<CR>
-noremap <F5> :Neomake<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
-noremap <C-n> :NERDTreeToggle<CR>
 
 " Define custom command to update and upgrade in one go.
 command! PU PlugUpdate | PlugUpgrade
