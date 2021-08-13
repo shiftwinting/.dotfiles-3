@@ -88,11 +88,17 @@ function! MyFoldText() " {{{
 endfunction " }}}
 set foldtext=MyFoldText()
 
+
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=-1
+
 " Make a tab an actual tab.
-"set autoindent noexpandtab tabstop=4 shiftwidth=4 softtabstop=-1
+"set noexpandtab
 
 " Make tabs spaces - required for neovim development
-set autoindent expandtab tabstop=4 shiftwidth=4 softtabstop=-1
+set expandtab
 
 set ignorecase
 set smartcase
