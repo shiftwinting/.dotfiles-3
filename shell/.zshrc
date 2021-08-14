@@ -13,9 +13,6 @@ fi
 # General options
 #
 
-# Case sensitive completion.
-zstyle ':*:*:*' case-sensitive 'yes'
-
 # Allow .. without getting "Permission denied".
 setopt auto_cd
 
