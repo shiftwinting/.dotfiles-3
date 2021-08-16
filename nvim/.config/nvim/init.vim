@@ -100,11 +100,6 @@ set smartcase
 " Enable true colors.
 set termguicolors
 
-
-" This stops the search at the end of the file.  Or, when you are searching
-" backwards, it stops the search at the start of the file. 
-set nowrapscan
-
 " This disables the display of the matches while you are still typing your
 " search.
 set noincsearch
