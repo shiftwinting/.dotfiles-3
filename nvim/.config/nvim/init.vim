@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'Chiel92/vim-autoformat'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'Konfekt/FastFold'
 Plug 'zplugin/zplugin-vim-syntax'
 Plug 'farmergreg/vim-lastplace'
