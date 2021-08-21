@@ -333,3 +333,5 @@ build() {
 }
 
 alias black="black -C"
+
+alias cl='clang-format -i **/*.c **/*.h'
