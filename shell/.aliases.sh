@@ -336,4 +336,5 @@ alias black="black -C"
 
 alias cl='clang-format -i **/*.c **/*.h'
 
-alias un='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup **/*.c **/*.h'
+alias una='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup **/*.c **/*.h'
+alias un='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup'
