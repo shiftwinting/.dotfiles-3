@@ -85,6 +85,7 @@ gri() {
 	git rebase -i HEAD~"${1:-10}"
 }
 alias gs="git status"
+alias gst="git diff --stat-count=1"
 alias gopen="git open"
 alias gu="git remote update"
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
@@ -336,5 +337,5 @@ alias black="black -C"
 
 alias cl='clang-format -i'
 alias un='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup'
-alias cla='clang-format -i *.{c,h} {api,eval,event,lua,msgpack_rpc,os,testdir,tui,viml}/**/*.{c,h}'
-alias una='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup *.{c,h} {api,eval,event,lua,msgpack_rpc,os,testdir,tui,viml}/**/*.{c,h}'
+alias cla='clang-format -i *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
+alias una='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
