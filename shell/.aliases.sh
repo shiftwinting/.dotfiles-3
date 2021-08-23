@@ -334,7 +334,7 @@ build() {
 
 alias black="black -C"
 
-alias cl='clang-format -i **/*.c **/*.h'
-
-alias una='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup **/*.c **/*.h'
+alias cl='clang-format -i'
 alias un='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup'
+alias cla='clang-format -i *.{c,h} {api,eval,event,lua,msgpack_rpc,os,testdir,tui,viml}/**/*.{c,h}'
+alias una='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup *.{c,h} {api,eval,event,lua,msgpack_rpc,os,testdir,tui,viml}/**/*.{c,h}'
