@@ -51,6 +51,7 @@ colorscheme dracula
 noremap <F3> :Autoformat<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
+nnoremap <C-Z> <NOP>
 
 " Define custom command to update and upgrade in one go.
 command! PU PlugUpdate | PlugUpgrade
