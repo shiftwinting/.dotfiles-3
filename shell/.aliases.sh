@@ -328,7 +328,6 @@ nuke() {
 build() {
 	local neovim_path="/home/dundar/programs/neovim"
 
-	make -C "$neovim_path" distclean
 	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path"
 	make -C "$neovim_path" install
 }
