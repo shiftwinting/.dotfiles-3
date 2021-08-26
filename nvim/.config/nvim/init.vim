@@ -84,8 +84,8 @@ set foldtext=MyFoldText()
 
 
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set softtabstop=-1
 
 " Make a tab an actual tab.
