@@ -326,10 +326,23 @@ nuke() {
 }
 
 build() {
-	local neovim_path="/home/dundar/programs/neovim"
+	local neovim_path="$HOME/programs/neovim"
 
 	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path"
 	make -C "$neovim_path" install
+}
+
+build_uncrustify() {
+	local uncrustify_build_path="$HOME/programs/uncrustify/build"
+
+  mkdir -p $uncrustify_build_path
+
+  (
+    cd $uncrustify_build_path
+    cmake ..
+    cmake --build .
+  )
+
 }
 
 alias black="black -C"
