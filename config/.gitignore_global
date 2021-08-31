@@ -1,0 +1,9 @@
+# Ignore cache directory clangd creates
+
+.cache
+
+# Ignore ctags
+
+tags
+
+

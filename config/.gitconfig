@@ -16,6 +16,7 @@
 	autoupdate = true
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /home/dundar/.gitignore_global
 	#hooksPath = /home/dundar/.dotfiles/.githooks
 [color]
 	ui = true
