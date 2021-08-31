@@ -109,7 +109,7 @@ set noincsearch
 set nojoinspaces
 
 "------------------------------------
-" Treesitter config
+" Tree-sitter
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
