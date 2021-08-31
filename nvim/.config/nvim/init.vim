@@ -1,14 +1,17 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+" General plugins
 Plug 'Chiel92/vim-autoformat'
 Plug 'Konfekt/FastFold'
 Plug 'zplugin/zplugin-vim-syntax'
 Plug 'farmergreg/vim-lastplace'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " tmux
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
+
+" Tree-sitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " Themes
 Plug 'dracula/vim', { 'as': 'dracula' }
