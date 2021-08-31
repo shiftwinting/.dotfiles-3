@@ -61,8 +61,6 @@ command! PU PlugUpdate | PlugUpgrade
 command! PI PlugInstall
 command! PC PlugClean!
 
-let g:airline#extensions#tmuxline#enabled = 0
-
 set clipboard+=unnamedplus
 
 "esc removes highlighed text
