@@ -90,6 +90,9 @@ alias gopen="git open"
 alias gu="git remote update"
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias up="git upstream"
+git-add-upstream(){
+  git remote add upstream "$@"
+}
 
 # vim
 alias vi='$EDITOR'
