@@ -79,3 +79,6 @@ chpwd() {
 
 # Enable thefuck
 eval $(thefuck --alias)
+
+# Enable homebrew
+eval $(~/.linuxbrew/bin/brew shellenv)
