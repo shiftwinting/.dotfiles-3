@@ -297,7 +297,7 @@ codespell() {
 	command codespell --quiet-level 2 --check-hidden --skip "po,*spell*,*test*,*utf-8.vim" --ignore-words-list hist,fo,enew,windo,SER,tabe,sover,ned,dum,sav,tolen,te "$@"
 }
 
-go() {
+gooo() {
 	branch="$*"
 	gcbb "$branch"
 	sed -i "s|$branch||g" highlight.c
