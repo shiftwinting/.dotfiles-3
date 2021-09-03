@@ -358,3 +358,4 @@ alias una='uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace 
 alias buna='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --replace --no-backup *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
 alias clint='$HOME/programs/neovim/src/clint.py'
 alias clinta='$HOME/programs/neovim/src/clint.py *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
+alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/contrib/uncrustify.cfg'
