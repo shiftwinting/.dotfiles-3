@@ -359,3 +359,7 @@ alias buna='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/
 alias clint='$HOME/programs/neovim/src/clint.py'
 alias clinta='$HOME/programs/neovim/src/clint.py *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
 alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/contrib/uncrustify.cfg'
+
+vs(){
+  while read -r file; do rg -iH "Maintainer:.*$@" $file; done <<< $(codespell | awk -F: '{print $1}' | sort -u)
+}
