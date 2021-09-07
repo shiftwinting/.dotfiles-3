@@ -88,7 +88,20 @@ gri() {
 alias gs="git status"
 alias gst="git diff --stat-count=1"
 alias gopen="git open"
-alias gu="git remote update"
+
+gu(){
+  starting_branch="$(git branch --show-current)"
+
+  while read -r branch; do
+    [[ -n $branch ]] || continue
+
+    git switch -q "$branch"
+    git rebase -q master
+  done <<< "$(git branch | sed s/master//g | sed s/*//g)"
+  git switch -q "$starting_branch"
+
+}
+
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias up="git upstream"
 git-add-upstream(){
