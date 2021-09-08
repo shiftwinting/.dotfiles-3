@@ -375,6 +375,8 @@ alias clinta='$HOME/programs/neovim/src/clint.py *.{c,h} {api,eval,event,lua,msg
 alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/contrib/uncrustify.cfg'
 
 form(){
+  unc-update
+
   nvim_path="$HOME/programs/neovim/src/nvim"
   for i in window.c ops.c ex_cmds.c normal.c ex_docmd.c screen.c; do
     bun "$nvim_path"/"$i" &
