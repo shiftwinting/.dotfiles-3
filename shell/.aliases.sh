@@ -101,12 +101,12 @@ gu(){
   git switch -q "$starting_branch"
 
 }
-
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias up="git upstream"
 git-add-upstream(){
   git remote add upstream "$@"
 }
+alias sync="hub sync"
 
 # vim
 alias vi='$EDITOR'
