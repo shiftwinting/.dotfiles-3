@@ -386,18 +386,20 @@ alias clint='$HOME/programs/neovim/src/clint.py'
 alias clinta='$HOME/programs/neovim/src/clint.py *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
 alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/contrib/uncrustify.cfg'
 
+format_files=(window.c ops.c ex_cmds.c normal.c ex_docmd.c screen.c fileio.c search.c edit.c fold.c mbyte.c)
+
 form(){
   unc-update
 
   nvim_path="$HOME/programs/neovim/src/nvim"
-  for i in window.c ops.c ex_cmds.c normal.c ex_docmd.c screen.c; do
+  for i in "${format_files[@]}"; do
     bun "$nvim_path"/"$i" &
   done; wait
 }
 
 tidy(){
   nvim_path="$HOME/programs/neovim/src/nvim"
-  for i in window.c ops.c ex_cmds.c normal.c ex_docmd.c screen.c; do
+  for i in "${format_files[@]}"; do
     clang-tidy "$nvim_path"/"$i" -fix -checks=-*,"$@"
   done
 }
