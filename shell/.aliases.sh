@@ -370,7 +370,7 @@ build_uncrustify() {
 
   (
     cd $uncrustify_build_path
-    cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+    cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
     cmake --build .
   )
 
