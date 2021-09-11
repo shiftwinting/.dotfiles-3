@@ -394,7 +394,20 @@ alias clint='$HOME/programs/neovim/src/clint.py'
 alias clinta='$HOME/programs/neovim/src/clint.py *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
 alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/contrib/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/contrib/uncrustify.cfg'
 
-format_files=(window.c ops.c ex_cmds.c normal.c ex_docmd.c screen.c fileio.c search.c edit.c fold.c mbyte.c syntax.c)
+format_files=(
+  edit.c
+  ex_cmds.c
+  ex_docmd.c
+  fileio.c
+  fold.c
+  mbyte.c
+  normal.c
+  ops.c
+  screen.c
+  search.c
+  syntax.c
+  window.c
+)
 
 form(){
   unc-update
