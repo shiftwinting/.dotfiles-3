@@ -360,6 +360,12 @@ build() {
 	local neovim_path="$HOME/programs/neovim"
 
 	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path"
+}
+
+buildinstall(){
+	local neovim_path="$HOME/programs/neovim"
+
+  build
 	make -C "$neovim_path" install
 }
 
