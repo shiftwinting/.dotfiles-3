@@ -1,1 +1,11 @@
 ada
+foldmethod
+noexpandtab
+softtabstop
+shiftwidth
+tabstop
+textwidth
+txt
+endfunction
+endif
+escape
