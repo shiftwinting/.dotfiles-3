@@ -407,6 +407,7 @@ format_files=(
   search.c
   syntax.c
   window.c
+  tui/tui.c
 )
 
 form(){
