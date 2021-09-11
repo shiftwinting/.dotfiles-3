@@ -109,6 +109,15 @@ set noincsearch
 set nojoinspaces
 
 "------------------------------------
+" Global marks
+
+" Go to last python file
+au FileType python normal! mP
+
+" Go to last make file
+au FileType make normal! mM
+
+"------------------------------------
 " Tree-sitter
 
 lua <<EOF
