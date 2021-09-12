@@ -21,6 +21,7 @@ Plug 'sjl/badwolf'
 Plug 'TroyFletcher/vim-colors-synthwave'
 Plug 'Badacadabra/vim-archery'
 Plug 'mhartington/oceanic-next'
+Plug 'bluz71/vim-moonfly-colors'
 
 call plug#end()
 
@@ -41,6 +42,8 @@ source ~/.vimrc
 "highlight Folded ctermbg=000
 
 colorscheme dracula
+
+"colorscheme moonfly
 
 "colorscheme amora
 
