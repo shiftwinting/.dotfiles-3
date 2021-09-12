@@ -432,3 +432,4 @@ vs(){
 }
 
 alias comp="command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/"
+alias codespell="codespell --config $HOME/.codespellrc"
