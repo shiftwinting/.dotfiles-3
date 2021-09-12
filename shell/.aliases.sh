@@ -61,7 +61,10 @@ alias gis="git switch"
 alias gf="git add .; git commit -m 'Quick update, squash later.'"
 alias gfn="git add .; git commit --no-verify -m 'Quick update, squash later.'"
 alias gt="git add .; git commit -m 'Test commit, will likely delete after.'"
-alias gk="gitk"
+gk() {
+	gitk ${@:-.}
+}
+
 alias gl="git log --graph --full-history --pretty --oneline"
 alias gla="gl --all"
 alias glr="forgit::log HEAD..origin"
