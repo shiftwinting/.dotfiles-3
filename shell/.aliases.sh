@@ -423,8 +423,7 @@ form(){
 }
 
 tidy(){
-  nvim_build="$HOME/programs/neovim/build"
-  clang-tidy --config-file "$HOME/.clang-tidy" -p "$nvim_build" "$@"
+  clang-tidy --config-file "$HOME/.clang-tidy" "$@"
 }
 
 vs(){
