@@ -420,10 +420,8 @@ form(){
 }
 
 tidy(){
-  nvim_path="$HOME/programs/neovim/src/nvim"
-  for i in "${format_files[@]}"; do
-    clang-tidy "$nvim_path"/"$i" -fix -checks=-*,"$@"
-  done
+  nvim_build="$HOME/programs/neovim/build"
+  clang-tidy --config-file "$HOME/.clang-tidy" -p "$nvim_build" "$@"
 }
 
 vs(){
