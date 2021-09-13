@@ -432,3 +432,6 @@ vs(){
 
 alias comp="command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/"
 alias codespell="codespell --config $HOME/.codespellrc"
+
+alias pre-commit-enable="mv .git/hooks/pre-commit-disable .git/hooks/pre-commit"
+alias pre-commit-disable="mv .git/hooks/pre-commit .git/hooks/pre-commit-disable"
