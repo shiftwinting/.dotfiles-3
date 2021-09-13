@@ -409,8 +409,8 @@ format_files=(
   screen.c
   search.c
   syntax.c
-  window.c
   tui/tui.c
+  window.c
 )
 
 form(){
