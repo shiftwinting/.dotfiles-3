@@ -409,6 +409,7 @@ format_files=(
   screen.c
   search.c
   syntax.c
+  tui/input.c
   tui/tui.c
   window.c
 )
