@@ -185,4 +185,4 @@ lua << EOF
 EOF
 endfunction
 
-" call LSP()
+call LSP()

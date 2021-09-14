@@ -440,3 +440,7 @@ alias codespell="codespell --config $HOME/.codespellrc"
 
 alias pre-commit-enable="mv .git/hooks/pre-commit-disable .git/hooks/pre-commit"
 alias pre-commit-disable="mv .git/hooks/pre-commit .git/hooks/pre-commit-disable"
+
+vall(){
+  vi "${format_files[@]}"
+}
