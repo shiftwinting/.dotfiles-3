@@ -399,6 +399,16 @@ alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/n
 
 format_files=(
   edit.c
+  event/libuv_process.c 
+  event/loop.c
+  event/multiqueue.c
+  event/process.c  
+  event/rstream.c  
+  event/signal.c  
+  event/socket.c  
+  event/stream.c  
+  event/time.c  
+  event/wstream.c
   ex_cmds.c
   ex_docmd.c
   fileio.c
@@ -409,7 +419,8 @@ format_files=(
   screen.c
   search.c
   syntax.c
-  tui/input.c
+  tui/input.c 
+  tui/terminfo.c  
   tui/tui.c
   window.c
 )
