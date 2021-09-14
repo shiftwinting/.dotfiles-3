@@ -414,6 +414,9 @@ format_files=(
   fileio.c
   fold.c
   mbyte.c
+  msgpack_rpc/channel.c
+  msgpack_rpc/helpers.c
+  msgpack_rpc/server.c
   normal.c
   ops.c
   os/dl.c
