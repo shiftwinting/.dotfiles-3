@@ -416,6 +416,24 @@ format_files=(
   mbyte.c
   normal.c
   ops.c
+  os/dl.c
+  os/env.c
+  os/fileio.c
+  os/fs.c
+  os/input.c
+  os/lang.c
+  os/mem.c
+  os/os_win_console.c
+  os/process.c
+  os/pty_conpty_win.c
+  os/pty_process_unix.c
+  os/pty_process_win.c
+  os/shell.c
+  os/signal.c
+  os/stdpaths.c
+  os/time.c
+  os/tty.c
+  os/users.c
   screen.c
   search.c
   syntax.c
