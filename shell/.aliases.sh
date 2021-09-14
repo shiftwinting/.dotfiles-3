@@ -431,7 +431,11 @@ vs(){
   while read -r file; do rg -iH "Maintainer:.*$@" $file; done <<< $(codespell | awk -F: '{print $1}' | sort -u)
 }
 
-alias comp="command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/"
+comp(){
+  command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/
+  command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
+}
+
 alias codespell="codespell --config $HOME/.codespellrc"
 
 alias pre-commit-enable="mv .git/hooks/pre-commit-disable .git/hooks/pre-commit"
