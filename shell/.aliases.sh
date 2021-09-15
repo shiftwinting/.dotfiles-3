@@ -93,7 +93,7 @@ gri() {
 alias gs="git status"
 alias gst="git diff --stat-count=1"
 alias gopen="git open"
-gu(){
+guuuu(){
   starting_branch="$(git branch --show-current)"
 
   while read -r branch; do
