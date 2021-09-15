@@ -470,8 +470,17 @@ comp(){
 
 alias codespell="codespell --config $HOME/.codespellrc"
 
-alias pre-commit-enable="mv .git/hooks/pre-commit-disable .git/hooks/pre-commit"
-alias pre-commit-disable="mv .git/hooks/pre-commit .git/hooks/pre-commit-disable"
+pre-commit-enable(){
+  root=$(git rev-parse --show-toplevel)
+  hook_path=$root/.git/hooks
+  mv $hook_path/pre-commit-disable $hook_path/pre-commit
+}
+
+pre-commit-disable(){
+  root=$(git rev-parse --show-toplevel)
+  hook_path=$root/.git/hooks
+  mv $hook_path/pre-commit $hook_path/pre-commit-disable
+}
 
 vall(){
   vi "${format_files[@]}"
