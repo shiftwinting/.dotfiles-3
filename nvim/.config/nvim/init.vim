@@ -6,6 +6,9 @@ Plug 'Konfekt/FastFold'
 Plug 'zplugin/zplugin-vim-syntax'
 Plug 'farmergreg/vim-lastplace'
 
+" Firenvim
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
 " tmux
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
