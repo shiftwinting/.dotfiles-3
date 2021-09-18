@@ -84,9 +84,7 @@ alias gr="git remote"
 alias grr="git remote remove"
 alias gra="git rebase --abort"
 alias groot="git rebase --root -i"
-gres() {
-  git restore "${@:-$(git rev-parse --show-toplevel)}"
-}
+alias gres="git restore"
 gri() {
 	git rebase -i HEAD~"${1:-10}"
 }
