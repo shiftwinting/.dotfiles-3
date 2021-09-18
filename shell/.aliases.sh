@@ -322,10 +322,6 @@ mp4copy() {
 
 alias scc='scc --no-complexity --no-cocomo'
 
-codespell() {
-	command codespell --quiet-level 2 --check-hidden --skip "po,*spell*,*test*,*utf-8.vim" --ignore-words-list hist,fo,enew,windo,SER,tabe,sover,ned,dum,sav,tolen,te "$@"
-}
-
 gooo() {
 	branch="$*"
 	gcbb "$branch"
@@ -457,6 +453,8 @@ tidy(){
   clang-tidy --config-file "$HOME/.clang-tidy" "$@"
 }
 
+alias codespell="codespell --config $HOME/.codespellrc"
+
 vs(){
   while read -r file; do rg -iH "Maintainer:.*$@" $file; done <<< $(codespell | awk -F: '{print $1}' | sort -u)
 }
@@ -465,8 +463,6 @@ comp(){
   command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/
   command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
 }
-
-alias codespell="codespell --config $HOME/.codespellrc"
 
 pre-commit-enable(){
   root=$(git rev-parse --show-toplevel)
