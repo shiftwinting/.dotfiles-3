@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " General plugins
-Plug 'Konfekt/FastFold'
 Plug 'zplugin/zplugin-vim-syntax'
 Plug 'farmergreg/vim-lastplace'
 
