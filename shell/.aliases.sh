@@ -376,63 +376,38 @@ alias clint='$HOME/programs/neovim/src/clint.py'
 alias clinta='$HOME/programs/neovim/src/clint.py *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
 alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
 
-format_files=(
-  edit.c
-  event/libuv_process.c 
-  event/loop.c
-  event/multiqueue.c
-  event/process.c  
-  event/rstream.c  
-  event/signal.c  
-  event/socket.c  
-  event/stream.c  
-  event/time.c  
-  event/wstream.c
-  ex_cmds.c
-  ex_docmd.c
-  fileio.c
-  fold.c
-  mbyte.c
-  msgpack_rpc/channel.c
-  msgpack_rpc/helpers.c
-  msgpack_rpc/server.c
-  normal.c
-  ops.c
-  os/dl.c
-  os/env.c
-  os/fileio.c
-  os/fs.c
-  os/input.c
-  os/lang.c
-  os/mem.c
-  os/os_win_console.c
-  os/process.c
-  os/pty_conpty_win.c
-  os/pty_process_unix.c
-  os/pty_process_win.c
-  os/shell.c
-  os/signal.c
-  os/stdpaths.c
-  os/time.c
-  os/tty.c
-  os/users.c
-  screen.c
-  search.c
-  syntax.c
-  tui/input.c 
-  tui/terminfo.c  
-  tui/tui.c
-  window.c
-)
+form()(
+  setopt null_glob
+  nvim_path="$HOME/programs/neovim/src/nvim"
 
-form(){
   unc-update
 
-  nvim_path="$HOME/programs/neovim/src/nvim"
+  format_files=(
+    "$nvim_path"/indent.c
+    "$nvim_path"/rbuffer.c
+    "$nvim_path"/runtime.c
+    "$nvim_path"/screen.c
+    "$nvim_path"/search.c
+    "$nvim_path"/sha256.c
+    "$nvim_path"/shada.c
+    "$nvim_path"/sign.c
+    "$nvim_path"/spell.c
+    "$nvim_path"/spellfile.c
+    "$nvim_path"/state.c
+    #"$nvim_path"/strings.c
+    "$nvim_path"/syntax.c
+    "$nvim_path"/window.c
+  )
+
+  format_files+=("$nvim_path"/{api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.c)
+  format_files+=("$nvim_path"/{a..h}*.c)
+  format_files+=("$nvim_path"/{j..q}*.c)
+
   for i in "${format_files[@]}"; do
-    bun "$nvim_path"/"$i" &
+    bun "$i" &
   done; wait
-}
+
+)
 
 tidy(){
   for i in "$@"; do
