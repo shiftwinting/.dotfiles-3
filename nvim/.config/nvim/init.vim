@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " General plugins
-Plug 'Chiel92/vim-autoformat'
 Plug 'Konfekt/FastFold'
 Plug 'zplugin/zplugin-vim-syntax'
 Plug 'farmergreg/vim-lastplace'
@@ -60,7 +59,6 @@ colorscheme dracula
 "------------------------------------
 "Other settings
 
-noremap <F3> :Autoformat<CR>
 noremap <F8> :lnext<CR>
 noremap <S-F8> :lprev<CR>
 nnoremap <C-Z> <NOP>
