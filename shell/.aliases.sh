@@ -368,7 +368,7 @@ buildinstall(){
 	make -C "$neovim_path" install
 }
 
-build_uncrustify() {
+build-uncrustify() {
 	local uncrustify_build_path="$HOME/programs/uncrustify/build"
 
   mkdir -p $uncrustify_build_path
