@@ -475,7 +475,3 @@ pre-commit-disable(){
   hook_path=$root/.git/hooks
   mv $hook_path/pre-commit $hook_path/pre-commit-disable
 }
-
-vall(){
-  vi "${format_files[@]}"
-}
