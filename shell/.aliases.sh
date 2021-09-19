@@ -357,6 +357,8 @@ build() {
 	local neovim_path="$HOME/programs/neovim"
 
 	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path"
+
+  command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/
 }
 
 buildinstall(){
@@ -377,6 +379,7 @@ build_uncrustify() {
     cmake --build .
   )
 
+  command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
 }
 
 alias black="black -C"
@@ -457,11 +460,6 @@ alias codespell="codespell --config $HOME/.codespellrc"
 
 vs(){
   while read -r file; do rg -iH "Maintainer:.*$@" $file; done <<< $(codespell | awk -F: '{print $1}' | sort -u)
-}
-
-comp(){
-  command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/
-  command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
 }
 
 pre-commit-enable(){
