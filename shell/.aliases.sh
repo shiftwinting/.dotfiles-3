@@ -453,7 +453,7 @@ form(){
 }
 
 tidy(){
-  clang-tidy --config-file "$HOME/.clang-tidy" "$@"
+  clang-tidy -fix --config-file "$HOME/.clang-tidy" "$@"
 }
 
 alias codespell="codespell --config $HOME/.codespellrc"
