@@ -319,16 +319,23 @@ mp4copy() {
 
 alias scc='scc --no-complexity --no-cocomo'
 
-gooo() {
+go() {
 	branch="$*"
 	gcbb "$branch"
-	sed -i "s|$branch||g" highlight.c
-	git add -A
-	git commit -m "$branch"
-	git push
+	git commit --allow-empty -m "$branch"
+  gp
 	gh pr create --fill
-	gh pr edit --add-label typo
-	git switch main
+  gis master
+
+	#branch="$*"
+	#gcbb "$branch"
+	#sed -i "s|$branch||g" highlight.c
+	#git add -A
+	#git commit -m "$branch"
+	#git push
+	#gh pr create --fill
+	#gh pr edit --add-label typo
+	#git switch main
 }
 
 nuke() {
