@@ -339,6 +339,7 @@ nuke() {
 }
 
 go() {
+  nuke
 	branch="$*"
 	gcbb "$branch"
 	git commit --allow-empty -m "$branch"
