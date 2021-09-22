@@ -319,6 +319,25 @@ mp4copy() {
 
 alias scc='scc --no-complexity --no-cocomo'
 
+nuke() {
+	if [[ $(pwd) != /home/dundar/programs/nvim-commitlint ]] && [[ $(pwd) != /home/dundar/programs/labeler ]]; then
+		echo "RUNNING DANGEROUS COMMAND OUTSITE OF TESTING AREA. ABORT"
+		return 1
+	fi
+
+	while read -r branch; do
+		[[ -n $branch ]] || continue
+
+		git push origin --delete "$branch"
+	done <<<"$(git branch --remotes | grep -v "main" | grep -v "master" | grep -v "HEAD" | sed 's|origin/||')"
+
+	while read -r branch; do
+		[[ -n $branch ]] || continue
+
+		git branch -D "$branch"
+	done <<<"$(git branch | grep -v main | grep -v master)"
+}
+
 go() {
 	branch="$*"
 	gcbb "$branch"
@@ -336,25 +355,6 @@ go() {
 	#gh pr create --fill
 	#gh pr edit --add-label typo
 	#git switch main
-}
-
-nuke() {
-	if [[ $(pwd) != /home/dundar/programs/squash-typo-pr ]] && [[ $(pwd) != /home/dundar/programs/labeler ]]; then
-		echo "RUNNING DANGEROUS COMMAND OUTSITE OF TESTING AREA. ABORT"
-		return 1
-	fi
-
-	while read -r branch; do
-		[[ -n $branch ]] || continue
-
-		git push origin --delete "$branch"
-	done <<<"$(git branch --remotes | grep -v "main" | grep -v "HEAD" | sed 's|origin/||')"
-
-	while read -r branch; do
-		[[ -n $branch ]] || continue
-
-		git branch -D "$branch"
-	done <<<"$(git branch | grep -v main)"
 }
 
 build() {
