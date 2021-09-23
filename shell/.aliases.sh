@@ -458,7 +458,9 @@ form(){
 }
 
 tidy(){
-  clang-tidy -fix --config-file "$HOME/.clang-tidy" "$@"
+  for i in "$@"; do
+    clang-tidy -fix --config-file "$HOME/.clang-tidy" "$i"
+  done
 }
 
 alias codespell="codespell --config $HOME/.codespellrc"
