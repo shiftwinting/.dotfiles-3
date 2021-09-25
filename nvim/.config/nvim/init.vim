@@ -26,6 +26,7 @@ Plug 'TroyFletcher/vim-colors-synthwave'
 Plug 'Badacadabra/vim-archery'
 Plug 'mhartington/oceanic-next'
 Plug 'bluz71/vim-moonfly-colors'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 
@@ -40,6 +41,8 @@ source ~/.vimrc
 "highlight Folded ctermfg=204
 
 "colorscheme badwolf
+
+"colorscheme onehalfdark
 
 "colorscheme synthwave
 "highlight Folded ctermfg=204
