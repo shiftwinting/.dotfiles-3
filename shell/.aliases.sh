@@ -339,7 +339,7 @@ nuke() {
 	done <<<"$(git branch | grep -v main | grep -v master)"
 }
 
-go() {
+gooo() {
   nuke
 	branch="$*"
 	gcbb "$branch"
