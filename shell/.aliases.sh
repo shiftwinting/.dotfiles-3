@@ -88,31 +88,7 @@ gri() {
 alias gs="git status"
 alias gst="git diff --stat-count=1"
 alias gopen="git open"
-guuuu(){
-  starting_branch="$(git branch --show-current)"
 
-  while read -r branch; do
-    [[ -n $branch ]] || continue
-
-    git switch -q "$branch"
-    git rebase -q master
-  done <<< "$(git branch | sed s/master//g | sed s/*//g)"
-  git switch -q "$starting_branch"
-
-}
-guuuuu(){
-  starting_branch="$(git branch --show-current)"
-
-  while read -r branch; do
-    [[ -n $branch ]] || continue
-
-    git rebase "$branch"
-    #git switch -q "$branch"
-    #git rebase -q master
-  done <<< "$(git branch | sed s/master//g | sed s/*//g)"
-  git switch -q "$starting_branch"
-
-}
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias up="git upstream"
 git-add-upstream(){
