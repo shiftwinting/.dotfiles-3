@@ -368,6 +368,7 @@ alias black="black -C"
 
 alias cl='clang-format -i'
 alias un='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
+alias bun='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
 alias clint='$HOME/programs/neovim/src/clint.py'
 alias unc-update='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
 
