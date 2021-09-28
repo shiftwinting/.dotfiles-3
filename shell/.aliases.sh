@@ -381,24 +381,15 @@ form()(
 
   format_files=(
     "$nvim_path"/indent.c
+    "$nvim_path"/if_cscope.c
     "$nvim_path"/rbuffer.c
     "$nvim_path"/runtime.c
-    "$nvim_path"/screen.c
-    "$nvim_path"/search.c
-    "$nvim_path"/sha256.c
-    "$nvim_path"/shada.c
-    "$nvim_path"/sign.c
-    "$nvim_path"/spell.c
-    "$nvim_path"/spellfile.c
-    "$nvim_path"/state.c
-    #"$nvim_path"/strings.c
-    "$nvim_path"/syntax.c
-    "$nvim_path"/window.c
   )
 
-  format_files+=("$nvim_path"/{api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.c)
+  format_files+=("$nvim_path"/{api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h})
   format_files+=("$nvim_path"/{a..h}*.c)
   format_files+=("$nvim_path"/{j..q}*.c)
+  format_files+=("$nvim_path"/{s..z}*.c)
 
   for i in "${format_files[@]}"; do
     un "$i" &
