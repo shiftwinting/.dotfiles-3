@@ -428,3 +428,7 @@ pre-commit-disable(){
   hook_path=$root/.git/hooks
   mv $hook_path/pre-commit $hook_path/pre-commit-disable
 }
+
+countcast(){
+  rg '(\(char_u *\*\)|\(char *\*\))' --stats --quiet **/* | head -n2
+}
