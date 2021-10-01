@@ -368,13 +368,8 @@ alias black="black -C"
 
 alias cl='clang-format -i'
 alias un='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-alias bun='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-alias cla='clang-format -i *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
-alias una='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
-alias buna='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
 alias clint='$HOME/programs/neovim/src/clint.py'
-alias clinta='$HOME/programs/neovim/src/clint.py *.{c,h} {api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h}'
-alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
+alias unc-update='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
 
 form()(
   setopt null_glob
@@ -404,7 +399,7 @@ form()(
   format_files+=("$nvim_path"/{j..q}*.c)
 
   for i in "${format_files[@]}"; do
-    bun "$i" &
+    un "$i" &
   done; wait
 
 )
