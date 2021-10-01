@@ -430,5 +430,5 @@ pre-commit-disable(){
 }
 
 countcast(){
-  rg '(\(char_u *\*\)|\(char *\*\))' --stats --quiet **/* | head -n2
+  rg '(\(char_u *\*\)|\(char *\*\)|\(const char *\*\)|\(const char_u *\*\))' --stats --quiet **/* | head -n2
 }
