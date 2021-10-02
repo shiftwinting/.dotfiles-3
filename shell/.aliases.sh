@@ -80,6 +80,7 @@ alias gpt="git push --tags"
 alias gr="git remote"
 alias grr="git remote remove"
 alias gra="git rebase --abort"
+alias grem="git rebase master"
 alias groot="git rebase --root -i"
 alias gres="git restore"
 gri() {
