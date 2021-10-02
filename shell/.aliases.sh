@@ -431,5 +431,7 @@ pre-commit-disable(){
 }
 
 countcast(){
-  rg '(\(char_u *\*\)|\(char *\*\)|\(const char *\*\)|\(const char_u *\*\))' --stats --quiet **/* | head -n2
+  for i in char char_u; do
+    rg "\((const)? *$i *\**\)" --stats --quiet **/*.c **/*.h | head -n2
+  done | grep . | awk '{print $1}' | paste -sd+ | bc
 }
