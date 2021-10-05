@@ -426,3 +426,29 @@ countcast(){
     rg "\((const)? *$i *\**\)" --stats --quiet **/*.c **/*.h | head -n2
   done | grep . | awk '{print $1}' | paste -sd+ | bc
 }
+
+vp(){
+  file="$1"
+
+  rm -f after.c before.c
+
+  cp -f $file after.c
+  un after.c
+
+  git uncommit
+
+  cp -f $file before.c
+  un before.c
+
+  diff -Naur before.c after.c > vim-patch
+
+  sed -i "s|before.c|a/src/nvim/$file|" vim-patch
+  sed -i "s|after.c|b/src/nvim/$file|" vim-patch
+
+  mv -f vim-patch $HOME/programs/neovim
+
+  (
+  cd $HOME/programs/neovim
+  patch -p1 < vim-patch
+  )
+}
