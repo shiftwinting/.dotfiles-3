@@ -298,7 +298,7 @@ mp4copy() {
 alias scc='scc --no-complexity --no-cocomo'
 
 nuke() {
-	if [[ $(pwd) != /home/dundar/programs/nvim-commitlint ]] && [[ $(pwd) != /home/dundar/programs/labeler ]]; then
+	if [[ $(pwd) != /home/dundar/programs/nvim-typo ]]; then
 		echo "RUNNING DANGEROUS COMMAND OUTSITE OF TESTING AREA. ABORT"
 		return 1
 	fi
@@ -317,23 +317,24 @@ nuke() {
 }
 
 gooo() {
+  #nuke
+	#branch="$*"
+	#gcbb "$branch"
+	#git commit --allow-empty -m "$branch"
+  #gp
+	#gh pr create --fill
+  #gis master
+
   nuke
 	branch="$*"
 	gcbb "$branch"
-	git commit --allow-empty -m "$branch"
-  gp
+	sed -i "s|$branch||g" src/nvim/highlight.c
+	git add -A
+	git commit -m "$branch"
+	git push
 	gh pr create --fill
-  gis master
-
-	#branch="$*"
-	#gcbb "$branch"
-	#sed -i "s|$branch||g" highlight.c
-	#git add -A
-	#git commit -m "$branch"
-	#git push
-	#gh pr create --fill
-	#gh pr edit --add-label typo
-	#git switch main
+	gh pr edit --add-label typo
+	git switch master
 }
 
 build() {
@@ -357,7 +358,7 @@ build-uncrustify() {
   mkdir -p $uncrustify_build_path
 
   (
-    cd $uncrustify_build_path
+    cd $uncrustify_build_path >/dev/null
     cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
     cmake --build .
   )
