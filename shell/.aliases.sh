@@ -428,8 +428,13 @@ countcast(){
   done | grep . | awk '{print $1}' | paste -sd+ | bc
 }
 
-vp(){
+vp1(){
   file="$1"
+  file_basename="$(basename "$1")"
+
+  if [[ $file_basename != *.c && $file_basename != *.h ]]; then
+    return
+  fi
 
   rm -f after.c before.c
 
@@ -443,13 +448,35 @@ vp(){
 
   diff -Naur before.c after.c > vim-patch
 
-  sed -i "s|before.c|a/src/nvim/$file|" vim-patch
-  sed -i "s|after.c|b/src/nvim/$file|" vim-patch
+  sed -i "s|before.c|a/src/nvim/$file_basename|" vim-patch
+  sed -i "s|after.c|b/src/nvim/$file_basename|" vim-patch
 
   mv -f vim-patch $HOME/programs/neovim
 
   (
   cd $HOME/programs/neovim
-  patch -p1 < vim-patch
+  patch -p1 -N -t --no-backup-if-mismatch < vim-patch
   )
+}
+
+vp(){
+  rm -f **/*.rej *.patch
+  version="$1"
+  scripts/vim-patch.sh -p "$version"
+
+  patch -p1 -N -t --no-backup-if-mismatch < *.patch
+
+  (
+  cd .vim-src
+  git checkout "$version"
+
+  while read -r file; do
+    git checkout "$version"
+    vp1 "$file"
+  done <<< "$(git diff-tree --no-commit-id --name-only -r $version)"
+
+  git checkout master
+  )
+
+  rm -f vim-patch **/*.orig
 }
