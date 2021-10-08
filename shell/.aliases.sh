@@ -92,8 +92,8 @@ alias gopen="git open"
 
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias up="git upstream"
-git-add-upstream(){
-  git remote add upstream "$@"
+git-add-upstream() {
+	git remote add upstream "$@"
 }
 alias sync="hub sync"
 
@@ -317,15 +317,15 @@ nuke() {
 }
 
 gooo() {
-  #nuke
+	#nuke
 	#branch="$*"
 	#gcbb "$branch"
 	#git commit --allow-empty -m "$branch"
-  #gp
+	#gp
 	#gh pr create --fill
-  #gis master
+	#gis master
 
-  nuke
+	nuke
 	branch="$*"
 	gcbb "$branch"
 	sed -i "s|$branch||g" src/nvim/highlight.c
@@ -342,10 +342,10 @@ build() {
 
 	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path"
 
-  command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/
+	command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/
 }
 
-buildinstall(){
+buildinstall() {
 	local neovim_path="$HOME/programs/neovim"
 
 	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path" CMAKE_BUILD_TYPE=RelWithDebInfo
@@ -355,25 +355,25 @@ buildinstall(){
 build-uncrustify() {
 	local uncrustify_build_path="$HOME/programs/uncrustify/build"
 
-  mkdir -p $uncrustify_build_path
+	mkdir -p $uncrustify_build_path
 
-  (
-    cd $uncrustify_build_path >/dev/null
-    cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
-    cmake --build .
-  )
+	(
+		cd $uncrustify_build_path >/dev/null
+		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
+		cmake --build .
+	)
 
-  command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
+	command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
 }
 
-build-vim(){
+build-vim() {
 	local vim_path="$HOME/programs/vim"
 
-  (
-    cd $vim_path >/dev/null
-    touch src/**/*
-    bear -- make -j
-  )
+	(
+		cd $vim_path >/dev/null
+		touch src/**/*
+		bear -- make -j
+	)
 }
 
 alias black="black -C"
@@ -385,109 +385,110 @@ alias clint='$HOME/programs/neovim/src/clint.py'
 alias unc-update='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
 alias bunc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
 
-form()(
-  setopt null_glob
-  nvim_path="$HOME/programs/neovim/src/nvim"
+form() (
+	setopt null_glob
+	nvim_path="$HOME/programs/neovim/src/nvim"
 
-  unc-update
+	unc-update
 
-  format_files=(
-    "$nvim_path"/indent.c
-    "$nvim_path"/if_cscope.c
-    "$nvim_path"/rbuffer.c
-    "$nvim_path"/runtime.c
-  )
+	format_files=(
+		"$nvim_path"/indent.c
+		"$nvim_path"/if_cscope.c
+		"$nvim_path"/rbuffer.c
+		"$nvim_path"/runtime.c
+	)
 
-  format_files+=("$nvim_path"/{api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h})
-  format_files+=("$nvim_path"/{a..h}*.c)
-  format_files+=("$nvim_path"/{j..q}*.c)
-  format_files+=("$nvim_path"/{s..z}*.c)
+	format_files+=("$nvim_path"/{api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h})
+	format_files+=("$nvim_path"/{a..h}*.c)
+	format_files+=("$nvim_path"/{j..q}*.c)
+	format_files+=("$nvim_path"/{s..z}*.c)
 
-  for i in "${format_files[@]}"; do
-    un "$i" &
-  done; wait
+	for i in "${format_files[@]}"; do
+		un "$i" &
+	done
+	wait
 
 )
 
-tidy(){
-  for i in "$@"; do
-    clang-tidy -fix --config-file "$HOME/.clang-tidy" "$i"
-  done
+tidy() {
+	for i in "$@"; do
+		clang-tidy -fix --config-file "$HOME/.clang-tidy" "$i"
+	done
 }
 
 alias codespell="codespell --config $HOME/.codespellrc"
 
-vs(){
-  while read -r file; do rg -iH "Maintainer:.*$@" $file; done <<< $(codespell | awk -F: '{print $1}' | sort -u)
+vs() {
+	while read -r file; do rg -iH "Maintainer:.*$@" $file; done <<<$(codespell | awk -F: '{print $1}' | sort -u)
 }
 
-pre-commit-enable(){
-  root=$(git rev-parse --show-toplevel)
-  hook_path=$root/.git/hooks
-  mv $hook_path/pre-commit-disable $hook_path/pre-commit
+pre-commit-enable() {
+	root=$(git rev-parse --show-toplevel)
+	hook_path=$root/.git/hooks
+	mv $hook_path/pre-commit-disable $hook_path/pre-commit
 }
 
-pre-commit-disable(){
-  root=$(git rev-parse --show-toplevel)
-  hook_path=$root/.git/hooks
-  mv $hook_path/pre-commit $hook_path/pre-commit-disable
+pre-commit-disable() {
+	root=$(git rev-parse --show-toplevel)
+	hook_path=$root/.git/hooks
+	mv $hook_path/pre-commit $hook_path/pre-commit-disable
 }
 
-countcast(){
-  for i in char char_u; do
-    rg "\((const)? *$i *\**\)" --stats --quiet **/*.c **/*.h | head -n2
-  done | grep . | awk '{print $1}' | paste -sd+ | bc
+countcast() {
+	for i in char char_u; do
+		rg "\((const)? *$i *\**\)" --stats --quiet **/*.c **/*.h | head -n2
+	done | grep . | awk '{print $1}' | paste -sd+ | bc
 }
 
-vp1(){
-  file="$1"
-  file_basename="$(basename "$1")"
+vp1() {
+	file="$1"
+	file_basename="$(basename "$1")"
 
-  if [[ $file_basename != *.c && $file_basename != *.h ]]; then
-    return
-  fi
+	if [[ $file_basename != *.c && $file_basename != *.h ]]; then
+		return
+	fi
 
-  rm -f after.c before.c
+	rm -f after.c before.c
 
-  cp -f $file after.c
-  un after.c
+	cp -f $file after.c
+	un after.c
 
-  git uncommit
+	git uncommit
 
-  cp -f $file before.c
-  un before.c
+	cp -f $file before.c
+	un before.c
 
-  diff -Naur before.c after.c > vim-patch
+	diff -Naur before.c after.c >vim-patch
 
-  sed -i "s|before.c|a/src/nvim/$file_basename|" vim-patch
-  sed -i "s|after.c|b/src/nvim/$file_basename|" vim-patch
+	sed -i "s|before.c|a/src/nvim/$file_basename|" vim-patch
+	sed -i "s|after.c|b/src/nvim/$file_basename|" vim-patch
 
-  mv -f vim-patch $HOME/programs/neovim
+	mv -f vim-patch $HOME/programs/neovim
 
-  (
-  cd $HOME/programs/neovim
-  patch -p1 -N -t --no-backup-if-mismatch < vim-patch
-  )
+	(
+		cd $HOME/programs/neovim
+		patch -p1 -N -t --no-backup-if-mismatch <vim-patch
+	)
 }
 
-vp(){
-  rm -f **/*.rej *.patch
-  version="$1"
-  scripts/vim-patch.sh -p "$version"
+vp() {
+	rm -f **/*.rej *.patch
+	version="$1"
+	scripts/vim-patch.sh -p "$version"
 
-  patch -p1 -N -t --no-backup-if-mismatch < *.patch
+	patch -p1 -N -t --no-backup-if-mismatch <*.patch
 
-  (
-  cd .vim-src
-  git checkout "$version"
+	(
+		cd .vim-src
+		git checkout "$version"
 
-  while read -r file; do
-    git checkout "$version"
-    vp1 "$file"
-  done <<< "$(git diff-tree --no-commit-id --name-only -r $version)"
+		while read -r file; do
+			git checkout "$version"
+			vp1 "$file"
+		done <<<"$(git diff-tree --no-commit-id --name-only -r $version)"
 
-  git checkout master
-  )
+		git checkout master
+	)
 
-  rm -f vim-patch **/*.orig
+	rm -f vim-patch **/*.orig
 }
