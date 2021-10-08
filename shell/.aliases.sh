@@ -366,6 +366,16 @@ build-uncrustify() {
   command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
 }
 
+build-vim(){
+	local vim_path="$HOME/programs/vim"
+
+  (
+    cd $vim_path >/dev/null
+    touch src/**/*
+    bear -- make -j
+  )
+}
+
 alias black="black -C"
 
 alias cl='clang-format -i'
