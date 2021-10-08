@@ -359,12 +359,33 @@ build-uncrustify() {
 
 	(
 		cd $uncrustify_build_path >/dev/null
+
+    git checkout 1f883c69
+
 		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
 		cmake --build .
 	)
 
 	command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
 }
+
+build-uncrustify-latest() {
+	local uncrustify_build_path="$HOME/programs/uncrustify/build"
+
+	mkdir -p $uncrustify_build_path
+
+	(
+		cd $uncrustify_build_path >/dev/null
+
+    git checkout master
+
+		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
+		cmake --build .
+	)
+
+	command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
+}
+
 
 build-vim() (
 	local vim_path="$HOME/programs/vim"
@@ -377,11 +398,13 @@ build-vim() (
 alias black="black -C"
 
 alias cl='clang-format -i'
-alias un='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-alias bun='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
+#alias un='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
+#alias bun='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
+alias un='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
 alias clint='$HOME/programs/neovim/src/clint.py'
-alias unc-update='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
-alias bunc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
+#alias unc-update='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
+#alias bunc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
+alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
 
 form() (
 	setopt null_glob
