@@ -408,26 +408,16 @@ alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/n
 form() (
 	setopt null_glob
 	nvim_path="$HOME/programs/neovim/src/nvim"
+	cd "$nvim_path" >/dev/null
 
 	unc-update
 
-	format_files=(
-		"$nvim_path"/indent.c
-		"$nvim_path"/if_cscope.c
-		"$nvim_path"/rbuffer.c
-		"$nvim_path"/runtime.c
-	)
-
-	format_files+=("$nvim_path"/{api,eval,event,lua,msgpack_rpc,os,tui,viml}/**/*.{c,h})
-	format_files+=("$nvim_path"/{a..h}*.c)
-	format_files+=("$nvim_path"/{j..q}*.c)
-	format_files+=("$nvim_path"/{s..z}*.c)
+	format_files=(**/*.{c,h})
 
 	for i in "${format_files[@]}"; do
 		un "$i" &
 	done
 	wait
-
 )
 
 tidy() {
