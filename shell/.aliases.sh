@@ -360,7 +360,7 @@ build-uncrustify() {
 	(
 		cd $uncrustify_build_path >/dev/null
 
-    git checkout 1f883c69
+		git reset --hard 1f883c69
 
 		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
 		cmake --build .
@@ -377,7 +377,7 @@ build-uncrustify-latest() {
 	(
 		cd $uncrustify_build_path >/dev/null
 
-    git checkout master
+		git pull
 
 		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
 		cmake --build .
@@ -385,7 +385,6 @@ build-uncrustify-latest() {
 
 	command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
 }
-
 
 build-vim() (
 	local vim_path="$HOME/programs/vim"
