@@ -360,7 +360,7 @@ build-uncrustify() {
 	(
 		cd $uncrustify_build_path >/dev/null
 
-		git reset --hard 1f883c69
+		git reset --hard 0dfafb27
 
 		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
 		cmake --build .
