@@ -27,6 +27,7 @@ Plug 'Badacadabra/vim-archery'
 Plug 'mhartington/oceanic-next'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'kyoz/purify', { 'rtp': 'vim' }
 
 call plug#end()
 
@@ -48,7 +49,9 @@ source ~/.vimrc
 "highlight Folded ctermfg=204
 "highlight Folded ctermbg=000
 
-colorscheme dracula
+"colorscheme dracula
+
+colorscheme purify
 
 "colorscheme moonfly
 
