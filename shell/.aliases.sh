@@ -365,8 +365,6 @@ build-uncrustify() {
 		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
 		cmake --build .
 	)
-
-	command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
 }
 
 build-uncrustify-latest() {
@@ -384,6 +382,19 @@ build-uncrustify-latest() {
 	)
 
 	command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
+}
+
+build-uncrustify-current() {
+	local uncrustify_build_path="$HOME/programs/uncrustify/build"
+
+	mkdir -p $uncrustify_build_path
+
+	(
+		cd $uncrustify_build_path >/dev/null
+
+		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
+		cmake --build .
+	)
 }
 
 build-vim() (
