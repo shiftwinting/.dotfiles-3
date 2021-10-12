@@ -49,9 +49,9 @@ source ~/.vimrc
 "highlight Folded ctermfg=204
 "highlight Folded ctermbg=000
 
-"colorscheme dracula
+colorscheme dracula
 
-colorscheme purify
+"colorscheme purify
 
 "colorscheme moonfly
 
