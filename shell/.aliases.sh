@@ -513,3 +513,7 @@ vp() {
 
 	rm -f vim-patch **/*.orig
 }
+
+profile() {
+	flamegraph --open "$HOME"/programs/neovim/bin/nvim "$@"
+}
