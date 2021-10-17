@@ -14,6 +14,7 @@ alias mirror="sudo pacman-mirrors -id"
 alias orphan='yay -Qdtq | yay -Rs -'
 
 # git
+alias abort="git rebase --abort"
 alias amend="git commit --amend --no-verify --allow-empty"
 alias good="git bisect good"
 alias bad="git bisect bad"
