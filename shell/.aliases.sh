@@ -87,6 +87,11 @@ alias gres="git restore"
 gri() {
 	git rebase -i HEAD~"${1:-10}"
 }
+grim() {
+	current_branch="$(git branch --show-current)"
+	ancestor="$(git merge-base "$current_branch" master)"
+	git rebase -i $ancestor
+}
 alias gs="git status"
 alias gst="git diff --stat-count=1"
 alias gopen="git open"
