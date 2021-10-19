@@ -439,7 +439,7 @@ form() (
 
 tidy() {
 	for i in "$@"; do
-		clang-tidy -fix --config-file "$HOME/.clang-tidy" "$i"
+		clang-tidy --config-file "$HOME/.clang-tidy" "$i"
 	done
 }
 
