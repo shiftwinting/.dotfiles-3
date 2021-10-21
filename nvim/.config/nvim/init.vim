@@ -117,9 +117,6 @@ set termguicolors
 " search.
 set noincsearch
 
-" Insert only one space after a '.', '?' and '!' with a join command.
-set nojoinspaces
-
 " Disable auto-comment for current session
 map \c :set formatoptions-=cro
 
