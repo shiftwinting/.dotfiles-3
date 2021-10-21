@@ -494,7 +494,7 @@ vp1() {
 
 	(
 		cd $HOME/programs/neovim
-		patch -p1 -N -t --no-backup-if-mismatch <vim-patch
+		patch -l -p1 -N -t --no-backup-if-mismatch <vim-patch
 	)
 }
 
@@ -503,7 +503,7 @@ vp() {
 	version="$1"
 	scripts/vim-patch.sh -p "$version"
 
-	patch -p1 -N -t --no-backup-if-mismatch <*.patch
+	patch -l -p1 -N -t --no-backup-if-mismatch <*.patch
 
 	(
 		cd .vim-src
