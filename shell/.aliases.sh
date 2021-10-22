@@ -112,6 +112,7 @@ alias la="ls -a"
 alias ll="la -l"
 
 # goto
+alias cdn="cd $HOME/programs/neovim"
 alias d="cd $HOME/.dotfiles"
 alias c="cd $HOME/.dotfiles/config/.config"
 alias zs="cd $HOME/.zinit/snippets"
@@ -345,6 +346,7 @@ gooo() {
 
 cleanbuild() (
 	cd "$HOME/programs/neovim"
+	reset
 
 	make clean
 	make CMAKE_INSTALL_PREFIX="$neovim_path"
