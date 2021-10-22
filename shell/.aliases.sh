@@ -343,6 +343,15 @@ gooo() {
 	git switch master
 }
 
+cleanbuild() (
+	cd "$HOME/programs/neovim"
+
+	make clean
+	make CMAKE_INSTALL_PREFIX="$neovim_path"
+
+	command cp -f build/compile_commands.json .
+)
+
 build() {
 	local neovim_path="$HOME/programs/neovim"
 
