@@ -177,15 +177,12 @@ lua << EOF
     buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   end
 
-  local servers = { 'clangd' }
-  for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      }
+  nvim_lsp.clangd.setup {
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
     }
-  end
+  }
 EOF
 endfunction
 
