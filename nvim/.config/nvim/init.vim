@@ -146,8 +146,6 @@ EOF
 
 function! LSP()
 lua << EOF
-  local nvim_lsp = require('lspconfig')
-
   -- Use an on_attach function to only map the following keys
   -- after the language server attaches to the current buffer
   local on_attach = function(client, bufnr)
@@ -169,7 +167,7 @@ lua << EOF
     buf_set_keymap('<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   end
 
-  nvim_lsp.clangd.setup {
+  require('lspconfig').clangd.setup {
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
