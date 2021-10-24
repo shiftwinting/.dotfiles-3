@@ -144,7 +144,7 @@ EOF
 "------------------------------------
 " LSP
 
-function! LSP()
+function! LSP_clangd()
 lua << EOF
   -- Use an on_attach function to only map the following keys
   -- after the language server attaches to the current buffer
@@ -176,4 +176,4 @@ lua << EOF
 EOF
 endfunction
 
-call LSP()
+call LSP_clangd()
