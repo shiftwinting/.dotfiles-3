@@ -189,4 +189,71 @@ function lsp_clangd()
 	})
 end
 
+function lsp_sumneko_lua()
+
+	local on_attach = function(client, bufnr)
+		-- Enable completion triggered by <c-x><c-o>
+		vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+		local function buf_set_keymap(...)
+			vim.api.nvim_buf_set_keymap(bufnr, "n", ...)
+		end
+		local opts = { noremap = true, silent = true }
+		buf_set_keymap("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+		buf_set_keymap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+		buf_set_keymap("K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+		buf_set_keymap("<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+		buf_set_keymap("<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+		buf_set_keymap("gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+		buf_set_keymap("<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
+		buf_set_keymap("[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+		buf_set_keymap("]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+		buf_set_keymap("<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
+	end
+
+	local sumneko_root_path = "/usr/lib/lua-language-server"
+	local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
+	local data_path = os.getenv("XDG_DATA_HOME")
+
+	-- Make runtime files discoverable to the server
+	local runtime_path = vim.split(package.path, ";")
+	table.insert(runtime_path, "lua/?.lua")
+	table.insert(runtime_path, "lua/?/init.lua")
+
+	require("lspconfig").sumneko_lua.setup({
+		cmd = {
+			sumneko_binary,
+			"-E",
+			sumneko_root_path .. "/main.lua",
+			"--logpath=" .. data_path .. "/log",
+			"--metapath=" .. data_path .. "/meta",
+		},
+		on_attach = on_attach,
+		capabilities = capabilities,
+		settings = {
+			Lua = {
+				runtime = {
+					-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+					version = "LuaJIT",
+					-- Setup your lua path
+					path = runtime_path,
+				},
+				diagnostics = {
+					-- Get the language server to recognize the `vim` global
+					globals = { "vim" },
+				},
+				workspace = {
+					-- Make the server aware of Neovim runtime files
+					library = vim.api.nvim_get_runtime_file("", true),
+				},
+				-- Do not send telemetry data containing a randomized but unique identifier
+				telemetry = {
+					enable = false,
+				},
+			},
+		},
+	})
+end
+
 lsp_clangd()
+lsp_sumneko_lua()
