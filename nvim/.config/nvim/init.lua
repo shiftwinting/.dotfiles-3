@@ -190,7 +190,6 @@ function lsp_clangd()
 end
 
 function lsp_sumneko_lua()
-
 	local on_attach = function(client, bufnr)
 		-- Enable completion triggered by <c-x><c-o>
 		vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -240,12 +239,30 @@ function lsp_sumneko_lua()
 				},
 				diagnostics = {
 					-- Get the language server to recognize the `vim` global
-					globals = { "vim" },
+					globals = {
+						-- neovim
+						"vim",
+						"capabilities",
+						-- busted
+						"after_each",
+						"before_each",
+						"context",
+						"describe",
+						"it",
+						"setup",
+						"teardown",
+						"pending",
+					},
+					disable = { "lowercase-global" },
 				},
 				workspace = {
 					-- Make the server aware of Neovim runtime files
 					library = vim.api.nvim_get_runtime_file("", true),
+					maxPreload = 1000,
+					preloadFileSize = 350,
+					checkThirdParty = false,
 				},
+				completion = { callSnippet = "Replace", showWord = "Disable" },
 				-- Do not send telemetry data containing a randomized but unique identifier
 				telemetry = {
 					enable = false,
