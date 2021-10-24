@@ -19,6 +19,10 @@ alias amend="git commit --amend --no-verify --allow-empty"
 alias good="git bisect good"
 alias bad="git bisect bad"
 alias bisect="git bisect start"
+fix() {
+	git add -A
+	git commit --fixup="$@"
+}
 alias gac="git add .; git commit"
 alias gap="git add -p"
 alias gb="git branch"
