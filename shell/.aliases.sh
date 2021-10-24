@@ -56,6 +56,9 @@ alias gd="forgit::diff"
 alias gdw="git diff --word-diff-regex='\w*'"
 alias gdc="forgit::diff --cached"
 alias gdcw="git diff --cached --word-diff-regex='\w*'"
+gdm() {
+	git diff master..."$(git branch --show-current)" "$@"
+}
 alias gcl="git clone --recursive"
 alias gcl1="git clone --depth=1"
 alias gclc="git clean -fd :/"
