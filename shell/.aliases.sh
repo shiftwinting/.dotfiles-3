@@ -21,7 +21,7 @@ alias bad="git bisect bad"
 alias bisect="git bisect start"
 fix() {
 	git add -A
-	git commit --fixup="$@"
+	git commit --no-verify --allow-empty --fixup="$@"
 }
 alias gac="git add .; git commit"
 alias gap="git add -p"
