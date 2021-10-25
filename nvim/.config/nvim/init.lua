@@ -15,7 +15,7 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 ]])
 
 -- tmux
-vim.cmd([[ 
+vim.cmd([[
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 ]])
@@ -31,7 +31,7 @@ Plug 'neovim/nvim-lspconfig'
 ]])
 
 -- Themes
-vim.cmd([[ 
+vim.cmd([[
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'owozsh/amora'
 Plug 'tomasr/molokai'
@@ -48,7 +48,7 @@ vim.cmd([[
 call plug#end()
 ]])
 
-vim.cmd([[ 
+vim.cmd([[
 set runtimepath^=~/.vim runtimepath+=/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
@@ -57,7 +57,7 @@ source ~/.vimrc
 -- ----------------------
 -- Colors
 
-vim.cmd([[ 
+vim.cmd([[
 "colorscheme molokai
 "highlight Folded ctermfg=204
 ]])
@@ -70,7 +70,7 @@ vim.cmd([[
 -- vim.cmd("colorscheme archery")
 -- vim.cmd("colorscheme OceanicNext")
 
-vim.cmd([[ 
+vim.cmd([[
 "colorscheme synthwave
 "highlight Folded ctermfg=204
 "highlight Folded ctermbg=000
@@ -95,7 +95,7 @@ vim.cmd("set clipboard+=unnamedplus")
 -- esc removes highlighed text
 vim.cmd("nnoremap <esc> :noh<return><esc>")
 
-vim.cmd([[ 
+vim.cmd([[
 function! MyFoldText() " {{{
 	let line = getline(v:foldstart)
 
@@ -158,28 +158,29 @@ require("nvim-treesitter.configs").setup({
 ------------------------------------
 -- LSP
 
+on_attach = function(bufnr)
+	-- Enable completion triggered by <c-x><c-o>
+	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+	local function buf_set_keymap(...)
+		vim.api.nvim_buf_set_keymap(bufnr, "n", ...)
+	end
+	local opts = { noremap = true, silent = true }
+	buf_set_keymap("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+	buf_set_keymap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	buf_set_keymap("K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	buf_set_keymap("<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+	buf_set_keymap("<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+	buf_set_keymap("gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+	buf_set_keymap("<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
+	buf_set_keymap("[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+	buf_set_keymap("]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+	buf_set_keymap("<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
+end
+
 function lsp_clangd()
 	-- Use an on_attach function to only map the following keys
 	-- after the language server attaches to the current buffer
-	local on_attach = function(bufnr)
-		-- Enable completion triggered by <c-x><c-o>
-		vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
-		local function buf_set_keymap(...)
-			vim.api.nvim_buf_set_keymap(bufnr, "n", ...)
-		end
-		local opts = { noremap = true, silent = true }
-		buf_set_keymap("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-		buf_set_keymap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-		buf_set_keymap("K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-		buf_set_keymap("<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-		buf_set_keymap("<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-		buf_set_keymap("gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-		buf_set_keymap("<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
-		buf_set_keymap("[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-		buf_set_keymap("]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-		buf_set_keymap("<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-	end
 
 	require("lspconfig").clangd.setup({
 		on_attach = on_attach,
@@ -190,26 +191,6 @@ function lsp_clangd()
 end
 
 function lsp_sumneko_lua()
-	local on_attach = function(bufnr)
-		-- Enable completion triggered by <c-x><c-o>
-		vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
-		local function buf_set_keymap(...)
-			vim.api.nvim_buf_set_keymap(bufnr, "n", ...)
-		end
-		local opts = { noremap = true, silent = true }
-		buf_set_keymap("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-		buf_set_keymap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-		buf_set_keymap("K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-		buf_set_keymap("<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-		buf_set_keymap("<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-		buf_set_keymap("gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-		buf_set_keymap("<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
-		buf_set_keymap("[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-		buf_set_keymap("]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-		buf_set_keymap("<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-	end
-
 	local sumneko_root_path = "/usr/lib/lua-language-server"
 	local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
 	local data_path = os.getenv("XDG_DATA_HOME")
