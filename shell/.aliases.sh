@@ -164,8 +164,8 @@ alias wifi="sudo nmtui"
 
 # zsh-only aliases (mostly global aliases)
 if [ -n "$ZSH_VERSION" ]; then
-	alias -g A="| ack"
-	alias -g R="| rg"
+	alias -g A="| ack -i"
+	alias -g R="| rg -i"
 	alias -g C="| xclip -selection clipboard"
 	alias -g L="| less"
 	alias -g NE="2> /dev/null"
