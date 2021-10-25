@@ -132,6 +132,7 @@ alias bin="cd $HOME/.dotfiles/bin/.bin"
 
 #config
 alias ali='$EDITOR $HOME/.aliases.sh'
+alias pack='$EDITOR $HOME/.dotfiles/nvim/.config/nvim/plugin/packer.lua'
 alias rc='$EDITOR $HOME/.zshrc'
 alias brc='$EDITOR $HOME/.bashrc'
 alias zenv='$EDITOR $HOME/.zshenv'
