@@ -6,4 +6,5 @@
 
 tags
 
-
+# Compiled file from packer.nvim
+packer_compiled.lua

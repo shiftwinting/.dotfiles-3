@@ -1,52 +1,9 @@
-vim.cmd([[
-call plug#begin('~/.local/share/nvim/plugged')
-]])
+-- Install packer
+local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
--- General plugins
-
-vim.cmd([[
-Plug 'zplugin/zplugin-vim-syntax'
-Plug 'farmergreg/vim-lastplace'
-]])
-
--- Firenvim
-vim.cmd([[
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-]])
-
--- tmux
-vim.cmd([[
-Plug 'edkolev/tmuxline.vim'
-Plug 'christoomey/vim-tmux-navigator'
-]])
-
--- Tree-sitter
-vim.cmd([[
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-]])
-
--- LSP
-vim.cmd([[
-Plug 'neovim/nvim-lspconfig'
-]])
-
--- Themes
-vim.cmd([[
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'owozsh/amora'
-Plug 'tomasr/molokai'
-Plug 'sjl/badwolf'
-Plug 'TroyFletcher/vim-colors-synthwave'
-Plug 'Badacadabra/vim-archery'
-Plug 'mhartington/oceanic-next'
-Plug 'bluz71/vim-moonfly-colors'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'kyoz/purify', { 'rtp': 'vim' }
-]])
-
-vim.cmd([[
-call plug#end()
-]])
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+	vim.fn.execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
+end
 
 vim.cmd([[
 set runtimepath^=~/.vim runtimepath+=/.vim/after
