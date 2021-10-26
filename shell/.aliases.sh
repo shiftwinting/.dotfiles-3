@@ -357,7 +357,7 @@ cleanbuild() (
 	cd "$HOME/programs/neovim"
 	reset
 
-	make clean
+	rm -rf build
 	make CMAKE_INSTALL_PREFIX="$neovim_path"
 
 	command cp -f build/compile_commands.json .
