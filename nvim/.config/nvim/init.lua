@@ -41,9 +41,7 @@ vim.cmd("noremap <S-F8> :lprev<CR>")
 vim.cmd("nnoremap <C-Z> <NOP>")
 
 -- Define custom command to update and upgrade in one go.
-vim.cmd("command! PU PlugUpdate | PlugUpgrade")
-vim.cmd("command! PI PlugInstall")
-vim.cmd("command! PC PlugClean!")
+vim.cmd("command! PS PackerSync")
 
 vim.cmd("set clipboard+=unnamedplus")
 
