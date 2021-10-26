@@ -5,11 +5,9 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 	vim.fn.execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
 end
 
-vim.cmd([[
-set runtimepath^=~/.vim runtimepath+=/.vim/after
-let &packpath = &runtimepath
-source ~/.vimrc
-]])
+vim.cmd("set runtimepath^=~/.vim runtimepath+=/.vim/after")
+vim.cmd("let &packpath = &runtimepath")
+vim.cmd("source ~/.vimrc")
 
 -- ----------------------
 -- Colors
