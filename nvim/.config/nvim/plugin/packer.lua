@@ -40,8 +40,6 @@ local plugins = {
 
 	-- LSP
 	"neovim/nvim-lspconfig",
-
-	{ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
 }
 
 local config = {
