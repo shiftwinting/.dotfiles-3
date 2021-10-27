@@ -544,12 +544,14 @@ profile() {
 	flamegraph --open "$HOME"/programs/neovim/bin/nvim "$@"
 }
 
-build-asan() {
-	local neovim_path="$HOME/programs/neovim"
-	make -C "$neovim_path" clean
-	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path" CMAKE_EXTRA_FLAGS="-DCMAKE_C_COMPILER=clang -DCLANG_ASAN_UBSAN=1" CMAKE_BUILD_TYPE=RelWithDebInfo
-	make -C "$neovim_path" install
-}
+build-asan() (
+	neovim_path="$HOME/programs/neovim"
+	cd $neovim_path
+
+	rm -rf build
+	make CMAKE_INSTALL_PREFIX="$neovim_path" CMAKE_EXTRA_FLAGS="-DCMAKE_C_COMPILER=clang -DCLANG_ASAN_UBSAN=1" CMAKE_BUILD_TYPE=RelWithDebInfo
+	make install
+)
 
 asan() {
 	UBSAN_OPTIONS=print_stacktrace=1 ASAN_OPTIONS=log_path=/tmp/nvim_asan $HOME/program/nvim/bin/nvim "$@"
