@@ -85,7 +85,7 @@ vim.o.incsearch = false
 
 -- Disable auto-comment for current session
 vim.cmd([[
-map \c :set formatoptions-=cro
+map \c :set formatoptions-=cro<Enter>
 ]])
 
 ------------------------------------
