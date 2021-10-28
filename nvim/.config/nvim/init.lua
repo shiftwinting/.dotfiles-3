@@ -9,7 +9,7 @@ vim.cmd("set runtimepath^=~/.vim runtimepath+=/.vim/after")
 vim.cmd("let &packpath = &runtimepath")
 
 -- ----------------------
--- Colors
+-- Themes
 
 vim.cmd([[
 "colorscheme molokai
