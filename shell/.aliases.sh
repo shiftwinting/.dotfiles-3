@@ -119,6 +119,7 @@ alias la="ls -a"
 alias ll="la -l"
 
 # goto
+alias cdd="cd $HOME/Downloads"
 alias cdn="cd $HOME/programs/neovim"
 alias cdp="cd $HOME/programs"
 alias d="cd $HOME/.dotfiles"
