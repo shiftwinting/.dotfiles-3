@@ -555,7 +555,7 @@ build-asan() (
 )
 
 asan() {
-	UBSAN_OPTIONS=print_stacktrace=1 ASAN_OPTIONS=log_path=/tmp/nvim_asan $HOME/program/nvim/bin/nvim "$@"
+	UBSAN_OPTIONS=print_stacktrace=1 ASAN_OPTIONS=log_path=/tmp/nvim_asan $HOME/programs/neovim/bin/nvim "$@"
 }
 
 asan-log() {
