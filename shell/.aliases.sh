@@ -121,6 +121,7 @@ alias ll="la -l"
 # goto
 alias cdd="cd $HOME/Downloads"
 alias cdn="cd $HOME/programs/neovim"
+alias cdnn="cd $HOME/programs/neovim/src/nvim"
 alias cdp="cd $HOME/programs"
 alias d="cd $HOME/.dotfiles"
 alias n="cd $HOME/.dotfiles/nvim/.config/nvim"
