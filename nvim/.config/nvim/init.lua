@@ -193,10 +193,6 @@ function lsp_sumneko_lua()
 					checkThirdParty = false,
 				},
 				completion = { callSnippet = "Replace", showWord = "Disable" },
-				-- Do not send telemetry data containing a randomized but unique identifier
-				telemetry = {
-					enable = false,
-				},
 			},
 		},
 	})
