@@ -4,6 +4,7 @@ local plugins = {
 	-- General plugins
 	"zplugin/zplugin-vim-syntax",
 	"farmergreg/vim-lastplace",
+	"tpope/vim-fugitive",
 
 	-- Firenvim
 	{
