@@ -52,9 +52,9 @@ gcf() {
 	git add -A
 	git commit -m "$modified_file"
 }
-alias gd="forgit::diff"
+alias gd="git diff"
 alias gdw="git diff --word-diff-regex='\w*'"
-alias gdc="forgit::diff --cached"
+alias gdc="git diff --cached"
 alias gdcw="git diff --cached --word-diff-regex='\w*'"
 gdm() {
 	git diff master..."$(git branch --show-current)" "$@"
@@ -72,7 +72,6 @@ alias gt="git add .; git commit -m 'chore: test commit, will likely delete after
 alias gk="gitk"
 alias gl="git log --graph --full-history --pretty --oneline"
 alias gla="gl --all"
-alias glr="forgit::log HEAD..origin"
 alias gls="git log --stat --oneline"
 alias gp="git push --quiet"
 gps() {
