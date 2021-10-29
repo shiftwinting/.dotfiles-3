@@ -38,6 +38,7 @@ gbdd() {
 alias gbD="git branch -D"
 alias gbu="git branch --unset-upstream"
 alias gc="git commit"
+alias gcb="git checkout -b"
 gcbb() {
 	git checkout -b "$@"
 	git push --set-upstream origin "$@"
