@@ -120,6 +120,7 @@ alias ll="la -l"
 # goto
 alias cdd="cd $HOME/Downloads"
 alias cdn="cd $HOME/programs/neovim"
+alias cdni="cd $HOME/programs/neovim/.github/workflows"
 alias cdnc="cd $HOME/programs/neovim/contrib"
 alias cdnn="cd $HOME/programs/neovim/src/nvim"
 alias cdp="cd $HOME/programs"
