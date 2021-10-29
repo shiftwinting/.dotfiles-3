@@ -41,9 +41,6 @@ PS1="- "
 zinit ice silent depth'1' id-as'auto' wait"!" pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
-zinit ice silent depth"1" id-as"auto" wait"1" has"git" 
-zinit light zdharma/zsh-diff-so-fancy
-
 zinit ice silent depth"1" id-as"auto" wait"1" has"git" atload"unalias gi gcf gss gclean" 
 zinit light wfxr/forgit
 
