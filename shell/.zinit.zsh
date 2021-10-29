@@ -47,9 +47,6 @@ zinit light wfxr/forgit
 zinit ice silent depth"1" id-as"auto" wait"1"
 zinit light ael-code/zsh-colored-man-pages
 
-zinit ice silent depth'1' id-as'auto' wait"1"
-zinit light tmux-plugins/tpm
-
 # Syntax highlighter "needs" to be last.
 
 zinit ice silent depth'1' id-as'auto' wait"1" atinit"
