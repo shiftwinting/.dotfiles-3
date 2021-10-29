@@ -76,6 +76,3 @@ source ~/.aliases.sh
 chpwd() {
 	la
 }
-
-# Enable thefuck
-eval $(thefuck --alias)
