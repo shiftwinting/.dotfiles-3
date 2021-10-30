@@ -31,12 +31,6 @@ zinit snippet PZT::modules/completion/init.zsh
 zinit ice silent depth'1' id-as'auto' wait atinit"export ENHANCD_DISABLE_HOME=1"
 zinit light b4b4r07/enhancd
 
-zinit ice silent depth'1' id-as'auto' wait atload"
-_zsh_autosuggest_start
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
-bindkey '^ ' autosuggest-accept"
-zinit light zsh-users/zsh-autosuggestions
-
 PS1="- "
 zinit ice silent depth'1' id-as'auto' wait"!" pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure

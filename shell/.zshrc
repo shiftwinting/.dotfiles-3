@@ -70,6 +70,11 @@ setopt hist_save_no_dups
 setopt hist_verify
 
 source ~/.zinit.zsh
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
+bindkey '^ ' autosuggest-accept
+
 source ~/.aliases.sh
 
 # Automatically run ls after using cd.
