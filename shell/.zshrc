@@ -80,6 +80,10 @@ bindkey '^ ' autosuggest-accept
 
 source /usr/share/zsh/functions/Prompts/prompt_pure_setup
 
+for i in $HOME/.zsh/*; do
+  source "$i"
+done
+
 # ----------------------------------------------------------------------
 
 source ~/.aliases.sh
