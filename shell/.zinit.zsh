@@ -31,10 +31,6 @@ zinit snippet PZT::modules/completion/init.zsh
 zinit ice silent depth'1' id-as'auto' wait atinit"export ENHANCD_DISABLE_HOME=1"
 zinit light b4b4r07/enhancd
 
-PS1="- "
-zinit ice silent depth'1' id-as'auto' wait"!" pick"async.zsh" src"pure.zsh"
-zinit light sindresorhus/pure
-
 zinit ice silent depth"1" id-as"auto" wait"1"
 zinit light ael-code/zsh-colored-man-pages
 

@@ -78,6 +78,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
 bindkey '^ ' autosuggest-accept
 
+source /usr/share/zsh/functions/Prompts/prompt_pure_setup
+
 # ----------------------------------------------------------------------
 
 source ~/.aliases.sh
