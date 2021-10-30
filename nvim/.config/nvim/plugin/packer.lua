@@ -2,7 +2,6 @@ local plugins = {
 	"wbthomason/packer.nvim",
 
 	-- General plugins
-	"zplugin/zplugin-vim-syntax",
 	"farmergreg/vim-lastplace",
 	"tpope/vim-fugitive",
 
