@@ -11,11 +11,6 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit installer's chunk
 
-zinit ice silent depth'1' id-as'auto' atinit"
-zstyle ':prezto:module:editor' dot-expansion 'yes'
-zstyle ':prezto:module:editor' key-bindings 'vi' "
-zinit snippet PZT::modules/editor/init.zsh
-
 zinit ice silent depth'1' id-as'auto' atclone"./install --key-bindings --completion --no-update-rc" atload"source ~/.fzf.zsh"
 zinit light junegunn/fzf
 
