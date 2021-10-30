@@ -162,6 +162,7 @@ fi
 # Exec new shell
 alias z="exec zsh -o NO_GLOBAL_RCS"
 alias b="exec bash"
+alias f="exec fish"
 
 # reset
 if [[ "$TMUX" ]]; then
