@@ -1,7 +1,5 @@
 ######################################################
-#
 # General options
-#
 
 # Allow .. without getting "Permission denied".
 setopt auto_cd
@@ -9,25 +7,8 @@ setopt auto_cd
 # Add additional features for identifying files.
 setopt extendedglob
 
-# [Ctrl-RightArrow] - move forward one word.
-bindkey '^[[1;5C' forward-word
-
-# [Ctrl-LeftArrow] - move backward one word.
-bindkey '^[[1;5D' backward-word
-
-# Automatically attach tmux session named ssh-tmux. If it doesn't exist then just create a new one.
-if [[ -n $PS1 ]] && [[ -z $TMUX ]] && [[ -n $SSH_CONNECTION ]]; then
-	export TERM=xterm-256color # Set the term variable if I'm using SSH so my terminal (kitty) doesn't break.
-	tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
-fi
-
-# Force unique paths only
-typeset -U path
-
 ######################################################
-#
 # History
-#
 
 # Treat the '!' character specially during expansion.
 setopt bang_hist
@@ -60,6 +41,24 @@ setopt hist_save_no_dups
 setopt hist_verify
 
 # ----------------------------------------------------------------------
+# Other
+
+# [Ctrl-RightArrow] - move forward one word.
+bindkey '^[[1;5C' forward-word
+
+# [Ctrl-LeftArrow] - move backward one word.
+bindkey '^[[1;5D' backward-word
+
+# Automatically attach tmux session named ssh-tmux. If it doesn't exist then just create a new one.
+if [[ -n $PS1 ]] && [[ -z $TMUX ]] && [[ -n $SSH_CONNECTION ]]; then
+	export TERM=xterm-256color # Set the term variable if I'm using SSH so my terminal (kitty) doesn't break.
+	tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi
+
+# Force unique paths only
+typeset -U path
+
+# ----------------------------------------------------------------------
 # Plugins
 
 source ~/.zinit.zsh
@@ -75,6 +74,7 @@ for i in $HOME/.zsh/*; do
 done
 
 # ----------------------------------------------------------------------
+# Aliases and functions
 
 source ~/.aliases.sh
 
@@ -82,3 +82,4 @@ source ~/.aliases.sh
 chpwd() {
 	la
 }
+
