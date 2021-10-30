@@ -69,11 +69,16 @@ setopt hist_save_no_dups
 # Do not execute immediately upon history expansion.
 setopt hist_verify
 
+# ----------------------------------------------------------------------
+# Plugins
+
 source ~/.zinit.zsh
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
 bindkey '^ ' autosuggest-accept
+
+# ----------------------------------------------------------------------
 
 source ~/.aliases.sh
 
