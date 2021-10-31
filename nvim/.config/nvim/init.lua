@@ -35,9 +35,9 @@ vim.cmd("colorscheme dracula")
 -- ------------------------------------
 -- Other settings
 
-vim.cmd("noremap <F8> :lnext<CR>")
-vim.cmd("noremap <S-F8> :lprev<CR>")
-vim.cmd("nnoremap <C-Z> <NOP>")
+vim.api.nvim_buf_set_keymap("<buffer>", "n", "<F8>", ":lnext<CR>", { noremap = true })
+vim.api.nvim_buf_set_keymap("<buffer>", "n", "<S-F8>", ":lprev<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-Z>", "<NOP>", { noremap = true })
 
 -- Define custom command to update and upgrade in one go.
 vim.cmd("command! PS PackerSync")
@@ -83,10 +83,7 @@ vim.o.termguicolors = true
 -- This disables the display of the matches while you are still typing your search.
 vim.o.incsearch = false
 
--- Disable auto-comment for current session
-vim.cmd([[
-map \c :set formatoptions-=cro<Enter>
-]])
+vim.api.nvim_buf_set_keymap("<buffer>", "", "\\c", ":set formatoptions-=cro<Enter>", { noremap = true })
 
 ------------------------------------
 -- Global marks
