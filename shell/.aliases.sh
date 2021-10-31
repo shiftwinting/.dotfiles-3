@@ -23,6 +23,7 @@ fix() {
 	git add -A
 	git commit --no-verify --allow-empty --fixup="$@"
 }
+alias ga="git add -A"
 alias gac="git add .; git commit"
 alias gap="git add -p"
 alias gb="git branch"
