@@ -573,3 +573,5 @@ asan() {
 asan-log() {
 	vi /tmp/nvim_asan
 }
+
+alias dvi="$HOME/programs/neovim/bin/nvim"
