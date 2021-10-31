@@ -88,6 +88,7 @@ alias gpf!='git push --force'
 alias gpt="git push --tags"
 alias gr="git remote"
 alias grr="git remote remove"
+alias gre="git rebase"
 alias grea="git rebase --abort"
 alias grec="git rebase --continue"
 alias grem="git rebase master"
