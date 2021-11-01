@@ -1,9 +1,13 @@
 #!/bin/bash
 
+DOT="$HOME"/.dotfiles
+PROGRAMS="$HOME"/programs
+NEOVIM="$PROGRAMS"/neovim
+
 alias ls="exa"
 
 install() {
-	$HOME/.dotfiles/bin/.bin/install "$@"
+	$DOT/bin/.bin/install "$@"
 }
 
 alias show="yay -Si"
@@ -121,43 +125,43 @@ alias la="ls -a"
 alias ll="la -l"
 
 # goto
-alias cdf="cd $HOME/.dotfiles/shell/.config/fish"
+alias cdf="cd $DOT/shell/.config/fish"
 alias cdd="cd $HOME/Downloads"
-alias cdn="cd $HOME/programs/neovim"
-alias cdni="cd $HOME/programs/neovim/.github/workflows"
-alias cdnc="cd $HOME/programs/neovim/contrib"
-alias cdnd="cd $HOME/programs/neovim/runtime/doc"
-alias cdnr="cd $HOME/programs/neovim/runtime"
-alias cdnn="cd $HOME/programs/neovim/src/nvim"
-alias cdns="cd $HOME/programs/neovim/src"
-alias cdp="cd $HOME/programs"
-alias cdv="cd $HOME/programs/vim/src"
-alias cdu="cd $HOME/programs/uncrustify"
-alias cdus="cd $HOME/programs/uncrustify/src"
-alias d="cd $HOME/.dotfiles"
-alias n="cd $HOME/.dotfiles/nvim/.config/nvim"
-alias c="cd $HOME/.dotfiles/config/.config"
+alias cdn="cd $NEOVIM"
+alias cdni="cd $NEOVIM/.github/workflows"
+alias cdnc="cd $NEOVIM/contrib"
+alias cdnd="cd $NEOVIM/runtime/doc"
+alias cdnr="cd $NEOVIM/runtime"
+alias cdnn="cd $NEOVIM/src/nvim"
+alias cdns="cd $NEOVIM/src"
+alias cdp="cd $PROGRAMS"
+alias cdv="cd $PROGRAMS/vim/src"
+alias cdu="cd $PROGRAMS/uncrustify"
+alias cdus="cd $PROGRAMS/uncrustify/src"
+alias d="cd $DOT"
+alias n="cd $DOT/nvim/.config/nvim"
+alias c="cd $DOT/config/.config"
 alias zs="cd $HOME/.zinit/snippets"
 alias zp="cd $HOME/.zinit/plugins"
 alias zb="cd $HOME/.zinit/bin"
-alias ds="cd $HOME/.dotfiles/shells"
+alias ds="cd $DOT/shells"
 alias ft="cd $HOME/.config/nvim/ftplugin"
-alias bin="cd $HOME/.dotfiles/bin/.bin"
+alias bin="cd $DOT/bin/.bin"
 
 #config
-alias ali='$EDITOR $HOME/.aliases.sh'
-alias prc='$EDITOR $HOME/.dotfiles/nvim/.config/nvim/plugin/packer.lua'
-alias rc='$EDITOR $HOME/.zshrc'
-alias brc='$EDITOR $HOME/.bashrc'
-alias frc='$EDITOR $HOME/.dotfiles/shell/.config/fish/config.fish'
-alias zenv='$EDITOR $HOME/.zshenv'
-alias zi='$EDITOR $HOME/.zinit.zsh'
-alias unrc='$EDITOR $HOME/programs/neovim/src/uncrustify.cfg'
-alias vimrc='$EDITOR $HOME/.config/nvim/init.lua'
-alias bsprc='$EDITOR $HOME/.config/bspwm/bspwmrc'
-alias sxhrc='$EDITOR $HOME/.config/sxhkd/sxhkdrc'
-alias trc='$EDITOR $HOME/.tmux.conf'
-alias gconf='$EDITOR $HOME/.gitconfig'
+alias ali="$EDITOR $HOME/.aliases.sh"
+alias prc="$EDITOR $DOT/nvim/.config/nvim/plugin/packer.lua"
+alias rc="$EDITOR $HOME/.zshrc"
+alias brc="$EDITOR $HOME/.bashrc"
+alias frc="$EDITOR $DOT/shell/.config/fish/config.fish"
+alias zenv="$EDITOR $HOME/.zshenv"
+alias zi="$EDITOR $HOME/.zinit.zsh"
+alias unrc="$EDITOR $NEOVIM/src/uncrustify.cfg"
+alias vimrc="$EDITOR $HOME/.config/nvim/init.lua"
+alias bsprc="$EDITOR $HOME/.config/bspwm/bspwmrc"
+alias sxhrc="$EDITOR $HOME/.config/sxhkd/sxhkdrc"
+alias trc="$EDITOR $HOME/.tmux.conf"
+alias gconf="$EDITOR $HOME/.gitconfig"
 
 # reload current shell
 if [ -n "$ZSH_VERSION" ]; then
@@ -215,7 +219,7 @@ chrome() {
 alias rmd="rmdir * 2>/dev/null"
 
 # Restore dotfiles
-alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && reload"
+alias restore="pushd -q && cd -q $DOT && git checkout . && popd -q && reload"
 
 # Download youtube as mp3
 alias yget="youtube-dl --extract-audio --audio-format mp3"
@@ -371,32 +375,28 @@ gooo() {
 }
 
 cleanbuild() (
-	cd "$HOME/programs/neovim"
+	cd $NEOVIM
 	reset
 
 	rm -rf build
-	make CMAKE_INSTALL_PREFIX="$neovim_path"
+	make CMAKE_INSTALL_PREFIX=$NEOVIM
 
 	command cp -f build/compile_commands.json .
 )
 
 build() {
-	local neovim_path="$HOME/programs/neovim"
+	make -C $NEOVIM CMAKE_INSTALL_PREFIX=$NEOVIM
 
-	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path"
-
-	command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/
+	command cp -f $NEOVIM/build/compile_commands.json $NEOVIM/
 }
 
 buildinstall() {
-	local neovim_path="$HOME/programs/neovim"
-
-	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path" CMAKE_BUILD_TYPE=RelWithDebInfo
-	make -C "$neovim_path" install
+	make -C $NEOVIM CMAKE_INSTALL_PREFIX=$NEOVIM CMAKE_BUILD_TYPE=RelWithDebInfo
+	make -C $NEOVIM install
 }
 
 build-uncrustify() {
-	local uncrustify_build_path="$HOME/programs/uncrustify/build"
+	local uncrustify_build_path="$PROGRAMS/uncrustify/build"
 
 	mkdir -p $uncrustify_build_path
 
@@ -411,7 +411,7 @@ build-uncrustify() {
 }
 
 build-uncrustify-latest() {
-	local uncrustify_build_path="$HOME/programs/uncrustify/build"
+	local uncrustify_build_path="$PROGRAMS/uncrustify/build"
 
 	mkdir -p $uncrustify_build_path
 
@@ -424,11 +424,11 @@ build-uncrustify-latest() {
 		cmake --build .
 	)
 
-	command cp -f $HOME/programs/uncrustify/build/compile_commands.json $HOME/programs/uncrustify/
+	command cp -f $PROGRAMS/uncrustify/build/compile_commands.json $PROGRAMS/uncrustify/
 }
 
 build-uncrustify-current() {
-	local uncrustify_build_path="$HOME/programs/uncrustify/build"
+	local uncrustify_build_path="$PROGRAMS/uncrustify/build"
 
 	mkdir -p $uncrustify_build_path
 
@@ -441,7 +441,7 @@ build-uncrustify-current() {
 }
 
 build-vim() (
-	local vim_path="$HOME/programs/vim"
+	local vim_path="$PROGRAMS/vim"
 
 	cd $vim_path >/dev/null
 	touch src/**/*
@@ -451,17 +451,17 @@ build-vim() (
 alias black="black -C"
 
 alias cl='clang-format -i'
-#alias un='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-#alias bun='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-alias un='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-alias clint='$HOME/programs/neovim/src/clint.py'
-#alias unc-update='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
-#alias bunc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
-alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
+#alias un='uncrustify -c $NEOVIM/src/uncrustify.cfg --replace --no-backup'
+#alias bun='$PROGRAMS/uncrustify/build/uncrustify -c $NEOVIM/src/uncrustify.cfg --replace --no-backup'
+alias un='$PROGRAMS/uncrustify/build/uncrustify -c $NEOVIM/src/uncrustify.cfg --replace --no-backup'
+alias clint='$NEOVIM/src/clint.py'
+#alias unc-update='uncrustify -c $NEOVIM/src/uncrustify.cfg --update-config-with-doc -o $NEOVIM/src/uncrustify.cfg'
+#alias bunc-update='$PROGRAMS/uncrustify/build/uncrustify -c $NEOVIM/src/uncrustify.cfg --update-config-with-doc -o $NEOVIM/src/uncrustify.cfg'
+alias unc-update='$PROGRAMS/uncrustify/build/uncrustify -c $NEOVIM/src/uncrustify.cfg --update-config-with-doc -o $NEOVIM/src/uncrustify.cfg'
 
 form() (
 	setopt null_glob
-	nvim_path="$HOME/programs/neovim/src/nvim"
+	nvim_path="$NEOVIM/src/nvim"
 	cd "$nvim_path" >/dev/null
 
 	unc-update
@@ -527,10 +527,10 @@ vp1() {
 	sed -i "s|before.c|a/src/nvim/$file_basename|" vim-patch
 	sed -i "s|after.c|b/src/nvim/$file_basename|" vim-patch
 
-	mv -f vim-patch $HOME/programs/neovim
+	mv -f vim-patch $NEOVIM
 
 	(
-		cd $HOME/programs/neovim
+		cd $NEOVIM
 		patch -l -p1 -N -t --no-backup-if-mismatch <vim-patch
 	)
 }
@@ -558,23 +558,22 @@ vp() {
 }
 
 profile() {
-	flamegraph --open "$HOME"/programs/neovim/bin/nvim "$@"
+	flamegraph --open $NEOVIM/bin/nvim "$@"
 }
 
 build-asan() (
-	neovim_path="$HOME/programs/neovim"
-	cd $neovim_path
+	cd $NEOVIM
 
-	make CMAKE_INSTALL_PREFIX="$neovim_path" CMAKE_EXTRA_FLAGS="-DCMAKE_C_COMPILER=clang -DCLANG_ASAN_UBSAN=1" CMAKE_BUILD_TYPE=RelWithDebInfo
+	make CMAKE_INSTALL_PREFIX=$NEOVIM CMAKE_EXTRA_FLAGS="-DCMAKE_C_COMPILER=clang -DCLANG_ASAN_UBSAN=1" CMAKE_BUILD_TYPE=RelWithDebInfo
 	make install
 )
 
 asan() {
-	UBSAN_OPTIONS=print_stacktrace=1 ASAN_OPTIONS=log_path=/tmp/nvim_asan $HOME/programs/neovim/bin/nvim "$@"
+	UBSAN_OPTIONS=print_stacktrace=1 ASAN_OPTIONS=log_path=/tmp/nvim_asan $NEOVIM/bin/nvim "$@"
 }
 
 asan-log() {
 	vi /tmp/nvim_asan
 }
 
-alias dvi="$HOME/programs/neovim/bin/nvim"
+alias dvi="$NEOVIM/bin/nvim"
