@@ -65,8 +65,15 @@ alias gdcw="git diff --cached --word-diff-regex='\w*'"
 gdm() {
 	git diff master..."$(git branch --show-current)" "$@"
 }
-alias gcl="git clone --recursive"
-alias gcl1="git clone --depth=1"
+
+gcl() {
+	gh repo clone "$@" -- --recursive
+}
+
+gcl1() {
+	gh repo clone "$@" -- --depth=1
+}
+
 alias gclc="git clean -fd :/"
 alias gch="git cherry-pick"
 alias gcn="git commit --no-verify"
