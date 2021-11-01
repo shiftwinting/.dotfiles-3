@@ -103,7 +103,6 @@ grim() {
 	git rebase -i $ancestor
 }
 alias gs="git status"
-alias gst="git diff --stat-count=1"
 alias gopen="git open"
 
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
