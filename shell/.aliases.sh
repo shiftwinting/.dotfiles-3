@@ -70,6 +70,10 @@ gcl() {
 	gh repo clone "$@" -- --recursive
 }
 
+fork() {
+	gh repo fork --clone=true "$@"
+}
+
 gcl1() {
 	gh repo clone "$@" -- --depth=1
 }
