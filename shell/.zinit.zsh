@@ -14,9 +14,6 @@ autoload -Uz _zinit
 zinit ice silent depth'1' id-as'auto' atclone"./install --key-bindings --completion --no-update-rc" atload"source ~/.fzf.zsh"
 zinit light junegunn/fzf
 
-zinit ice silent depth'1' id-as'auto' wait pick'async.zsh'
-zinit light mafredri/zsh-async
-
 zinit ice silent depth'1' wait id-as"completion" blockf;
 zinit snippet PZT::modules/completion/init.zsh
 
