@@ -379,21 +379,6 @@ alias t="tmux"
 #	make -C "$neovim_path" install
 #}
 
-#build-uncrustify() {
-#	local uncrustify_build_path="$HOME/programs/uncrustify/build"
-#
-#	mkdir -p $uncrustify_build_path
-#
-#	(
-#		cd $uncrustify_build_path >/dev/null
-#
-#		git reset --hard 0dfafb27
-#
-#		cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
-#		cmake --build .
-#	)
-#}
-
 #build-uncrustify-latest() {
 #	local uncrustify_build_path="$HOME/programs/uncrustify/build"
 #
