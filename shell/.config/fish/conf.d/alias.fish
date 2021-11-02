@@ -525,10 +525,6 @@ alias codespell="codespell --config $HOME/.codespellrc"
 #	rm -f vim-patch **/*.orig
 #}
 
-#profile() {
-#	flamegraph --open "$HOME"/programs/neovim/bin/nvim "$@"
-#}
-
 #build-asan() (
 #	neovim_path="$HOME/programs/neovim"
 #	cd $neovim_path
