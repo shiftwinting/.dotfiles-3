@@ -23,9 +23,6 @@ zinit snippet PZT::modules/completion/init.zsh
 zinit ice silent depth'1' id-as'auto' wait atinit"export ENHANCD_DISABLE_HOME=1"
 zinit light b4b4r07/enhancd
 
-zinit ice silent depth"1" id-as"auto" wait"1"
-zinit light ael-code/zsh-colored-man-pages
-
 # Syntax highlighter "needs" to be last.
 
 zinit ice silent depth'1' id-as'auto' wait"1" atinit"
