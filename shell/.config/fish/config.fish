@@ -13,3 +13,6 @@ set -Ux LS_COLORS (vivid generate snazzy)
 
 # Change capslock to control
 setxkbmap -option "ctrl:nocaps"
+
+# Remove the start greeting
+set -U fish_greeting
