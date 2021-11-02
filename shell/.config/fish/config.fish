@@ -16,3 +16,6 @@ setxkbmap -option "ctrl:nocaps"
 
 # Remove the start greeting
 set -U fish_greeting
+
+# Accept autosuggestion with control-space
+bind -k nul forward-char
