@@ -1,3 +1,4 @@
+# Define environment variables
 set -Ux EDITOR nvim
 set -Ux VISUAL nvim 
 
@@ -10,4 +11,5 @@ set -Ux XDG_CONFIG_DIRS /etc/xdg
 # Change ls colors. Possible colors schemes: ayu, jellybeans, molokai, snazzy, solarized-dark, solarized-light.
 set -Ux LS_COLORS (vivid generate snazzy)
 
+# Change capslock to control
 setxkbmap -option "ctrl:nocaps"
