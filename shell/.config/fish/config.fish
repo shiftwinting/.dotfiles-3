@@ -19,3 +19,6 @@ set -U fish_greeting
 
 # Accept autosuggestion with control-space
 bind -k nul forward-char
+
+# Add bin folder to path
+fish_add_path "$HOME/.dotfiles/bin/.bin"
