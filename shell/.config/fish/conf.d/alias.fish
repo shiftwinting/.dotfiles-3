@@ -111,7 +111,7 @@ alias gopen="git open"
 alias gl1="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias up="git upstream"
 alias git-add-upstream "git remote add upstream"
-alias sync="hub sync"
+alias s="hub sync"
 
 # vim
 alias vi '$EDITOR'
