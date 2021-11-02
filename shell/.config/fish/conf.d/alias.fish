@@ -123,6 +123,8 @@ alias ll="la -l"
 
 # goto
 alias cdf="cd $HOME/.dotfiles/shell/.config/fish"
+alias cdfc="cd $HOME/.dotfiles/shell/.config/fish/conf.d"
+alias cdff="cd $HOME/.dotfiles/shell/.config/fish/functions"
 alias cdd="cd $HOME/Downloads"
 alias cdn="cd $HOME/programs/neovim"
 alias cdni="cd $HOME/programs/neovim/.github/workflows"
