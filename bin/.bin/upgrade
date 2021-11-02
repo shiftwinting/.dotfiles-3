@@ -8,21 +8,10 @@ println(){
 	printf "__________________________________________________ \n\n"
 }
 
-source $HOME/.zinit/bin/zinit.zsh
-reset
-
 pprint "powerpill"
 sudo powerpill -Syu --noconfirm
 println
 
 pprint "yay"
 yay -Syu --needed --nocleanmenu --nodiffmenu --removemake --noupgrademenu
-println
-
-pprint "zinit modules"
-zinit update -p
-println
-
-pprint "zinit"
-zinit self-update
 println

@@ -36,8 +36,6 @@ typeset -U path
 # ----------------------------------------------------------------------
 # Plugins
 
-source ~/.zinit.zsh
-
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
 bindkey '^ ' autosuggest-accept
