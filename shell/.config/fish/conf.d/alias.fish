@@ -372,14 +372,6 @@ alias t="tmux"
 #	command cp -f build/compile_commands.json .
 #)
 
-#build() {
-#	local neovim_path="$HOME/programs/neovim"
-#
-#	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path"
-#
-#	command cp -f $HOME/programs/neovim/build/compile_commands.json $HOME/programs/neovim/
-#}
-
 #buildinstall() {
 #	local neovim_path="$HOME/programs/neovim"
 #
