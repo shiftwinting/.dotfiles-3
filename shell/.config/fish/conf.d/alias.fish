@@ -407,16 +407,16 @@ alias t="tmux"
 #	bear -- make -j
 #)
 
-#alias black="black -C"
+alias black="black -C"
 
-#alias cl='clang-format -i'
-##alias un='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-##alias bun='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-#alias un='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
-#alias clint='$HOME/programs/neovim/src/clint.py'
-##alias unc-update='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
-##alias bunc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
-#alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
+alias cl='clang-format -i'
+#alias un='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
+#alias bun='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
+alias un='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --replace --no-backup'
+alias clint='$HOME/programs/neovim/src/clint.py'
+#alias unc-update='uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
+#alias bunc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
+alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/neovim/src/uncrustify.cfg --update-config-with-doc -o $HOME/programs/neovim/src/uncrustify.cfg'
 
 #form() (
 #	setopt null_glob
