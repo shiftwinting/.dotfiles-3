@@ -352,16 +352,6 @@ alias t="tmux"
 #	git switch master
 #}
 
-#cleanbuild() (
-#	cd "$HOME/programs/neovim"
-#	reset
-#
-#	rm -rf build
-#	make CMAKE_INSTALL_PREFIX="$neovim_path"
-#
-#	command cp -f build/compile_commands.json .
-#)
-
 #buildinstall() {
 #	local neovim_path="$HOME/programs/neovim"
 #
