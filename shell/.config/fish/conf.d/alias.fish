@@ -451,12 +451,6 @@ alias codespell="codespell --config $HOME/.codespellrc"
 #	mv $hook_path/pre-commit $hook_path/pre-commit-disable
 #}
 
-#countcast() {
-#	for i in char char_u; do
-#		rg "\((const)? *$i *\**\)" --stats --quiet **/*.c **/*.h | head -n2
-#	done | grep . | awk '{print $1}' | paste -sd+ | bc
-#}
-
 #vp1() {
 #	file="$1"
 #	file_basename="$(basename "$1")"
