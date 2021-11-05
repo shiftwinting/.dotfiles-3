@@ -478,3 +478,5 @@ alias codespell="codespell --config $HOME/.codespellrc"
 #asan-log() {
 #	vi /tmp/nvim_asan
 #}
+
+alias lt "reset; languagetool --autoDetect --disable DASH_RULE,COMMA_PARENTHESIS_WHITESPACE,ARROWS,UNLIKELY_OPENING_PUNCTUATION,WHITESPACE_RULE,FILE_EXTENSIONS_CASE"
