@@ -70,6 +70,7 @@ vim.o.autoindent = true
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.softtabstop = -1
+vim.cmd([[set listchars+=tab:<->]])
 
 -- Make tabs spaces - required for neovim development
 vim.o.expandtab = true
