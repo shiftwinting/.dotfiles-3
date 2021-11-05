@@ -197,8 +197,8 @@ alias clip="xclip -sel clip <"
 ## rmdir
 #alias rmd="rmdir * 2>/dev/null"
 
-## Restore dotfiles
-#alias restore="pushd -q && cd -q ~/.dotfiles && git checkout . && popd -q && reload"
+# Restore dotfiles
+alias restore="git -C $HOME/.dotfiles checkout .; reload"
 
 # Download youtube as mp3
 alias yget="youtube-dl --extract-audio --audio-format mp3"
