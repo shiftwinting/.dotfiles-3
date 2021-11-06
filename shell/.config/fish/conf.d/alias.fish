@@ -404,12 +404,6 @@ alias codespell="codespell --config $HOME/.codespellrc"
 #	while read -r file; do rg -iH "Maintainer:.*$@" $file; done <<<$(codespell | awk -F: '{print $1}' | sort -u)
 #}
 
-#pre-commit-disable() {
-#	root=$(git rev-parse --show-toplevel)
-#	hook_path=$root/.git/hooks
-#	mv $hook_path/pre-commit $hook_path/pre-commit-disable
-#}
-
 #vp1() {
 #	file="$1"
 #	file_basename="$(basename "$1")"
