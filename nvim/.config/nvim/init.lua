@@ -196,5 +196,15 @@ function lsp_sumneko_lua()
 	})
 end
 
+function lsp_pyright()
+	require("lspconfig").pyright.setup({
+		on_attach = on_attach,
+		flags = {
+			debounce_text_changes = 150,
+		},
+	})
+end
+
 lsp_clangd()
 lsp_sumneko_lua()
+lsp_pyright()
