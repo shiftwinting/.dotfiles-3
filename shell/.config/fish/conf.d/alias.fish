@@ -1,6 +1,6 @@
 alias ls "exa"
 
-alias install "$HOME/.dotfiles/bin/.bin/install"
+alias install "$HOME/.dotfiles/bin/.bin/install-arch-package"
 
 alias show "yay -Si"
 alias search "yay -Ss"
