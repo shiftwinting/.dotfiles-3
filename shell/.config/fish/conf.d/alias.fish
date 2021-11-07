@@ -290,7 +290,7 @@ alias t="tmux"
 #	done
 #}
 
-#alias rename="perl-rename -i"
+alias rename="perl-rename -i"
 
 alias detox="detox -s lower"
 
