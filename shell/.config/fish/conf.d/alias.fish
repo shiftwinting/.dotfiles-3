@@ -476,3 +476,5 @@ alias codespell="codespell --config $HOME/.codespellrc"
 alias lt "reset; languagetool --autoDetect --disable DASH_RULE,COMMA_PARENTHESIS_WHITESPACE,ARROWS,UNLIKELY_OPENING_PUNCTUATION,WHITESPACE_RULE,FILE_EXTENSIONS_CASE,PLUS_MINUS,UPPERCASE_SENTENCE_START"
 
 alias gen "$HOME/programs/neovim/scripts/gen_vimdoc.py"
+
+alias diff "diff -W (tput cols)"
