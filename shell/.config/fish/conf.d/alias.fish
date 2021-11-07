@@ -292,7 +292,7 @@ alias t="tmux"
 
 #alias rename="perl-rename -i"
 
-#alias detox="detox -s lower"
+alias detox="detox -s lower"
 
 #vmprof() {
 #	python -m vmprof --lines -o results.dat pre-commit
