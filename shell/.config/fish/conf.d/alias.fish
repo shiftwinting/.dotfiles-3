@@ -281,7 +281,7 @@ alias t="tmux"
 #	find . -type f -exec shellcheck -x -W 0 -e SC2086 "$@" {} \;
 #}
 
-#alias fo="shfmt -w -s"
+alias fo="shfmt -w -s"
 
 #lower() {
 #	for filename in "$@"; do
