@@ -105,6 +105,7 @@ alias s="hub sync"
 
 # vim
 alias vi '$EDITOR'
+alias vid "vi -d"
 alias svi 'sudo $EDITOR'
 
 #ls
