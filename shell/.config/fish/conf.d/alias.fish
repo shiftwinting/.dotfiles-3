@@ -80,14 +80,6 @@ alias grem="git rebase master"
 alias groot="git rebase --root -i"
 alias gres="git restore"
 
-function gri --argument-names 'number'
-  if test -n "$number"
-    git rebase -i HEAD~$number
-  else
-    git rebase -i HEAD~10
-  end
-end
-
 #grim() {
 #	current_branch="$(git branch --show-current)"
 #	ancestor="$(git merge-base "$current_branch" master)"
