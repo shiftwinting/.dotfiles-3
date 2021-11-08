@@ -49,9 +49,7 @@ alias gd="git diff"
 alias gdw="git diff --word-diff-regex='\w*'"
 alias gdc="git diff --cached"
 alias gdcw="git diff --cached --word-diff-regex='\w*'"
-#gdm() {
-#	git diff master..."$(git branch --show-current)" "$@"
-#}
+alias gdm "git diff master...(git branch --show-current)" 
 alias gcl1="git clone --depth=1"
 alias gclc="git clean -fd :/"
 alias gch="git cherry-pick"
