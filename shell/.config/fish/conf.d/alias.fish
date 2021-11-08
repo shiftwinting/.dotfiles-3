@@ -80,12 +80,6 @@ alias grem="git rebase master"
 alias groot="git rebase --root -i"
 alias gres="git restore"
 
-#grim() {
-#	current_branch="$(git branch --show-current)"
-#	ancestor="$(git merge-base "$current_branch" master)"
-#	git rebase -i $ancestor
-#}
-
 alias gs="git status"
 alias gst="git diff --stat-count=1"
 alias gopen="git open"
