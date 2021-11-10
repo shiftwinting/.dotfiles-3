@@ -465,3 +465,5 @@ alias gen "$HOME/programs/neovim/scripts/gen_vimdoc.py"
 alias diff "diff -W (tput cols)"
 
 alias upgrade "topgrade"
+
+alias fd "fd --hidden"
