@@ -1,6 +1,7 @@
 # Define environment variables
 set -Ux EDITOR nvim
 set -Ux VISUAL nvim 
+set -Ux MANPAGER 'nvim +Man!'
 
 set -Ux XDG_CONFIG_HOME $HOME/.config
 set -Ux XDG_CACHE_HOME $HOME/.cache
