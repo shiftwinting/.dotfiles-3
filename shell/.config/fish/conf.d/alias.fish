@@ -338,13 +338,6 @@ alias detox="detox -s lower"
 #	git switch master
 #}
 
-#buildinstall() {
-#	local neovim_path="$HOME/programs/neovim"
-#
-#	make -C "$neovim_path" CMAKE_INSTALL_PREFIX="$neovim_path" CMAKE_BUILD_TYPE=RelWithDebInfo
-#	make -C "$neovim_path" install
-#}
-
 #build-uncrustify-current() {
 #	local uncrustify_build_path="$HOME/programs/uncrustify/build"
 #
