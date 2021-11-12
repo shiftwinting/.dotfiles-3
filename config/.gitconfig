@@ -16,6 +16,7 @@
   irebase = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git rebase -i"
 [merge]
 	tool = meld
+	conflictstyle = diff3
 [rerere]
 	enabled = true
 	autoupdate = true
