@@ -435,6 +435,7 @@ alias codespell="codespell --config $HOME/.codespellrc"
 #	rm -f vim-patch **/*.orig
 #}
 
+alias bi "$HOME/programs/neovim/bin/nvim"
 alias asan "UBSAN_OPTIONS=print_stacktrace=1 ASAN_OPTIONS=log_path=/tmp/nvim_asan $HOME/programs/neovim/bin/nvim"
 
 alias asan-log "vi /tmp/nvim_asan"
