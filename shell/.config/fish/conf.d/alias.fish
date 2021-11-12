@@ -442,21 +442,9 @@ alias codespell="codespell --config $HOME/.codespellrc"
 #	rm -f vim-patch **/*.orig
 #}
 
-#build-asan() (
-#	neovim_path="$HOME/programs/neovim"
-#	cd $neovim_path
-#
-#	make CMAKE_INSTALL_PREFIX="$neovim_path" CMAKE_EXTRA_FLAGS="-DCMAKE_C_COMPILER=clang -DCLANG_ASAN_UBSAN=1" CMAKE_BUILD_TYPE=RelWithDebInfo
-#	make install
-#)
+alias asan "UBSAN_OPTIONS=print_stacktrace=1 ASAN_OPTIONS=log_path=/tmp/nvim_asan $HOME/programs/neovim/bin/nvim"
 
-#asan() {
-#	UBSAN_OPTIONS=print_stacktrace=1 ASAN_OPTIONS=log_path=/tmp/nvim_asan $HOME/programs/neovim/bin/nvim "$@"
-#}
-
-#asan-log() {
-#	vi /tmp/nvim_asan
-#}
+alias asan-log "vi /tmp/nvim_asan"
 
 alias lt "reset; languagetool --autoDetect --disable DASH_RULE,COMMA_PARENTHESIS_WHITESPACE,ARROWS,UNLIKELY_OPENING_PUNCTUATION,WHITESPACE_RULE,FILE_EXTENSIONS_CASE,PLUS_MINUS,UPPERCASE_SENTENCE_START"
 
