@@ -1,5 +1,7 @@
 alias ls "exa"
 
+alias ag "rg --ignore-case --hidden"
+
 alias install "$HOME/.dotfiles/bin/.bin/install-arch-package"
 
 alias show "yay -Si"
@@ -205,9 +207,6 @@ alias xmin="brightnessctl set 1%"
 
 # Use make without printing the input and automatically use parallel jobs.
 alias make="make -s"
-
-# So ag doesn't print "Permission denied"
-alias ag="ag --hidden --smart-case --silent --ignore .git"
 
 ## Make commands human-readable.
 #alias du="du -h"
