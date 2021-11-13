@@ -1,10 +1,11 @@
 # Ignore cache directory clangd creates
-
 .cache
 
-# Ignore ctags
+# Ignore compilation database
+compile_commands.json
 
+# Ignore ctags
 tags
 
-# Compiled file from packer.nvim
+# compiled file from packer.nvim
 packer_compiled.lua
