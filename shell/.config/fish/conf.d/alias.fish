@@ -4,6 +4,7 @@ alias ag "rg --ignore-case --hidden"
 
 alias install "$HOME/.dotfiles/bin/.bin/install-arch-package"
 
+alias prune "paccache -ruk0"
 alias show "yay -Si"
 alias search "yay -Ss"
 alias fsearch "yay -F"
