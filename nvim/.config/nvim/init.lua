@@ -86,6 +86,9 @@ vim.o.incsearch = false
 
 vim.api.nvim_buf_set_keymap("<buffer>", "", "\\c", ":set formatoptions-=cro<Enter>", { noremap = true })
 
+-- Set default font and font size for GUI.
+vim.cmd([[set guifont=Fira\ Code:h20]])
+
 ------------------------------------
 -- Global marks
 
