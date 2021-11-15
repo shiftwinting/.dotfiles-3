@@ -217,7 +217,17 @@ function lsp_yamlls()
 	})
 end
 
+function lsp_tsserver()
+	require("lspconfig").tsserver.setup({
+		on_attach = on_attach,
+		flags = {
+			debounce_text_changes = 150,
+		},
+	})
+end
+
 lsp_clangd()
 lsp_sumneko_lua()
 lsp_pyright()
 lsp_yamlls()
+lsp_tsserver()
