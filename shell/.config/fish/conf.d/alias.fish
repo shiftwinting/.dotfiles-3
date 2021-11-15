@@ -165,11 +165,12 @@ alias wifi="sudo nmtui"
 #	alias \$=''
 #fi
 
-# Safe/verbose ops
-alias rm="rm -iv"
-alias mv="mv -iv"
-alias cp="cp -iv"
-alias mkdir="mkdir -pv"
+# Make "dangerous" operations interactive
+alias rm="rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
+
+alias mkdir="mkdir -p"
 
 # xclip
 alias clip="xclip -sel clip <"
