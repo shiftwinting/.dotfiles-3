@@ -248,7 +248,7 @@ alias t="tmux"
 
 #alias hook="cd .git/hooks"
 
-#alias virtual="python -m venv .venv"
+alias virtual="python -m venv .venv"
 
 #alias ch="reset; shellcheck -x -e SC2086"
 #alias chs="ch -S style"
