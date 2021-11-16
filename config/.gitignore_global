@@ -9,3 +9,6 @@ tags
 
 # compiled file from packer.nvim
 packer_compiled.lua
+
+# Ignore python virtual directory
+.venv
