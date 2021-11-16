@@ -128,18 +128,6 @@ on_attach = function(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
 end
 
-function lsp_clangd()
-	-- Use an on_attach function to only map the following keys
-	-- after the language server attaches to the current buffer
-
-	require("lspconfig").clangd.setup({
-		on_attach = on_attach,
-		flags = {
-			debounce_text_changes = 150,
-		},
-	})
-end
-
 function lsp_sumneko_lua()
 	local sumneko_root_path = "/usr/lib/lua-language-server"
 	local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
@@ -199,35 +187,17 @@ function lsp_sumneko_lua()
 	})
 end
 
-function lsp_pyright()
-	require("lspconfig").pyright.setup({
-		on_attach = on_attach,
-		flags = {
-			debounce_text_changes = 150,
-		},
-	})
+function lsp_init()
+	local servers = { "tsserver", "yamlls", "pyright", "clangd" }
+	for _, server in ipairs(servers) do
+		require("lspconfig")[server].setup({
+			on_attach = on_attach,
+			flags = {
+				debounce_text_changes = 150,
+			},
+		})
+	end
 end
 
-function lsp_yamlls()
-	require("lspconfig").yamlls.setup({
-		on_attach = on_attach,
-		flags = {
-			debounce_text_changes = 150,
-		},
-	})
-end
-
-function lsp_tsserver()
-	require("lspconfig").tsserver.setup({
-		on_attach = on_attach,
-		flags = {
-			debounce_text_changes = 150,
-		},
-	})
-end
-
-lsp_clangd()
 lsp_sumneko_lua()
-lsp_pyright()
-lsp_yamlls()
-lsp_tsserver()
+lsp_init()
