@@ -226,7 +226,7 @@ alias t="tmux"
 ## allow sudo to expand aliases as well as run anything in $PATH
 #alias sudo='sudo env PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"	'
 
-#alias logout="loginctl terminate-user dundar"
+alias logout="loginctl terminate-user dundar"
 
 #alias hook="cd .git/hooks"
 
