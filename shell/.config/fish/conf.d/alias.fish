@@ -361,7 +361,7 @@ alias unc-update='$HOME/programs/uncrustify/build/uncrustify -c $HOME/programs/n
 #	done
 #}
 
-alias codespell="codespell --config $HOME/.codespellrc"
+alias codespell="codespell -H --config $HOME/.codespellrc"
 
 #vs() {
 #	while read -r file; do rg -iH "Maintainer:.*$@" $file; done <<<$(codespell | awk -F: '{print $1}' | sort -u)
